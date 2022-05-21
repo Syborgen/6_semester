@@ -1,0 +1,239 @@
+@startuml
+class Camera{
++  virtual QVector3D Project(QVector3D point) = 0;
++  virtual ~Camera() = default;
++  void SetCentral();
++  void SetParallels();
++  float near_{1};
++  float far_{10000};
+#  QMatrix4x4 projection_;
+#  bool is_central = true;
+}
+class GraphicsScene{
++  void PushShape(Shape* shape);
++  void EraseShape(Shape* shape);
++  void Clear();
++  const std::vector<Shape *>& Shapes() const;
+  ~GraphicsScene() override;
+- std::vector<Shape*> shapes_;
+- std::mutex m_;
+}
+class GraphicsView{
++  explicit GraphicsView(QWidget* parent = nullptr,
+                        GraphicsScene* scene = nullptr);
++  GraphicsScene *Scene() const;
++  void Scene(GraphicsScene *scene);
++  void Render();
++  void SetCentral();
++  void SetParallels();
++  void SetPolygonView();
++  void SetLineView();
++  void PanoramStep(QVector3D);
++  const std::unordered_map<::Shape*,
+                           std::optional<QRgb>>& SelectedShapes() const;
++  void ClearSelected();
++  Camera* Camera() const;
++  void Camera(class Camera* camera);
++  void UnselectedAllShape();
+#  void keyPressEvent(QKeyEvent*) override;
+#  void keyReleaseEvent(QKeyEvent*) override;
+#  void mousePressEvent(QMouseEvent*) override;
+#  void resizeEvent(QResizeEvent* event) override;
+#  void timerEvent(QTimerEvent*) override;
+-  QImage image_;
+-  ZBuffer zbuffer_;
+-  class Camera* camera_;
+-  GraphicsScene* scene_;
+-  std::unordered_map<::Shape*, std::optional<QRgb>> selected_shapes;
+-  std::map<int, bool> buttons_;
+-  void FreeCameraChange();
+-  SGL::ViewType view_type_;
+}
+class LookAtCamera{
++  LookAtCamera(QVector3D eye, QVector3D center, QVector3D up);
++  QVector3D Project(QVector3D point) override;
++  LookAtCamera& operator=(const LookAtCamera& rhs);
++  void Reset(QVector3D eye, QVector3D center, QVector3D up);
++  const QVector3D &Eye() const;
++  const QVector3D &Center() const;
++  const QVector3D &Up() const;
++  float Near() const;
++  float Far() const;
++  const QSize& WindowSize() const;
++  void WindowSize(const QSize& window_size);
+-  QVector3D eye_;
+-  QVector3D center_;
+-  QVector3D up_;
+-  QMatrix4x4 model_view_;
+-  QSize window_size_;
+-  void CalculateMatrix();
+}
+class Painter{
++  explicit Painter(QImage& image, ZBuffer& zbuffer, Camera& camera,
+                   SGL::ViewType view_type);
++  void SetPixel(int x, int y, QRgb color);
++  SGL::Size ImageSize() const;
++  void DrawPoint(QVector3D point, Shape* shape = nullptr);
++  void DrawBrush(QVector3D point, Shape* shape = nullptr);
++  void DrawPixel(QVector3D point, QRgb color, Shape* parent = nullptr);
++  std::optional<QRgb> Color() const;
++  void Color(std::optional<QRgb> color);
++  std::optional<QRgb> Brush() const;
++  void Brush(std::optional<QRgb> brash);
++  void Save();
++  void Restore();
++  void AppendTransform(QMatrix4x4 transform);
++  void DrawLine(QVector3D begin, QVector3D end, Shape* parent);
++  void DrawTriangle(std::array<QVector3D, 3> points, Shape* parent);
+-  std::optional<QRgb> color_ = std::nullopt;
+-  std::optional<QRgb> brush_ = std::nullopt;
+-  QMatrix4x4 transform_;
+-  QImage& image_;
+-  ZBuffer& zbuffer_;
+-  Camera& camera_;
+-  std::optional<QRgb> save_colors[2];
+-  QMatrix4x4 save_transform_;
+-  SGL::ViewType view_type_ = SGL::ViewType::polygon;
+}
+class ZBuffer{
++  explicit ZBuffer(QSize size);
++  void Resize(QSize size);
++  Point* operator[](int i) noexcept;
++  void Clear() noexcept;
++  ~ZBuffer();
+-  Point* storage_;
+-  QSize size_;
++  const QSize& Size() const;
+}
+
+abstract class Shape{
++  explicit Shape(QVector3D base_point = {}, std::optional<QRgb> color = std::nullopt,
+        std::optional<QRgb> brush = std::nullopt,
+        Shape* parent = nullptr)
++  void AppendModify(QMatrix4x4 modify_matrix) noexcept;
++  void Rotate(float a, QVector4D v);
++  void Rotate(float a, QVector4D v, QVector3D pos);
++  void Move(QVector4D);
++  void Scale(float a, float b, float c);
++  void MoveBasePoint(QVector4D v);
++  virtual QVector3D Center() const = 0;
++  void Draw(Painter& painter);
++  virtual std::vector<Triangle> Triangulate() = 0;
++  virtual ~Shape() = default;
++  const QVector3D& BasePoint() const;
++  void BasePoint(const QVector3D& base_point);
++  const std::optional<QRgb>& Color() const;
++  void Color(const std::optional<QRgb> &color);
++  const std::optional<QRgb>& Brush() const;
++  void Brush(const std::optional<QRgb>& brush);
++  const QVector4D& I() const;
++   const QVector4D& J() const;
++  const QVector4D& K() const;
++  Shape* BaseParent() noexcept;
++   const QMatrix4x4& ModifyMatrix() const;
++  void ModifyMatrix(const QMatrix4x4& modify_matrix);
++   virtual QJsonObject ToJson() const;
++  virtual void FromJson(const QJsonObject& json);
++  virtual QString type();
+#  std::optional<QRgb> color_{};
+#  std::optional<QRgb> brush_{};
+#  QMatrix4x4 modify_matrix_;
+#  QVector3D base_point_;
+#  Shape* parent_ = nullptr;
+#  virtual void DrawShape(Painter& painter) = 0;
+}
+class Box{
++  Box(QVector3D base_point, float length, float width, float height,
+  std::optional<QRgb> color = std::nullopt,
+  std::optional<QRgb> brush = std::nullopt,
+  Shape* parent = nullptr);
+-  float length_{};
+-  float width_{};
+-  float height_{};
+}
+class Ellipse{
++  Ellipse(float a_far, float b_far,
+                  std::optional<QRgb> color = std::nullopt,
+                  std::optional<QRgb> brush = std::nullopt,
+                  QVector3D base_point = {},
+                  float a_near = 0, float b_near = 0);
+-  float a_near_;
+-  float b_near_;
+-  float a_far_;
+-  float b_far_;
+}
+class Ellipsoid{
++  Ellipsoid();
++  const std::vector<Triangle>& MyTriangulate();
+-  float a_;
+-  float b_;
+-  float c_;
+-  float a_old_;
+-  float b_old_;
+-  float c_old_;
+-  float part_;
+-  std::vector<Triangle> triangles_;
+}
+class Frustum{
++  Frustum();
+-  float a_far_bottom_;
+-  float a_near_bottom_;
+-  float b_far_bottom_;
+-  float b_near_bottom_;
+-  float a_far_top_;
+-  float a_near_top_;
+-  float b_far_top_;
+-  float b_near_top_;
+-  float height_;
+}
+class Line{
++  explicit Line();
++  explicit Line();
++  const QVector3D &Begin() const;
++  void Begin(const QVector3D &begin);
++  const QVector3D &AnEnd() const;
++  void AnEnd(const QVector3D &an_end);
+-  QVector3D begin_;
+-  QVector3D end_;
+}
+class Pyramid{
++  Pyramid();
+-  float bottom_length_;
+-  float bottom_width_;
+-  float height_;
+-  float top_length_;
+-  float top_width_;
+-  float bottom_near_length_;
+-  float bottom_near_width_;
+-  float top_near_length_;
+-  float top_near_width_;
+}
+class Quadrangle{
++  explicit Quadrangle();
+-  QVector3D vertexes_[4];
+}
+class Triangle{
++  explicit Triangle();
++  explicit Triangle();
++  const std::array<QVector3D, 3>& Points() const;
+-  std::array<QVector3D, 3> points_;
+}
+Camera <|-left- LookAtCamera
+GraphicsScene o-- Shape
+GraphicsView o-- GraphicsScene
+GraphicsView o-left- Camera
+GraphicsView *-- ZBuffer
+GraphicsView o-- Shape
+Painter o-- ZBuffer
+Painter o-up- Camera
+Ellipsoid *-- Triangle
+Shape -up-o ZBuffer
+Shape <|-down- Box
+Shape <|-up- Ellipse
+Shape <|-- Ellipsoid
+Shape <|-- Frustum
+Shape <|-- Line
+Shape <|-left- Pyramid
+Shape <|- Quadrangle
+Shape <|- Triangle
+@enduml

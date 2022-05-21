@@ -1,0 +1,115 @@
+class FileSystem{
+SuperBlock superBlock;
+	std::string filePath;
+	std::fstream fileStream;
+	std::vector<int32_t> FAT;
+public: 
+	FileSystem(int param); 
+	~FileSystem();
+	void formatting(int clusterSize); 
+	void writeZeroCharactersOnDisc(int count); 
+	SuperBlock getSuperBlock();
+	int findFirstFreeBlockNumber();
+	void calculateCountOfFreeBlocks();
+	void writeSuperBlock();
+	void writeFAT();
+	void deleteFATBlockChain(int firstFileBlockNumber); 
+	int newFATBlockChain(int blocksCount); 
+	void resizeFATBlockChain(int firstBlockNumber, int newBlocksCount);
+	int getLastBlockOfChain(int firstBlockNumber);
+	int addBlockToFATBlockChain(int firstBlockNumber);
+	int getFirstByteOfBlock(int blockNumber);
+	std::fstream* getFileStream();
+	int getNextFATChainBlockNumber(int curBlockNumber);
+	void makeBlockLastInFATChain(int blockNumber);
+	int getBlockSize();};
+}
+
+class File {
+	DirectoryNote directoryNote;
+	FileSystem *fileSystem;
+	int currentWritePosition;
+	int currentReadPosition;
+	int positionOfNoteInRootDirectory;
+	File(FileSystem* fs, int, int, int, int, int, string, int, int, int);
+	File(FileSystem* fs);
+	File(FileSystem* fs, File* rootDir, int posInRootDir);
+	~File();
+	void write(const char *str, int length);
+	void read(char* str, int length);
+	const DirectoryNote &getDirectoryNote();
+	void seekGet(int countOfBytes, int position);
+	void seekPut(int countOfBytes, int position);
+	void addDirectoryNote(const DirectoryNote& directoryNote);
+	int findDirectoryNote(string fileName);
+	void readDirectoryNote(DirectoryNote& directoryNote);
+	int getPositionOfNoteInRootDirectory();
+	void createNewFile(string fName);
+	int findFreeDirectoryNote(int fNoteSize);
+	void deleteFile();
+	int getCurrentGetPosition();
+	void changeAttributes(string attr);
+	void deleteData();
+    }
+    
+    class Process{
+    int time;
+    int pid;
+    int ppid;
+    int pri;
+    int nice;
+    int cpuBurst;
+    int state;
+    int count;
+    int wakeup();
+    int fork();
+    int sleep(int time);
+    }
+    
+    class ProcessPlanner{
+    Process pool[];
+    void killProcess(int id);
+    int createProcess();
+    coid exit(int signal);
+	int kill(int pid, int signal);
+    int renice(int pid, int newPri);
+    void ps();
+    }
+Process "*" *-- "1" ProcessPlanner
+File "*" *-- "1" FileSystem
+
+
+
+
+
+
+
+
+
+actor Пользователь
+participant Интерпретатор
+participant FileSystem
+participant File
+activate Пользователь
+activate Интерпретатор
+Пользователь --> FileSystem : Ввод логина и пароля
+activate FileSystem
+FileSystem --> File : Проверка данных
+activate File
+FileSystem <-- File : Данные
+deactivate File
+Пользователь <-- FileSystem : Авторизация
+Пользователь --> Интерпретатор : Удалить файл FName
+Интерпретатор --> FileSystem : Удалить файл FName
+FileSystem --> FileSystem : Проверить наличие файла
+FileSystem --> File : Удалить файл
+activate File
+File --> File : Удаление
+FileSystem <-- File : Подтверждение
+deactivate File
+Интерпретатор <-- FileSystem : Подтверждение
+Интерпретатор --> Пользователь : Запрос следующей команды
+Пользователь --> Интерпретатор : Выход
+destroy Интерпретатор
+destroy FileSystem
+destroy Пользователь

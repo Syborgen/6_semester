@@ -1,0 +1,1392 @@
+<html>
+
+<head>
+<meta name=Generator content="HTML-фильтр Microsoft Office версии 2.1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Originator content="Microsoft Word 9">
+<title>Деформация моделей, построенных методом лофтинга</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+h5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:72.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:84.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:96.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:19.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.FR1, li.FR1, div.FR1
+	{
+	margin-top:0cm;
+	margin-right:130.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:20.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR2, li.FR2, div.FR2
+	{
+	margin-top:22.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR3, li.FR3, div.FR3
+	{
+	margin-top:20.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR4, li.FR4, div.FR4
+	{
+	margin-top:7.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Arial;}
+p.a, li.a, div.a
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:14.2pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.a0, li.a0, div.a0
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=silver lang=RU link=blue vlink=purple style='
+text-justify-trim:punctuation' background="fon.jpg">
+<div class=Section1>
+
+<p class=FR2 style='margin-top:0cm'><b><font size=5 face=Arial><span
+style='font-size:18.0pt;'>Деформация моделей,
+построенных методом лофтинга</span></font></b></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font color=blue><a href="#_Toc513992191">Кривые деформации</a></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513992192">Кнопки управления панелью кривой деформации</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513992193">Редактирование масштаба</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513992194">Деформация скрутки</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513992195">Деформация качки</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513992196">Деформация скоса</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513992197">Деформация подгонки</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513992198">Дополнения к сцене интерьера</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513992199">Присоединение файла к сцене</a></span></font></u></span></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>&nbsp;</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Стандартный метод лофтинга более эффективен при моделировании объектов
+со сложной геометрией. Но даже полностью смоделированная оболочка часто требует
+различного рода редактирования. На этом занятии мы рассмотрим способы
+модификации лофтинг-оболочки, которые сведены в пять разделов:</span></font></p>
+
+<p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt;font-weight:bold'> Scale</span></font></b> (Масштаб),<b><span
+style='font-weight:bold'>  Twist</span></b> (Скрутка),. <b><span
+style='font-weight:bold'> Teeter</span></b> (Качка),<b><span style='font-weight:
+bold'>  Bevel</span></b> (Скос),<b><span style='font-weight:bold'>  Fit</span></b>
+(Подгонка).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Загрузите
+объект, созданный ранее методом лофтинга. Для этого в меню <b><span
+style='font-weight:bold'> File</span></b> (Файл) выберите команду<b><span
+style='font-weight:bold'>  Open</span></b> (Открыть). </p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В появившемся диалоговом
+окне укажите требуемый файл и нажмите кнопку<b><span style='font-weight:bold'> 
+Open</span></b> (Открыть).</span></font></p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>После выполнения команды на рабочем экране появится
+созданная вами модель.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=164 height=295
+  src="./chapter9.files/image002.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.1.</span></font></b> Свиток
+  инструментов информации</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+окне<b><span style='font-weight:bold'>  Perspective</span></b> (Перспектива)
+выделите лофтинг-модель и перейдите на командную панель<b><span
+style='font-weight:bold'>  Modify</span></b> (Изменить).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Разверните
+свиток<b><span style='font-weight:bold'>  Deformation</span></b> (Деформация),
+расположенный в самом низу командной панели и щелкните LM на любой из кнопок
+инструментов деформации, показанных на рис. 9.1.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>На экране появится
+диалоговое окно<b><span style='font-weight:bold'>  Deformation</span></b>
+(Деформация), подобное приведенному на рис. 9.2. Прежде, чем перейти к изучению
+способов деформации, рассмотрим содержимое этого окна.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=498 height=247
+  src="./chapter9.files/image004.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.2.</span></font></b>
+  Диалоговое окно деформации</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc513992191"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Кривые деформации</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>На сетке диаграммы деформации находится линия красного цвета. Эта
+линия, называемая <i><span style='font-style:italic'>кривой деформации,</span></i>
+является графиком величины деформации сечения в зависимости от координат пути,
+вдоль которого строится оболочка объекта. Кривая имеет на концах два маркера,
+называемых <i><span style='font-style:italic'>управляющими точками.</span></i>
+На кривой деформации можно создать любое количество управляющих точек или
+удалить лишние. Каждая точка позволяет регулировать величину деформации в
+сечении, расположенном на заданном расстоянии от начала пути. Управляющие точки
+можно перемещать, используя инструменты панели управления окна диаграммы
+деформации, чтобы придать кривой ту форму, которая необходима.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Сверху над сеткой диаграммы находится <i><span style='font-style:italic'>относительная
+шкала расстояния. </span></i>Координаты положения управляющих точек вдоль линии
+пути, на котором размещаются сечения, указываются на диаграмме в процентах
+расстояния от начала этого пути.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Слева от сетки диаграммы находится <i><span style='font-style:italic'>шкала
+значений.</span></i> Градуировка этой шкалы зависит от типа деформации и
+позволяет оценить степень деформации сечения в любой точке вдоль размещения
+сечений.</span></font></p>
+
+<h3><a name="_Toc513992192"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Кнопки управления панелью кривой деформации</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>В верхней части окна расположены следующие кнопки.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=549 style='width:411.5pt;
+ border-collapse:collapse;'>
+ <tr height=18 style='height:13.75pt'>
+  <td width=457 height=18 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Make Symmetrical</span></font></b> (Симметрично по Х и Y).
+  Инструменты деформации могут применяться как относительно оси X, так и Y
+  (считается, что оси Х и Y направлены перпендикулярно линии пути, в
+  направлении которой ориентирована ось Z). Щелчок LM на данной кнопке
+  заставляет одну и ту же деформацию действовать относительно обеих осей.</p>
+  </td>
+  <td width=91 height=18 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=19 height=18
+  src="./chapter9.files/image005.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=18 style='height:13.75pt'>
+  <td width=457 height=18 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Display Х /Y/XY Axis</span></font></b> (Показать деформации по
+  Х /Y/XY). При нажатии одной из этих кнопок в сетке диаграммы изображается
+  кривая деформации относительно оси Х (линией красного цвета), оси Y (зеленого
+  цвета) или обе кривые одновременно.</p>
+  </td>
+  <td width=91 height=18 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=25 height=24
+  src="./chapter9.files/image007.jpg" alt="*"></span></font> <img border=0 width=25 height=24
+  src="./chapter9.files/image008.jpg"> <img border=0 width=27 height=25
+  src="./chapter9.files/image010.jpg"></p>
+  </td>
+ </tr>
+ <tr height=18 style='height:13.75pt'>
+  <td width=457 height=18 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Swap deform Curves</span></font></b> (Поменять кривые
+  деформации). Щелчок LM на данной кнопке меняет местами кривые деформации по
+  осям Х и Y. Эта кнопка доступна только тогда, когда выключен режим<b><span
+  style='font-weight:bold'>  Make Symmetrical</span></b> (Симметрично по Х и Y).</p>
+  </td>
+  <td width=91 height=18 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=23 height=21
+  src="./chapter9.files/image011.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=18 style='height:13.75pt'>
+  <td width=457 height=18 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Move Control Point</span></font></b> (Переместить управляющую
+  точку). Позволяет переместить управляющую точку кривой деформации в другое
+  место на диаграмме. На раскрывающейся панели данной кнопки находятся два
+  дополнительных инструмента, которые позволяют перемещать управляющие точки
+  только по горизонтали или только по вертикали.</p>
+  </td>
+  <td width=91 height=18 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=20 height=19
+  src="./chapter9.files/image012.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=18 style='height:13.75pt'>
+  <td width=457 height=18 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Scale Control Point</span></font></b> (Пропорциональное
+  управление). Включает режим пропорционального перемещения управляющей точки,
+  при котором она перемещается на меньшее расстояние, чем курсор мыши, для
+  обеспечения большей точности настройки кривой деформации.</p>
+  </td>
+  <td width=91 height=18 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=19 height=19
+  src="./chapter9.files/image013.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=18 style='height:13.75pt'>
+  <td width=457 height=18 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Insert Corner Point </span></font></b>(Вставить угловую
+  точку). Позволяет вставить новую точку излома в любом месте кривой
+  деформации. На раскрывающейся панели инструментов есть кнопка <b><span
+  style='font-weight:bold'> Insert Bezier Point</span></b> (Вставить точку
+  Безье). Управляющая точка Безье позволяет контролировать кривизну линии
+  деформации в окрестности данной точки.</p>
+  </td>
+  <td width=91 height=18 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'> <img border=0 width=19 height=18
+  src="./chapter9.files/image014.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=18 style='height:13.75pt'>
+  <td width=457 height=18 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Delete Control Point</span></font></b> (Удалить управляющую
+  точку). Позволяет удалить любые управляющие точки кривой деформации, кроме
+  первой и последней. Сначала следует выделить управляющую точку, а затем
+  щелкнуть LM на данной кнопке.</p>
+  </td>
+  <td width=91 height=18 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:13.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=19 height=18
+  src="./chapter9.files/image015.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=75 style='height:55.9pt'>
+  <td width=457 height=75 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:55.9pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Reset Curve</span></font></b> (Исходная кривая). Возвращает
+  кривую деформации к исходному виду, принятому по умолчанию для кривых данного
+  типа. В нижней части окна расположены следующие кнопки, используемые для
+  управления видом диаграммы.</p>
+  </td>
+  <td width=91 height=75 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:55.9pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=19 height=19
+  src="./chapter9.files/image016.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=23 style='height:16.95pt'>
+  <td width=457 height=23 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:16.95pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Pan</span></font></b> (Прокрутка). Позволяет выполнять
+  прокрутку изображения кривой деформации в окне диаграммы.</p>
+  </td>
+  <td width=91 height=23 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:16.95pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=18 height=16
+  src="./chapter9.files/image017.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=23 style='height:16.95pt'>
+  <td width=457 height=23 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:16.95pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Zoom extends</span></font></b> (Кривая целиком), <b><span
+  style='font-weight:bold'> Zoom Horizontal/Vertical Extents</span></b> (Целиком
+  по горизонтали/По вертикали). Изменяют масштаб в окне диаграммы, подгоняя его
+  под границы кривой деформации по обеим осям либо только по горизонтали или
+  вертикали.</p>
+  </td>
+  <td width=91 height=23 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:16.95pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr height=23 style='height:16.95pt'>
+  <td width=457 height=23 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:16.95pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Zoom Horizontally/Vertically</span></font></b> (Масштаб по
+  горизонтали/По вертикали). Позволяют сжать или растянуть горизонтальную
+  (вертикальную) шкалу окна диаграммы так, чтобы в окне наблюдалась часть
+  кривой деформации. Для изменения масштаба после щелчка на кнопке в окне
+  диаграммы щелкните в окне диаграммы и перетаскивайте мышь вправо или влево
+  (вверх или вниз).</p>
+  </td>
+  <td width=91 height=23 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:16.95pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=62 height=17
+  src="./chapter9.files/image019.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr height=23 style='height:16.95pt'>
+  <td width=457 height=23 valign=top style='width:343.1pt;padding:0cm 0cm 0cm 0cm;
+  height:16.95pt'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Zoom</span></font></b> (Масштаб), <b><span style='font-weight:
+  bold'> Zoom Region</span></b> (Масштаб области). Кнопки изменения масштаба
+  изображения в окне диаграммы, действующие аналогично таким же кнопкам
+  управления окнами проекции.</p>
+  </td>
+  <td width=91 height=23 valign=top style='width:68.4pt;padding:0cm 0cm 0cm 0cm;
+  height:16.95pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=39 height=17
+  src="./chapter9.files/image020.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513992193"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Редактирование масштаба</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>В развернутом свитке<b><span
+style='font-weight:bold'>  Deformation</span></b> (Деформация), расположенном в
+самом низу командной панели, выберите кнопку<b><span style='font-weight:bold'> 
+Scale</span></b> (Масштаб).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>На экране появится окно
+диаграммы деформации масштаба. Деформация масштаба позволяет менять размер
+сечения в зависимости от координаты пути, вдоль которого строится оболочка
+объекта.</span></font></p>
+
+<p class=MsoBodyTextIndent3 style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Кривая деформации
+масштаба представляет собой линию продольного сечения объекта.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent3 style='margin-left:0cm'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=498 height=230
+  src="./chapter9.files/image022.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent3 style='margin-left:0cm'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'> Рис.
+  9.3.</span></font></b> Кривая деформации с дополнительными точками</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:13.9pt;margin-bottom:.0001pt;text-indent:-13.9pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>&nbsp;</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=548 style='width:411.1pt;
+ margin-left:.4pt;border-collapse:collapse;'>
+ <tr>
+  <td width=454 valign=top style='width:12.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:19.0pt;text-align:justify;text-indent:
+  -18.0pt;'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>С помощью кнопки<b><span
+  style='font-weight:bold'>  Insert Corner Point</span></b> (Вставить угловую
+  точку) вставьте простые дополнительные точки и точки Безье, как показано на
+  рис. 9.3.</p>
+  </td>
+  <td width=95 valign=top style='width:70.9pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=19 height=18
+  src="./chapter9.files/image014.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=454 valign=top style='width:12.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:19.0pt;text-align:justify;text-indent:
+  -18.0pt;'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Используя кнопку<b><span
+  style='font-weight:bold'>  Move Control Point</span></b> (Переместить
+  управляющую точку), измените кривую масштаба.</p>
+  </td>
+  <td width=95 valign=top style='width:70.9pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=19 height=18
+  src="./chapter9.files/image023.jpg" alt="*"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Закройте окно диалога, щелкнув LM на пиктограмме &quot;крест&quot; в
+правом верхнем углу. Результаты редактирования размеров сечения показаны на
+рис. 9.4.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter9.files/image025.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.4.</span></font></b>
+  Результат деформации масштаба объекта</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513992194"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Деформация скрутки</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Деформация скрутки заставляет форму-сечение разворачиваться в
+плоскости, перпендикулярной линии пути, вдоль которого строится трехмерная
+оболочка.</span></font></p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+LM на кнопке<b><span style='font-weight:bold'>  Twist</span></b> (Скрутка).
+Вставьте дополнительные точки деформации, как показано на рис. 9.5.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=498 height=247
+  src="./chapter9.files/image027.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.5.</span></font></b> Кривая
+  скрутки</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Используя
+кнопку<b><span style='font-weight:bold'>  Move Control Point</span></b>
+(Переместить управляющую точку), разверните сечение.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Результат поворота сечения показан на рис. 9.6.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter9.files/image029.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.6.</span></font></b>
+  Деформация объекта, соответствующая кривой скрутки</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513992195"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Деформация качки</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Деформация качки<b><span style='font-weight:bold'>  (Teeter)</span></b>
+вызывает поворот формы-сечения относительно осей, перпендикулярных линии пути,
+либо наклоняя сечение вперед или назад, либо поворачивая его вперед левым или
+правым боком.</span></font></p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+LM на кнопке<b><span style='font-weight:bold'>  Teeter</span></b> (Качка).
+Вставьте дополнительную точку Безье, как показано на рис. 9.7.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=499 height=247
+  src="./chapter9.files/image031.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.7.</span></font></b> Кривая
+  деформации качки</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Активизируйте
+кнопку, позволяющую показать деформацию по<b><span style='font-weight:bold'>  X,</span></b>
+и измените кривую деформации.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Результат поворота сечения показан на рис. 9.8.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter9.files/image033.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.8.</span></font></b> Объект,
+  подвергнутый деформации качки</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513992196"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Деформация скоса</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Деформация скоса<b><span style='font-weight:bold'>  (Bevel)</span></b>
+как и деформация масштаба вызывает изменение размеров сечений по мере
+продвижения вдоль линии пути. Однако, в отличие от деформации масштаба,
+деформация скоса оказывает противоположное действие на внешние и внутренние
+контуры форм-сечений, имеющих отверстия: если внешний контур уменьшается, то
+внутренний увеличивается, и наоборот.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Построим лофтинг-объект с помощью сечения, имеющего внешний и
+внутренний контур.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>На
+командной панели<b><span style='font-weight:bold'>  Create</span></b> (Создать)
+нажмите кнопку<b><span style='font-weight:bold'>  Shapes</span></b> (Формы), а
+затем нажмите кнопку<b><span style='font-weight:bold'>  Text</span></b> (Текст)
+и в качестве формы-сечения создайте букву О. Для указания пути создайте отрезок
+прямой.</p>
+
+<p class=MsoNormal align=center style='margin-right:10.0pt;text-align:center'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>Построенный с
+таким сечением лофтинг-объект показан на рис. 9.9.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.0pt'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter9.files/image035.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.0pt'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'> Рис.
+  9.9.</span></font></b> Исходный лофтинг-объект</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Перейдите
+на панель<b><span style='font-weight:bold'>  Modify</span></b> (Изменить) и
+щелкните на кнопке<b><span style='font-weight:bold'>  Bevel</span></b> (Скос).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Переместите
+конечные маркеры кривой деформации, как показано на рис. 9.10.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=464 valign=top style='width:348.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=498 height=247
+  src="./chapter9.files/image037.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=464 valign=top style='width:348.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.10.</span></font></b> Кривая
+  деформаций скоса</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Блокировка параметров<b><span style='font-weight:bold'>  Make
+Symmetrical</span></b> (Симметрично по Х и Y) и <b><span style='font-weight:
+bold'> Display Х/Y/XY Axis</span></b> (Показать деформации по Х /Y/XY)
+необходима, т. к. эта деформация по определению применяется симметрично по
+отношению к обеим осям деформации. Данный тип деформации очень чувствителен к
+величине скоса: чрезмерно большие значения этого параметра ведут к искажению
+формы объекта. Результат использования деформации скоса показан на рис. 9.11.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:5.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter9.files/image039.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.11.</span></font></b>
+  Результат деформации скоса лофтинг-объекта</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513992197"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Деформация подгонки</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Деформация<b><span style='font-weight:bold'>  Fit</span></b> (Подгонка)
+позволяет редактировать лофтинг-модель таким образом, чтобы ее проекции
+соответствовали заданным плоским формам.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Рассмотрим сначала назначения нескольких дополнительных кнопок на
+панели инструментов окна диалога<b><span style='font-weight:bold'>  Fit
+Deformation</span></b> (Деформация подгонки):</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=549 style='width:411.5pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=492 valign=top style='width:368.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Mirror HorizontaIl/Vertically </span></font></b>(Отразить по
+  горизонтали/вертикали) — зеркально отражает профиль проекции в окне диаграммы
+  деформации на 90° по часовой стрелке (против часовой стрелки);</p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=39 height=18
+  src="./chapter9.files/image041.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Rotate 90 CW/CCW</span></font></b> (Повернуть на 90° по
+  часовой стрелке/против часовой стрелки) — поворачивает профиль проекции в
+  окне диаграммы деформации;</p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=41 height=16
+  src="./chapter9.files/image042.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Delete Curve</span></font></b> (Удалить кривую) — удаляет
+  выделенный профиль проекции в окне диаграммы деформации;</p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=23 height=21
+  src="./chapter9.files/image043.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Get Shape</span></font></b> (Взять форму) — позволяет выбрать
+  замкнутую двумерную кривую в качестве профиля для подгонки формы сечения
+  трехмерного объекта в направлении выбранной оси локальной системы координат;</p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=19 height=18
+  src="./chapter9.files/image044.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Generate Path</span></font></b> (Создать путь) — автоматически
+  выполняет генерацию нового пути, вдоль которого будет построена оболочка
+  объекта, таким образом, чтобы этот путь в большей мере соответствовал
+  заданным профилям проекции.</p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=23 height=21
+  src="./chapter9.files/image045.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'>В нижней части окна диалога <b><span
+  style='font-weight:bold'> Fit Deformation</span></b> (Деформация подгонки)
+  появилась новая кнопка <b><span style='font-weight:bold'> Lock Aspect</span></b>
+  (Сохранить пропорции). Она поддерживает правильные пропорции формы-профиля
+  при изменении масштаба изображения в окне диаграммы деформации. Если этот режим
+  не включен, то вертикальная шкала окна градуируется в абсолютных единицах
+  размера формы, а горизонтальная — в процентах расстояния от начала пути,
+  вдоль которого строится оболочка объекта. В результате пропорции
+  формы-профиля могут быть нарушены.</span></font></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=19 height=18
+  src="./chapter9.files/image046.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Рассмотрим моделирование корпуса скрипки методом деформации подгонки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Перейдите
+в окно проекции<b><span style='font-weight:bold'>  Тор</span></b> (Вид сверху).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Здесь будут создаваться
+заготовки для метода подгонки: контуры продольного и поперечных сечений.
+Продольное — вдоль плоскости XY и поперечные — по осям Х и Y. Контуры сечений
+можно строить с помощью сплайнов или NURBS-кривых.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>На
+командной панели<b><span style='font-weight:bold'>  Create</span></b> (Создать)
+нажмите кнопку<b><span style='font-weight:bold'>  Shapes</span></b> (Формы), а
+затем нажмите кнопку<b><span style='font-weight:bold'>  Splines</span></b>
+(Сплайны) и постройте контуры сечений и путь, как показано на рис. 9.12.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Проверьте замкнутость контуров форм-сечений.</span></font></p>
+
+<p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Постройте основу методом
+лофтинга, взяв в качестве формы продольное сечение (рис. 9.13).</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=214
+  src="./chapter9.files/image048.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.12.</span></font></b>
+  Формы-сечения и путь для моделирования объекта методом подгонки</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=214
+  src="./chapter9.files/image050.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.13.</span></font></b>
+  Основа, созданная методом лофтинга</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+на кнопке<b><span style='font-weight:bold'>  Fit</span></b> (Подгонка) в свитке<b><span
+style='font-weight:bold'>  Deformation</span></b> (Деформация)</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+появившемся окне диалога отключите режим &quot;симметрично по Х и Y&quot;,
+щелкнув LM на кнопке<b><span style='font-weight:bold'>  Make Symmetrical</span></b>
+(Симметрично по Х и Y).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+LM на кнопке<b><span style='font-weight:bold'>  Display Х Axis</span></b>
+(Показать деформацию по X).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+LM на кнопке<b><span style='font-weight:bold'>  Get Shape</span></b> (Взять
+форму) и выделите контур поперечного сечения.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Используя кнопки отражения и поворота, придайте форме
+нужное положение. Следите за изменением объекта в окнах проекции.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Пользуясь
+инструментами окна деформации подгонки, скорректируйте форму контура сечения.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Готовая форма сечения показана на рис. 9.14, окончательно
+смоделированный объект — на рис. 9.15.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=498 height=247
+  src="./chapter9.files/image052.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.14.</span></font></b> Кривая
+  деформации подгонки поперечного сечения</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=214
+  src="./chapter9.files/image054.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.15.</span></font></b>
+  Окончательно смоделированный методом подгонки объект</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc513992198"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Дополнения к сцене интерьера</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Используя метод лофтинга и рассмотренные выше средства модификации,
+смоделируйте водопроводный кран для сцены интерьера, созданной в разделах
+четвертого занятия.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>На
+командной панели<b><span style='font-weight:bold'>  Create</span></b> (Создать)
+нажмите кнопку<b><span style='font-weight:bold'>  Shapes</span></b> (Формы), а
+затем нажмите кнопку<b><span style='font-weight:bold'>  Donut</span></b>
+(Кольцо). Постройте кольцо в окне проекции<b><span style='font-weight:bold'> 
+Тор</span></b> (Вид сверху).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Создана форма-сечение для
+крана (рис. 9.16, <i><span style='font-style:italic'>а).</span></i></span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Таким
+же образом создайте:</p>
+
+<p class=MsoToc1 style='margin-left:35.7pt;text-indent:-17.85pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Ngon</span></b>
+(Многоугольник), как путь для ручки (рис. 9.16, <i><span style='font-style:
+italic'>б);</span></i></p>
+
+<p class=MsoToc1 style='margin-left:35.7pt;text-indent:-17.85pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol;'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Circle</span></b>
+(Окружность), как форму-сечение для ручки (рис. 9.16, <i><span
+style='font-style:italic'>в).</span></i></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=214
+  src="./chapter9.files/image056.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.16.</span></font></b>
+  Заготовки для лофтинг-моделей</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>На
+командной панели<b><span style='font-weight:bold'>  Create</span></b> (Создать)
+нажмите кнопку<b><span style='font-weight:bold'>  Shapes</span></b> (Формы),
+нажмите кнопку<b><span style='font-weight:bold'>  NURBS Curves</span></b>
+(NURBS-кривые), а затем —<b><span style='font-weight:bold'>  Point Curve </span></b>(Точечная
+кривая) и создайте путь для крана (рис. 9.16, г).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Создайте
+лофтинг-модель крана, установив значение счетчика<b><span style='font-weight:
+bold'>  Path Steps </span></b>(Шагов пути) в разделе<b><span style='font-weight:
+bold'>  Options</span></b> (Параметры) не менее 24.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Напомним, что величина этого параметра влияет на
+степень сглаженности оболочки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+на командной панели<b><span style='font-weight:bold'>  Modify</span></b>
+(Изменить) элемент<b><span style='font-weight:bold'>  Deformation </span></b>(Деформации),
+а затем<b><span style='font-weight:bold'>  Scale</span></b> (Масштаб).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Настроенная кривая масштаба для крана показана на рис.
+9.17. Готовая модель крана — на рис. 9.18.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Создайте
+лофтинг-модель ручки, выбрав пятиугольник в качестве пути и окружность в
+качестве формы-сечения.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Кнопку
+для ручки можно создать из конуса, использовав команду неравномерного
+масштабирования.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Готовая модель ручки
+показана на рис. 9.19.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=498 height=247
+  src="./chapter9.files/image058.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.17.</span></font></b> Кривая
+  масштаба для крана</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=214
+  src="./chapter9.files/image060.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.18.</span></font></b>
+  Лофтинг-модель крана</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> <img border=0 width=306 height=212
+  src="./chapter9.files/image062.jpg"></span></font></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.19.</span></font></b>
+  Лофтинг-модель ручки</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>8.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Отмасштабируйте
+пропорционально оба объекта и создайте дубликат ручки.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Скомпонуйте построенные объекты в созданном ранее интерьере.</span></font></p>
+
+<h2><a name="_Toc513992199"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Присоединение файла к сцене</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+в меню<b><span style='font-weight:bold'>  File</span></b> (Файл) команду<b><span
+style='font-weight:bold'>  Merge</span></b> (Присоединить).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится диалоговое окно<b><span
+style='font-weight:bold'>  Merge File</span></b> (Присоединение файла), не
+отличающееся от типового окна открытия файла.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=401 height=367
+  src="./chapter9.files/image064.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 9.20.</span></font></b>
+  Диалоговое окно команды присоединения</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Укажите файл интерьера и нажмите кнопку<b><span
+style='font-weight:bold'>  Open</span></b> (Открыть).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится диалоговое окно<b><span
+style='font-weight:bold'>  Merge</span></b> (Присоединить), показанное на рис.
+9.20.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Выделите в списке окна объекты сцены,
+требующие присоединения и щелкните на кнопке<b><span style='font-weight:bold'> 
+ОК.</span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>К текущей сцене с
+деталями крана присоединятся объекты интерьера.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Скомпонуйте
+в интерьере детали крана..</p>
+
+</div>
+
+</body>
+
+</html>

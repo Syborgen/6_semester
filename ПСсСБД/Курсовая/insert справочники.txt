@@ -1,0 +1,14 @@
+insert into districts (district)
+values ('Киевский')
+
+select * from districts
+
+insert into statuses (status)
+values ('Рабочий')
+
+select * from statuses
+
+insert into product_types (product_type)
+values ('Посуда')
+
+select * from product_types

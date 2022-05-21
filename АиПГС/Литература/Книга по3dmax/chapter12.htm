@@ -1,0 +1,1191 @@
+<html>
+
+<head>
+<meta name=Generator content="HTML-фильтр Microsoft Office версии 2.1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Originator content="Microsoft Word 9">
+<title>Моделирование освещения</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:72.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:84.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:96.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:17.85pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:19.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0cm;
+	margin-right:60.0pt;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.FR1, li.FR1, div.FR1
+	{
+	margin-top:0cm;
+	margin-right:180.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:20.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR2, li.FR2, div.FR2
+	{
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR3, li.FR3, div.FR3
+	{
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:108%;
+	text-autospace:none;
+	font-size:9.0pt;
+	font-family:Arial;}
+p.a, li.a, div.a
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.a0, li.a0, div.a0
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=silver lang=RU link=blue vlink=purple style='
+text-justify-trim:punctuation' background="fon.jpg">
+<div class=Section1>
+
+<p class=FR2 style='margin-top:0cm'><b><font size=5 face=Arial><span
+style='font-size:18.0pt;'>Моделирование освещения</span></font></b></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font color=blue><a href="#_Toc515341604">Создание источников света</a></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc515341605">Настройка параметров теней</a></span></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc515341606">Всенаправленный источник света</a></span></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc515341607">Свободнонаправленный источник света и свободный прожектор</a></span></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc515341608">Нацеленнонаправленный источник света</a></span></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc515341609">Исключение объектов из освещения</a></span></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc515341610">Настройка подсветки</a></span></font></u></span></p>
+
+<p class=MsoNormal><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Созданная сцена должна
+быть освещена, иначе объекты этой сцены будут не видны. В предыдущих занятиях
+вопрос освещения не стоял, поскольку все построенные объекты были видны. Их
+освещали два источника света, установленных по умолчанию. Свет от одного из них
+падает на объекты спереди из левого верхнего угла сцены, а другого — сзади из
+правого нижнего угла. Оба источника света отключаются, если появляется
+созданный источник света, а при удалении всех созданных источников света
+восстанавливаются. Этот урок будет посвящен моделированию освещения, созданию
+различных источников света и настройке их параметров.</span></font></p>
+
+<h2><a name="_Toc515341604"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Создание источников света</span></font></b></a></h2>
+
+<p class=MsoBodyText2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>При создании освещения сцены используют пять типов
+источников света:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>всенаправленный<b><span style='font-weight:
+bold'>  (Опии),</span></b> излучающий свет равномерно во все стороны;</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>свободно направленный источник (<span
+lang=EN-US>Free</span><b><span lang=EN-US style='font-weight:bold'> Direct</span>);</b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>нацеленный источник<b><span
+style='font-weight:bold'>  (</span></b><b><span lang=EN-US style='font-weight:bold'> Target</span></b><b><span
+lang=EN-US style='font-weight:bold'> Direct</span>);</b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>нацеленный прожектор (<span lang=EN-US>Free</span><b><span lang=EN-US style='font-weight:bold'> Spot</span>);</b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:50.0pt;margin-bottom:
+4.0pt;margin-left:18.0pt;text-align:justify;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>свободный прожектор<b><span
+style='font-weight:bold'>  (</span></b><b><span lang=EN-US style='font-weight:bold'> Target</span></b><b><span
+lang=EN-US style='font-weight:bold'> Spot</span>). </b>Перед
+тем как создать источник света, постройте на экране сферу.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=555 style='width:416.5pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=511 valign=top style='width:383.15pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:19.0pt;text-align:justify;text-indent:
+  -18.0pt;'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>На командной панели<b><span lang=EN-US style='font-weight:bold'> Create</span></b> (Создать) нажмите кнопку<b><span lang=EN-US style='font-weight:bold'> Lights</span></b>(Источники
+  света).</p>
+  <p class=MsoNormal style='margin-top:0cm;margin-right:50.0pt;margin-bottom:
+  4.0pt;margin-left:19.0pt;text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>В свитке</span></font><b><span lang=EN-US
+  style='font-weight:bold'> Object</span></b><b><span lang=EN-US style='
+  font-weight:bold'> Type</span></b> (Тип объекта) появятся кнопки для создания
+  различных источников света (рис. 12.1).</p>
+  </td>
+  <td width=44 valign=top style='width:33.35pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-right:50.0pt;text-align:justify'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=21 height=19
+  src="./chapter12.files/image001.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span lang=EN-US style='font-size:12.0pt;'>&nbsp;</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=516 valign=top style='width:386.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=165 height=100
+  src="./chapter12.files/image003.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=516 valign=top style='width:386.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;
+  font-weight:bold'> Рис. 12.1.</span></font></b> Набор кнопок с различными типами источников света</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните <span lang=EN-US>LM</span> на кнопке<b><span lang=EN-US style='
+font-weight:bold'> Target</span></b><b><span
+lang=EN-US style='font-weight:bold'> Spot</span></b>
+(Нацеленный прожектор).</p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните LM в окне перспективы и, не
+отпуская кнопку мыши, наведите появившийся конус на существующий объект.</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:10.0pt;margin-bottom:
+4.0pt;margin-left:19.0pt;text-align:justify'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>На рис. 12.2 показан вариант построения направленного
+освещения.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.0pt;text-align:justify'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter12.files/image005.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-right:10.0pt;text-align:justify'><b><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'> Рис. 12.2.</span></font></b> Пример построения направленного источника света</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Раскройте свиток <span lang=EN-US>General</span><b><span lang=EN-US style='font-weight:bold'> Parameters</span></b> (Общие параметры).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>В нем производится настройка общих свойств параметров
+света, одинаковых для всех типов освещения.</span></font></p>
+
+<p class=a><b><font size=2 face=Arial><span style='font-size:10.0pt;font-weight:
+bold'> Замечание</span></font></b></p>
+
+<p class=a><font size=2 face=Arial><span style='font-size:10.0pt'>Помните, что
+построенный источник света можно настраивать с помощью указанных ниже
+параметров, если не снимался его выбор, и не использовались операции
+перемещения и поворота. В противном случае параметры можно выставить только в
+разделе </span></font><span lang=EN-US>Modify</span>
+(Изменить).</p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>5.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Первым отметьте флажок<b><span lang=EN-US style='font-weight:bold'> On</span></b> (Включение).</p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Если параметр</span></font><b><span lang=EN-US
+style='font-weight:bold'> On</span></b> (Включение) не
+отмечен, то источник света будет отключен.</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>При включенном источнике необходимо определить
+следующие параметры:</span></font></p>
+
+<p class=MsoNormal style='margin-left:37.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Exclude</span></b> (Исключение) — кнопка позволяет
+выбирать объекты сцены, на которые падает освещение от данного источника. Поле
+с образцом цвета справа от флажка<b><span
+lang=EN-US style='font-weight:bold'> On</span></b>
+(Включение) дает возможность настраивать цвет света. Для вызова цветовой
+палитры<b><span lang=EN-US
+style='font-weight:bold'> Color</span></b><b><span
+lang=EN-US style='font-weight:bold'> Selector</span></b>
+(Выбор цвета) достаточно щелкнуть LM в окне с образцом;</p>
+
+<p class=MsoNormal style='margin-left:37.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Multiplier</span></b> (Усилитель) — счетчик регулирует
+общий уровень интенсивности света;</p>
+
+<p class=MsoNormal style='margin-left:37.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Contrast</span></b> (Контраст) — счетчик регулирует
+контрасты света и тени;</p>
+
+<p class=MsoNormal style='margin-left:37.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>счетчики<b><span lang=EN-US
+style='font-weight:bold'>  Soften Diff. Edge</span></b>
+(Размытие краев диффузного цвета) и<b><span
+lang=EN-US style='font-weight:bold'> Affect</span></b><b><span lang=EN-US style='
+font-weight:bold'> Specular</span></b> (Влиять на зеркальный цвет) — управляют
+воздействием света соответственно на диффузное и на зеркальное отражения.</p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>6.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>В свитке<b><span lang=EN-US style='font-weight:bold'> Attenuation</span></b><b><span lang=EN-US style='
+font-weight:bold'> Parameters</span></b> (Затухание) установите параметры
+затухания света на расстоянии:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Start</span></b> (Начало) и<b><span lang=EN-US style='
+font-weight:bold'> End</span></b> (Конец) — счетчики задают интервалы действия
+затухания в ближней зоне, где интенсивность света будет нарастать от нуля до постоянной
+величины (параметры группы<b><span
+lang=EN-US style='font-weight:bold'> Near</span></b><b><span lang=EN-US style='
+font-weight:bold'> Attenuation</span>),</b> и в дальней зоне, где интенсивность
+света будет спадать до нуля (параметры группы<b><span lang=EN-US style='font-weight:bold'> Far</span></b><b><span lang=EN-US style='
+font-weight:bold'> Attenuation</span>);</b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Use</span></b> (Применить) и<b><span lang=EN-US style='
+font-weight:bold'> Show</span></b> (Показать) — флажки включают эффекты
+затухания и обозначают граничные сферы зон затухания в окнах проекций (рис.
+12.3 — в группе<b><span
+lang=EN-US style='font-weight:bold'> Near</span></b><b><span lang=EN-US style='
+font-weight:bold'> Attenuation</span></b> и рис. 12.4 — в группе<b><span lang=EN-US style='font-weight:bold'> Far</span></b><b><span
+lang=EN-US style='font-weight:bold'> Attenuation</span>);</b></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:36.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=436 valign=top style='width:326.65pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter12.files/image007.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:326.65pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;
+  font-weight:bold'> Рис. 12.3.</span></font></b> Эффект затухания в ближней зоне</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:326.65pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter12.files/image009.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=436 valign=top style='width:326.65pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;
+  font-weight:bold'> Рис. 12.4.</span></font></b> Эффект затухания в дальней зоне</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-17.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>значение <span lang=EN-US>None</span> (Отсутствует) раскрывающегося
+списка<b><span lang=EN-US
+style='font-weight:bold'> Type</span></b> (Тип) группы<b><span lang=EN-US style='font-weight:bold'> Decay</span></b> (Ослабление) — интенсивность света
+остается постоянной на всем интервале его действия;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-17.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>значение<b><span lang=EN-US style='font-weight:bold'> Inverse</span></b>
+(Обратная пропорция) раскрывающегося списка<b><span
+lang=EN-US style='font-weight:bold'> Type</span></b>(Тип) группы<b><span
+lang=EN-US style='font-weight:bold'> Decay</span></b>
+(Ослабление) — свет ослабевает обратно пропорционально расстоянию от источника,
+т. е. искусственно занижается его ослабление;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-17.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>значение<b><span lang=EN-US style='font-weight:bold'> Inverse</span></b><b><span lang=EN-US style='
+font-weight:bold'> Square</span></b> (Обратный квадрат) раскрывающегося списка <b><span
+lang=EN-US style='font-weight:bold'> Type</span></b>
+(Тип) группы<b><span lang=EN-US
+style='font-weight:bold'> Decay</span></b> (Ослабление)
+— свет ослабевает обратно пропорционально квадрату расстояния, что
+приблизительно соответствует реальному эффекту.</p>
+
+<h2><a name="_Toc515341605"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Настройка параметров теней</span></font></b></a></h2>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В свитке</span></font><b><span lang=EN-US
+style='font-weight:bold'> Shadow</span></b><b><span lang=EN-US style='font-weight:bold'> Parameters</span></b>
+(Параметры тени) настраиваются параметры теней, одинаковые для всех источников
+света.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Настройте режимы параметров теней:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-17.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> On</span></b> (Отбрасывать тени) — флажок включает
+режим воспроизведения теней от источника света;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-17.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Use</span></b><b><span
+lang=EN-US style='font-weight:bold'> Global</span></b><b><span lang=EN-US style='
+font-weight:bold'> Settings</span></b> (Применить глобальные настройки) — флажок
+приводит все остальные параметры свитка в соответствие со значениями
+аналогичных параметров других источников света, у которых установлен параметр
+глобальных настроек;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-17.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Shadow</span></b><b><span
+lang=EN-US style='font-weight:bold'> Maps</span></b>
+(Применять карты тени) — режим построения теней с размытыми краями задается в
+раскрывающемся списке окне;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Ray</span></b><b><span
+lang=EN-US style='font-weight:bold'> Traced</span></b><b><span lang=EN-US style='
+font-weight:bold'> Shadows</span></b> (Применять трассированные тени) — режим
+используется для имитации точных по форме теней с резко очерченными краями
+задается в раскрывающемся списке;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Color</span></b> (Цвет) — поле для задания цвета тени,
+при щелчке <span lang=EN-US>LM</span> по
+которому вызывается палитра;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Dens</span></b> (Плотность) — счетчик задает плотность
+тени;</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>В свитке<b><span lang=EN-US style='font-weight:bold'> Shadow</span></b><b><span lang=EN-US style='
+font-weight:bold'> Maps</span></b><b><span lang=EN-US
+style='font-weight:bold'> Params</span></b> (Параметры
+карт теней) настройте параметры:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Bias</span></b> (Смещение карты) — счетчик определяет,
+на каком расстоянии от объекта будет появляться его тень. По умолчанию смещение
+задается в 4 единицы. Если требуется, чтобы тень была прижата к краю объекта,
+то следует задать параметр равным 1;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Size</span></b> (Размер) — счетчик определяет размер
+карты теней в пикселах. Принятое по умолчанию значение — 256;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Sample</span></b><b><span
+lang=EN-US style='font-weight:bold'> Range</span></b>
+(Диапазон усреднения) — счетчик указывает количество усреднений карт теней.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Для просмотра тени с заданными
+параметрами выберите в меню<b><span
+lang=EN-US style='font-weight:bold'> Rendering</span></b>
+(Визуализация) команду<b><span
+lang=EN-US style='font-weight:bold'> Render</span></b>
+(Визуализировать).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Не вдаваясь в подробности
+режимов тонирования (они будут рассмотрены позже) щелкните LM на кнопке</span></font><b><span lang=EN-US
+style='font-weight:bold'> Render</span></b>
+(Визуализировать) в появившемся окне<b><span
+lang=EN-US style='font-weight:bold'> Render</span></b><b><span lang=EN-US style='
+font-weight:bold'> Scene</span></b> (Визуализация сцены).</p>
+
+<h2><a name="_Toc515341606"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Всенаправленный источник света</span></font></b></a></h2>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Всенаправленный источник
+света равномерно освещает объекты во всех направлениях.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Нажмите на командной панели<b><span lang=EN-US style='font-weight:bold'> Create</span></b> (Создать) кнопку<b><span lang=EN-US style='font-weight:bold'> Lights</span></b> (Источник света), а затем — кнопку<b><span lang=EN-US style='font-weight:bold'> Omni</span></b> (Всенаправленный).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните <span lang=EN-US>LM</span> в проекции окна в той точке, где
+должен располагаться источник света. Не отпуская кнопку мыши, можно передвинуть
+появившийся значок источника света, уточняя его положение в пространстве сцены.</p>
+
+<p class=a><b><font size=2 face=Arial><span style='font-size:10.0pt;font-weight:
+bold'> Примечание</span></font></b></p>
+
+<p class=a><font size=2 face=Arial><span style='font-size:10.0pt'>Всенаправленный
+источник света можно использовать в качестве проектора растрового изображения
+на поверхность растрового изображения.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Включите режим проецирования растрового
+изображения в свитке<b><span
+lang=EN-US style='font-weight:bold'> Projector</span></b><b><span lang=EN-US style='
+font-weight:bold'> Parameters</span></b> (Параметры проектирования). Для этого
+щелкните LM на кнопке<b><span
+lang=EN-US style='font-weight:bold'> Map</span></b>
+(Карта). Появится окно диалога<b><span
+lang=EN-US style='font-weight:bold'> Material</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Map</span></b><b><span lang=EN-US style='
+font-weight:bold'> Browser</span></b></p>
+
+<p class=MsoNormal style='margin-left:12.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>(Просмотр материалов и
+карт текстур).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Выберите карту текстуры и нажмите кнопку<b><span
+style='font-weight:bold'>  ОК.</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Проецирование выбранной
+текстуры можно наблюдать в режиме</span></font><b><span
+lang=EN-US style='font-weight:bold'> Render</span></b>(Тонировать).</p>
+
+<h2><a name="_Toc515341607"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Свободнонаправленный источник света и свободный прожектор</span></font></b></a></h2>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>На командной панели<b><span lang=EN-US style='font-weight:bold'> Create</span></b> (Создать) нажмите кнопку<b><span lang=EN-US style='font-weight:bold'> Lights</span></b> (Источник света), а затем — кнопку<b><span lang=EN-US style='font-weight:bold'> Free</span></b><b><span
+lang=EN-US style='font-weight:bold'> Direct</span></b>
+(Свободнонаправленный).</p>
+
+<p class=MsoBlockText><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Выставьте источник света в окно проекции, щелкнув LM.
+Вид его показан на рис. 12.5</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Для корректировки его положения были
+использованы преобразования поворота и перемещения. Теперь, чтобы настроить
+параметры источника света, следует перейти на командную панель<b><span lang=EN-US style='font-weight:bold'> Modify</span></b> (Изменить).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Помимо общих для всех типов освещения
+параметров, рассмотренных выше ранее в этом занятии, следует настроить еще
+параметры свитка <b><span lang=EN-US style='font-weight:
+bold'> Directional</span></b><b><span lang=EN-US
+style='font-weight:bold'> Parameters</span></b>(Параметры направленного света):</p>
+
+<p class=MsoNormal style='margin-left:36.15pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Hotspot</span></b> (Яркое пятно) — счет определяет
+размер области, в пределах которой интенсивность падающего света остается
+постоянной и равной значению, заданному для источника в счетчике<b><span lang=EN-US style='font-weight:bold'> Multiplier</span></b> (Усилитель). Границы области отмечены
+голубой линией;</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=466 style='width:349.8pt;
+ margin-left:36.0pt;border-collapse:collapse;'>
+ <tr>
+  <td width=466 valign=top style='width:349.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter12.files/image011.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=466 valign=top style='width:349.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;
+  font-weight:bold'> Рис. 12.5.</span></font></b> Свободнонаправленный источник света</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Falloff</span></b> (Край пятна) — счетчик задает размер
+кольцевой области по краю светового пятна, в пределах которой интенсивность
+света спадает от максимального значения до нуля;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Show</span></b><b><span
+lang=EN-US style='font-weight:bold'> Cone</span></b>
+(Показать конус) — флажок включает режим постоянного показа цилиндрических
+границ яркого пятна и края светового пятна;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Circle</span></b> (Круг) и<b><span lang=EN-US style='
+font-weight:bold'> Rectangle</span></b> (Прямоугольник) — переключатели
+определяют форму направленного пучка света;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Aspect</span></b> (Пропорции формы) — счетчик регулирует
+пропорции формы пучка света в случае прямоугольной его формы;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Overshoot</span></b> (Рассеивание) — установка флажка
+заставляет направленный источник света освещать по типу всенаправленного;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Bitmap</span></b><b><span
+lang=EN-US style='font-weight:bold'> Fit</span></b>
+(Подогнать под карту) — кнопка позволяет подогнать пропорции пятна под
+пропорции растровой карты в случае использования источника света как
+прожектора;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Target</span></b><b><span
+lang=EN-US style='font-weight:bold'> Distance</span></b>
+(Расстояние до мишени) — счетчик задает расстояние от источника света до
+мишени, вокруг которой источник света можно поворачивать с помощью инструмента<b><span lang=EN-US style='font-weight:bold'> Orbit</span></b><b><span
+lang=EN-US style='font-weight:bold'> Light</span></b>
+(Облет источником света) из группы инструментов управления окнами проекции.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Элементы группы</span></font><b><span lang=EN-US
+style='font-weight:bold'> Progector</span></b><b><span lang=EN-US style='
+font-weight:bold'> Map</span></b> (Карта проектора) свободно-направленного
+источника света аналогичны параметрам всенаправленного источника света.</p>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Самостоятельно создайте
+источник света типа</span></font><b><span
+lang=EN-US style='font-weight:bold'> Free</span></b><b><span lang=EN-US style='
+font-weight:bold'> Spot</span></b> (Свободный прожектор), который приведен на
+рис. 12.6. Параметры этого источника света аналогичны параметрам<b><span lang=EN-US style='font-weight:bold'> Free</span></b><b><span
+lang=EN-US style='font-weight:bold'> Direct</span></b>
+(Свободнонаправленный).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter12.files/image013.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;
+  font-weight:bold'> Рис. 12.6.</span></font></b> Освещение объекта свободным прожектором</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc515341608"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Нацеленнонаправленный источник света</span></font></b></a></h2>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Нацеленонаправленный
+источник света внешне похож на свободнонаправленный, но имеет мишень, на
+которую и направлен постоянно (рис. 12.7).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните <span lang=EN-US>LM</span> на кнопке <span lang=EN-US>Target</span><b><span lang=EN-US style='font-weight:bold'> Direct</span></b> (Нацеленнонаправленный) и установите
+его в требуемой точке окна проекции.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Наведите источник света на цель,
+перемещая его мишень.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Если щелкнуть LM на
+линии, соединяющей мишень с источником света, то можно одновременно перемещать
+и мишень, и источник света.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Настройте параметры источника света,
+перейдя на командную панель <b><span lang=EN-US style='
+font-weight:bold'> Modify</span></b> (Изменить).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:18.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter12.files/image015.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;
+  font-weight:bold'> Рис. 12.</span></font></b><b><span lang=EN-US
+  style='font-weight:bold'> 7</span></b><b><span
+  style='font-weight:bold'> .</span></b> Пример освещения нацеленнонаправленным
+  источником света</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Нацеленнонаправленный
+источник света и нацеленный прожектор, рассмотренный ранее в этом занятии,
+имеют те же параметры, что и свободно направленный источник. Отличие состоит
+только в том, что вместо счетчика </span></font><b><span lang=EN-US
+style='font-weight:bold'> Target</span></b><b><span lang=EN-US style='font-weight:bold'> Distance</span></b>
+(Расстояние до мишени) представлена текстовая строка, указывающая расстояние и
+предназначенная только для чтения. Это обусловлено тем, что расстояние до
+мишени у нацеленных источников является величиной переменной и изменяется при
+перемещении либо источника, либо цели.</p>
+
+<h2><a name="_Toc515341609"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Исключение объектов из освещения</span></font></b></a></h2>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Все объекты сцены
+освещаются установленными источниками. Однако есть возможность регулировать
+освещение сцены, исключая источники света из любого набора объектов сцены.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Постройте сцену с несколькими объектами и
+источником света.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Выделите источник света, перейдите на
+командную панель<b><span
+lang=EN-US style='font-weight:bold'> Modify</span></b>(Изменить) и щелкните <span lang=EN-US>LM</span> на кнопке<b><span
+lang=EN-US style='font-weight:bold'> Exclude</span></b>
+(Исключение) в свитке <b><span lang=EN-US style='
+font-weight:bold'> General</span></b><b><span
+lang=EN-US style='font-weight:bold'> Parameters</span></b>
+(Общие параметры).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится окно диалога</span></font><b><span lang=EN-US
+style='font-weight:bold'> Exclude</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Include</span></b>
+(Включить/Исключить) (рис. 12.8).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:18.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=423 height=378
+  src="./chapter12.files/image017.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;
+  font-weight:bold'> Рис. 12.</span></font></b><b><span lang=EN-US
+  style='font-weight:bold'> 8</span></b><b><span
+  style='font-weight:bold'> .</span></b> Диалоговое окно исключения объектов из
+  освещения</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>В верхней части окна установите
+переключатель<b><span lang=EN-US
+style='font-weight:bold'> Exclude</span></b> (Исключить)
+и отметьте переключатель<b><span
+lang=EN-US style='font-weight:bold'> Both</span></b>
+(Оба).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Режим</span></font><b><span lang=EN-US
+style='font-weight:bold'> Exclude</span></b> (Исключить)
+позволяет исключить источник света, а параметр<b><span lang=EN-US style='font-weight:bold'> Both</span></b>
+(Оба) указывает, что исключение источника влияет на освещение (переключатель<b><span lang=EN-US style='font-weight:bold'> Illumination</span>)</b> и на отбрасывание теней
+(переключатель<b><span
+lang=EN-US style='font-weight:bold'> Shadow</span></b><b><span lang=EN-US style='
+font-weight:bold'> Casting</span>)</b> выбранных объектов.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Выделите имена объектов в левой части
+окна, которые не должны освещаться, и щелкните <span lang=EN-US>LM</span> на кнопке ».</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Выделенные имена объектов
+переместятся в список справа. Нажатие кнопки</span></font><b><span
+lang=EN-US style='font-weight:bold'> Clear</span></b>
+(Очистить) позволит вернуть правый список имен обратно.</p>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Для включения источника
+света следует выбрать переключатель</span></font><b><span
+lang=EN-US style='font-weight:bold'> Include</span></b>(Включить).</p>
+
+<p class=a><b><font size=2 face=Arial><span style='font-size:10.0pt;font-weight:
+bold'> Примечание</span></font></b></p>
+
+<p class=a><font size=2 face=Arial><span style='font-size:10.0pt;'>Влияние исключения объектов из освещения можно наблюдать при
+визуализации сцены.</span></font></p>
+
+<h2><a name="_Toc515341610"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Настройка подсветки</span></font></b></a></h2>
+
+<p class=MsoNormal style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Подсветка создает
+равномерное распределение света на все объекты сцены. Чем выше уровень
+подсветки, тем ярче становятся цвета поверхностей объектов.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Выберите в меню<b><span lang=EN-US style='
+font-weight:bold'> Rendering</span></b> (Визуализация) команду<b><span lang=EN-US style='font-weight:bold'> Environment</span></b> (Окружение).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится диалоговое окно</span></font><b><span lang=EN-US
+style='font-weight:bold'> Environment</span></b>
+(Окружение), показанное на рис. 12.9.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните в области выбора цвета<b><span lang=EN-US style='font-weight:bold'> Ambient</span></b> (Подсветка), расположенном в правой
+части группы<b><span lang=EN-US
+style='font-weight:bold'> Global</span></b><b><span lang=EN-US style='font-weight:bold'> Lighting</span></b>
+(Общая освещенность) свитка <b><span lang=EN-US style='
+font-weight:bold'> Common</span></b><b><span
+lang=EN-US style='font-weight:bold'> Parameters</span></b>
+(Общие параметры).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится типовое окно
+диалога</span></font><b><span
+lang=EN-US style='font-weight:bold'> Color</span></b><b><span lang=EN-US style='
+font-weight:bold'> Selector</span>: </b><b><span lang=EN-US style='font-weight:bold'> Ambient</span></b><b><span
+lang=EN-US style='font-weight:bold'> Light</span></b>
+(Выбор цвета: Окружающая подсветка). По умолчанию подсветка имеет серый цвет с
+RGB-компонентами 11, 11, 11.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>После подборки цвета закройте окно
+диалога<b><span lang=EN-US
+style='font-weight:bold'> Environment</span></b>
+(Окружение).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Самостоятельно расставьте освещение в
+сцене интерьера и в светильнике. На рис. 12.10 изображен светильник с
+поставленными источниками света.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:18.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=492 valign=top style='width:368.65pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=356 height=541
+  src="./chapter12.files/image019.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.65pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 12.</span></font></b><b><span
+  lang=EN-US style='
+  font-weight:bold'> 9</span></b><b><span style='
+  font-weight:bold'> .</span></b>
+  Диалоговое окно настройки внешней среды</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<font size=3 face="Times New Roman"><span style='font-size:12.0pt;font-family:
+"Times New Roman";'><br clear=all
+style='page-break-before:always;'>
+</span></font>
+
+<div class=Section2>
+
+<p class=FR3 style='margin:0cm;margin-bottom:.0001pt;line-height:normal'><font
+size=1 face=Arial><span style='font-size:9.0pt'>&nbsp;</span></font></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+-------------------------------------Диаграмма классов без паттерна
+@startuml
+title Диаграмма классов бо применения паттерна
+class Generator {
+    void generateObjectTriangle(point, point, point)
+    void genereatObjectCylinder(point, point, int)
+    void generateObjectBox(point, point)
+    void generatePlanTriangle(point, point, point)
+    void genereatPlanCylinder(point, point, int)
+    void generatePlanBox(point, point)
+}
+abstract class Box {
+    Point p1
+    Point p2
+    {abstract} void draw()
+}
+abstract class Cylinder {
+    Point center
+    int radius
+    int height
+    {abstract} void draw()
+}
+
+abstract class Triangle {
+    Point p1
+    Point p2
+    Point p3
+    {abstract} void draw()
+}
+class PlanTriangle {
+    void draw()
+}
+class PlanBox {
+    void draw()
+}
+class PlanCylinder {
+    void draw()
+}
+class ObjectTriangle {
+    void draw()
+}
+class ObjectBox {
+    void draw()
+}
+class ObjectCylinder {
+    void draw()
+}
+Box <|-right- PlanBox
+Box <|-left- ObjectBox
+Cylinder <|-down- PlanCylinder
+Cylinder <|-down- ObjectCylinder
+Triangle <|-down- PlanTriangle
+Triangle <|-down- ObjectTriangle
+Generator -up-> PlanTriangle
+Generator --> PlanBox
+Generator -up-> PlanCylinder
+Generator -up-> ObjectTriangle
+Generator --> ObjectBox
+Generator -up-> ObjectCylinder
+@enduml
+-------------------------------------Диаграмма последовательности без паттерна
+@startuml
+title Диаграмма последовательности до применения паттерна
+actor user
+user --> Generator:Объектный вид
+Generator --> Generator:generateObjectTriangle()
+Generator --> Generator:genereatObjectCylinder()
+Generator --> Generator:generateObjectBox()
+user --> Generator:Чертежный вид
+Generator --> Generator:generatePlanTriangle()
+Generator --> Generator:genereatPlanCylinder()
+Generator --> Generator:generatePlanBox()
+@enduml
+-------------------------------------Диаграмма классов "Абстрактная фабрика"
+@startuml
+title Диаграмма классов после применения паттерна "Абстрактная фабрика"
+abstract class AbstractGenerator {
+    AbstractGenerator* currentGenerator
+    void setGenerator(AbstractGenerator*)
+    {abstract} void generateTriangle(point, point, point)
+    {abstract} void genereatCylinder(point, point, int)
+    {abstract} void generateBox(point, point)
+}
+class ObjectGenerator {
+    void generateTriangle(point, point, point)
+    void genereatCylinder(point, point, int)
+    void generateBox(point, point)
+}
+class PlanGenerator {
+    void generateTriangle(point, point, point)
+    void genereatCylinder(point, point, int)
+    void generateBox(point, point)
+}
+abstract class Triangle {
+    Point p1
+    Point p2
+    Point p3
+    {abstract} void draw()
+}
+abstract class Box {
+    Point p1
+    Point p2
+    {abstract} void draw()
+}
+abstract class Cylinder {
+    Point center
+    int radius
+    int height
+    {abstract} void draw()
+}
+class PlanTriangle {
+    void draw()
+}
+class PlanBox {
+    void draw()
+}
+class PlanCylinder {
+    void draw()
+}
+class ObjectTriangle {
+    void draw()
+}
+class ObjectBox {
+    void draw()
+}
+class ObjectCylinder {
+    void draw()
+}
+AbstractGenerator <|-left- ObjectGenerator
+AbstractGenerator <|-right- PlanGenerator
+Box <|-right- PlanBox
+Box <|-left- ObjectBox
+Cylinder <|-down- PlanCylinder
+Cylinder <|-down- ObjectCylinder
+Triangle <|-down- PlanTriangle
+Triangle <|-down- ObjectTriangle
+PlanGenerator -up-> PlanTriangle
+PlanGenerator --> PlanBox
+PlanGenerator --up-> PlanCylinder
+ObjectGenerator -up-> ObjectTriangle
+ObjectGenerator --> ObjectBox
+ObjectGenerator --up-> ObjectCylinder
+@enduml
+-------------------------------------Диаграмма последовательности "Абстрактная фабрика"
+@startuml
+title Диаграмма последовательности после применения паттерна
+actor user
+user --> "AbstractGenerator*":Объектный вид
+"AbstractGenerator*" --> "AbstractGenerator*":setGenerator(ObjectGenerator*)
+"AbstractGenerator*" --> "AbstractGenerator*":generateTriangle()
+"AbstractGenerator*" --> "AbstractGenerator*":genereatCylinder()
+"AbstractGenerator*" --> "AbstractGenerator*":generateBox()
+user --> "AbstractGenerator*":Чертежный вид
+"AbstractGenerator*" --> "AbstractGenerator*":setGenerator(PlanGenerator*)
+"AbstractGenerator*" --> "AbstractGenerator*":generateTriangle()
+"AbstractGenerator*" --> "AbstractGenerator*":genereatCylinder()
+"AbstractGenerator*" --> "AbstractGenerator*":generateBox()
+@enduml

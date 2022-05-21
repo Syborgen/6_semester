@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>SMTP_logo_wo_subtext-1280x231.png</file>
+  </qresource>
+</RCC>

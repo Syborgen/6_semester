@@ -1,0 +1,1665 @@
+<html>
+
+<head>
+<meta name=Generator content="HTML-фильтр Microsoft Office версии 2.1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Originator content="Microsoft Word 9">
+<title>Точность моделирования</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+h5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+h6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:72.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:84.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:96.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:17.85pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.FR1, li.FR1, div.FR1
+	{
+	margin-top:0cm;
+	margin-right:170.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:133%;
+	text-autospace:none;
+	font-size:18.0pt;
+	font-family:"Courier New";
+	font-weight:bold;}
+p.FR2, li.FR2, div.FR2
+	{
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR3, li.FR3, div.FR3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR4, li.FR4, div.FR4
+	{
+	margin-top:7.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Arial;}
+p.FR5, li.FR5, div.FR5
+	{
+	margin-top:1.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:right;
+	text-autospace:none;
+	font-size:6.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.a, li.a, div.a
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:14.2pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.a0, li.a0, div.a0
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=silver lang=RU link=blue vlink=purple style='
+text-justify-trim:punctuation' background="fon.jpg">
+<div class=Section1>
+
+<p class=MsoBodyText><b><font size=5 face=Arial><span style='font-size:18.0pt;font-family:Arial;font-weight:bold'>Точность
+моделирования</span></font></b></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font color=blue><a href="#_Toc513631467">Выбор единиц измерения</a></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631468">Установка общих привязок</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631469">Настройка координатной сетки</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631470">Назначение вспомогательных объектов</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631471">Применение вспомогательного объекта-сетки</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631472">Выравнивание обекта-сетки</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631473">Выравнивание положения и ориентации по опорному объекту</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631474">Выравнивание нормалей</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631475">Выравнивание источников света</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631476">Выравнивание камеры</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631477">Выравнивание локальных осей координат объекта по окну проекции</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513631478">Измерение расстояния между объектами</a></span></font></u></span></p>
+
+<p class=MsoNormal><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Любое моделирование требует точности в той или иной мере. Чем выше
+возможность точного моделирования у графического пакета, тем более сложные
+задачи позволяет он решать. Для 3D Studio MAX разработан широкий набор средств,
+позволяющих точно выстраивать сцены.</span></font></p>
+
+<h2><a name="_Toc513631467"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Выбор единиц измерения</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Перед началом работы требуется настроить систему измерения.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+в меню<b><span style='font-weight:bold'> Customize</span></b> (Специальные)
+команду<b><span style='font-weight:bold'> Units Setup</span></b> (Единицы измерения).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится диалоговое окно<b><span
+style='font-weight:bold'> Units Setup</span></b> (Единицы измерения).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите<b><span
+style='font-weight:bold'> Metric</span></b> (Метрические) — метрические единицы
+измерения.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Раскройте
+список и выберите там единицу измерения<b><span style='font-weight:bold'>
+Meters</span></b> (Метры).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Список содержит четыре варианта: миллиметры,
+сантиметры, метры и километры. Выбор единицы измерения зависит от конкретной
+задачи, и отразиться в поле отсчета координат строки состояния (рис. 3.1).</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=241 height=27
+  src="./chapter3.files/image002.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.1.</span></font></b> Поля
+  отсчета координат</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Выбрав вариант<b><span
+style='font-weight:bold'> Custom</span></b> (Пользовательский), можно задать
+собственную единицу измерения, например, 10 метров, при использовании которой
+одна единица системной шкалы будет соответствовать 10 метрам. По умолчанию в
+качестве специальной единицы предлагается единица<b><span style='font-weight:
+bold'> FL, </span></b>равная 660 футам, допустимая точность измерения
+предполагает три знака после запятой. Увеличим точность значений установки
+параметров.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+в меню<b><span style='font-weight:bold'> Customize</span></b> (Специальный)
+команду<b><span style='font-weight:bold'> Preferences</span></b> (Параметры) и
+щелкните LM на корешке вкладки<b><span style='font-weight:bold'> General</span></b>
+(Общие) диалогового окна.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+количество знаков после запятой в счетчике<b><span style='font-weight:bold'> Spinner
+Precision Decimals</span></b> (Точность счетчиков разрядов).</p>
+
+<h2><a name="_Toc513631468"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Установка общих привязок</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Привязки позволяют размещать опорные точки создаваемых или
+редактируемых объектов в конкретных местах. Средства привязки заставляют курсор
+притягиваться к определенным точкам объектов сцены, таким как вершины, ребра,
+центры граней или точки опоры. Установка привязок подразумевает задание типов
+привязок и их активизацию.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+в меню<b><span style='font-weight:bold'> Customize</span></b> (Специальный)
+команду<b><span style='font-weight:bold'> Grid and Snap Settings</span></b>
+(Настройка сетки и привязок).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится окно диалога
+настройки сетки и привязок, раскрытое по умолчанию на разделе<b><span
+style='font-weight:bold'> Snaps</span></b> (Привязки). Он содержит двенадцать
+видов привязки:</span></font></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Grid
+Points</span></b> (Узлы сетки) — привязка к узлам сетки;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Grid
+Lines</span></b> (Линии сетки) — привязка к линиям координатной сетки;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Pivot</span></b>
+(Опора) — привязка к опорным точкам объектов;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Bounding
+Box</span></b> (Габаритный контейнер) — привязка сегментов текущего сплайна к
+точкам других сплайнов;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Perpendicular</span></b>
+(Перпендикуляр) — привязка сегментов текущего сплайна к точкам других сплайнов,
+в которых сегменты перпендикулярны этим сплайнам;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Tangent</span></b>
+(Касательная) — привязка сегментов текущего сплайна к точкам других сплайнов, в
+которых сегменты касательны к этим сплайнам;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Vertex</span></b>
+(Вершины) — привязка к вершинам объектов-сеток;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Endpoint</span></b>
+(Концевая точка) — привязка к концам ребер каркаса или сегментов сплайна;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Edge</span></b>
+(Ребро) — привязка к произвольным точкам в пределах видимых и невидимых ребер
+каркасов;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Midpoint</span></b>
+(Средняя точка) — привязка к серединам ребер каркасов или сегментов сплайнов;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Face</span></b>
+(Грань) — привязка к произвольным точкам в пределах граней;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'>Center
+Face</span></b> (Центр грани) — привязка к центральным точкам граней.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+привязки<b><span style='font-weight:bold'> Grid Points</span></b> (Узлы сетки)
+и<b><span style='font-weight:bold'> Grid Lines</span></b> (Линии сетки).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Ни одна из установленных привязок не будет действовать
+до тех пор, пока ее не активизировали. Активизация проводится с помощью панели
+кнопок привязок, расположенной справа в нижней части экрана (рис. 3.2).</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:18.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=40 valign=bottom style='width:29.95pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><font size=3
+  face="Times New Roman"><span lang=EN-US style='font-size:12.0pt;'><img border=0 width=22 height=76
+  src="./chapter3.files/image004.jpg"></span></font></p>
+  </td>
+  <td width=449 valign=bottom style='width:336.85pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><font size=3
+  face="Times New Roman"><span lang=EN-US style='font-size:12.0pt;'><img border=0 width=67 height=15
+  src="./chapter3.files/image006.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=489 colspan=2 valign=bottom style='width:366.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'>Рис.
+  3.2.</span></font></b> Панель кнопок привязок</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для активизации привязки:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+LM на левой кнопке панели и, удерживая кнопку мыши, выберите инструмент
+двумерной привязки.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+lang=EN-US style='font-size:12.0pt;'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Сделайте активным окно проекции<b><span
+style='font-weight:bold'> Тор</span></b> (Верх) и увеличьте изображение. Для
+этого щелкните LM на кнопке<b><span style='font-weight:bold'> Zoom</span></b>
+(Увеличить) панели управления окнами проекций (рис. 3.3), переместите курсор в
+окно<b><span style='font-weight:bold'> Тор</span></b> (Верх) и, нажав LM,
+протяните его вверх.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=96 height=48
+  src="./chapter3.files/image008.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.3.</span></font></b> Панель
+  управления окнами проекции</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Очистите экран, если в
+этом есть необходимость, выбрав в меню<b><span style='font-weight:bold'> Edit </span></b>(Редактировать)
+команду<b><span style='font-weight:bold'> Select All</span></b> (Выделить все)
+и нажав клавишу &lt;Delete&gt; (Удалить).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Создайте
+объект &quot;чайник&quot;. Для этого на командной панели<b><span
+style='font-weight:bold'> Create </span></b>(Создать) нажмите кнопку<b><span
+style='font-weight:bold'> Geometry</span></b> (Геометрия), в списке выберите
+вариант<b><span style='font-weight:bold'> Standard Primitives</span></b>
+(Стандартные примитивы) и нажмите кнопку <b><span style='font-weight:bold'>Teapot</span></b>
+(Чайник).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=530 style='width:397.3pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=501 valign=top style='width:376.05pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Переместите объект с помощью
+  инструмента<b><span style='font-weight:bold'> Move</span></b> (Переместить).</p>
+  </td>
+  <td width=28 valign=top style='width:21.25pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=33 height=36
+  src="./chapter3.files/image010.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoBodyTextIndent3 style='margin-left:0cm'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Обратите внимание, что
+движение объекта по экрану стало дискретно. Активизированная привязка позволяет
+перемещать опорную точку объекта только по узлам масштабной сетки. Действия
+остальных кнопок активизации привязок описаны ниже:</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=536 style='width:402.3pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=508 valign=top style='width:381.05pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+  size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font><b><span style='font-weight:bold'>3D
+  Snap</span></b> (Трехмерная привязка) — действует во всех трех измерениях;</p>
+  </td>
+  <td width=28 valign=top style='width:21.25pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=21 height=20
+  src="./chapter3.files/image011.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=508 valign=top style='width:381.05pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+  size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font><b><span style='font-weight:bold'>2.5D
+  Snap</span></b> (Полуобъемная привязка) — включает режим привязки в текущей
+  плоскости;</p>
+  </td>
+  <td width=28 valign=top style='width:21.25pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=21 height=20
+  src="./chapter3.files/image012.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=508 valign=top style='width:381.05pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+  size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font><b><span style='font-weight:bold'>Angle
+  Snap</span></b> (Угловая привязка) — включает режим, ограничивающий
+  возможность поворота;</p>
+  </td>
+  <td width=28 valign=top style='width:21.25pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=26 height=22
+  src="./chapter3.files/image013.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=508 valign=top style='width:381.05pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol;'>·<font size=1 face="Times New Roman"><span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font><b><span style='font-weight:bold'>Percent
+  Snap</span></b> (Процентная привязка) — включает режим фиксированного
+  процентного приращения параметров, например, при масштабировании объекта;</p>
+  </td>
+  <td width=28 valign=top style='width:21.25pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=27 height=22
+  src="./chapter3.files/image014.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=508 valign=top style='width:381.05pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol;'>·<font size=1 face="Times New Roman"><span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font><b><span style='font-weight:bold'>Spinner
+  Snap</span></b> (Привязка приращения счетчиков) — обеспечивает режим
+  фиксированного приращения счетчиков.</p>
+  </td>
+  <td width=28 valign=top style='width:21.25pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=27 height=22
+  src="./chapter3.files/image014.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc513631469"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Настройка координатной сетки</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для изображения линий координатной сетки используются три различных
+оттенка цвета. Две наиболее темные и толстые линии — это координатные оси. Они
+соответствуют глобальной системе координат (World). Более светлые и тонкие
+линии сетки называются <i><span style='font-style:italic'>главными,</span></i>
+а самые светлые и тонкие — <i><span style='font-style:italic'>вспомогательными.</span></i>
+Перейдем к настройке параметров сетки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+команду<b><span style='font-weight:bold'> Grid and Snap Settings</span></b>
+(Настройка сетки и привязок) в меню<b><span style='font-weight:bold'> Customize</span></b>
+(Специальные) и щелкните LM на корешке вкладки<b><span style='font-weight:bold'>
+Ноте Grid</span></b> (Исходная сетка).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Измените
+величину шага между вспомогательными линиями с помощью счетчика<b><span
+style='font-weight:bold'> Grid Spacing</span></b> (Шаг сетки).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>По умолчанию она принимается равной 10 текущим
+единицам измерения.</span></font></p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Текущий шаг сетки отображается в строке состояний
+экрана (рис. 3.4).</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=71 height=18
+  src="./chapter3.files/image016.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'>Рис.
+  3.4.</span></font></b> Текущий шаг сетки</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+интервал между главными линиями в счетчике<b><span style='font-weight:bold'>
+Major Lines every Nth</span></b> (Главные линии каждые N).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>По умолчанию главной
+является каждая десятая линия сетки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Укажите,
+в каких окнах будет производиться изменение частоты сетки при изменении
+масштаба изображения, используя переключатель<b><span style='font-weight:bold'>
+Dynamic Update</span></b> (Динамическое обновление). Для этого установите
+переключатель в одно из двух положений<b><span style='font-weight:bold'> Active
+Viewport</span></b> (Активное окно) или<b><span style='font-weight:bold'> All
+Viewports</span></b> (Все окна).</p>
+
+<h2><a name="_Toc513631470"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Назначение вспомогательных объектов</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Вспомогательные объекты позволяют рисовать или выполнять анимацию, но
+не включаются в итоговую визуализацию. В свитке<b><span style='font-weight:
+bold'> Helpers</span></b> (Вспомогательные объекты) командной панели<b><span
+style='font-weight:bold'> Create</span></b> (Создать) (рис. 3.5) представлен
+весь перечень типов вспомогательных объектов.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:5.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=179 height=33
+  src="./chapter3.files/image018.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.5.</span></font></b> Кнопка
+  вспомогательных объектов, выделенная на командной панели</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513631471"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Применение вспомогательного объекта-сетки</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Объекты-сетки применяются в качестве конструкционных плоскостей, на
+которых строятся геометрические модели объектов сцены. После создания их можно
+перемещать и поворачивать, как и другие объекты сцены.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;'>
+ <tr>
+  <td width=464 valign=top style='width:347.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Щелкните LM на кнопке<b><span
+  style='font-weight:bold'> Helpers</span></b> (Вспомогательные объекты)
+  командной панели<b><span style='font-weight:bold'> Create</span></b>
+  (Создать).</p>
+  </td>
+  <td width=39 valign=top style='width:29.1pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=29 height=28
+  src="./chapter3.files/image020.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+LM на кнопке<b><span style='font-weight:bold'> Grid</span></b> (Сетка) в свитке<b><span
+style='font-weight:bold'> Object Type</span></b> (Тип объекта) вспомогательных
+объектов командной панели<b><span style='font-weight:bold'> Create</span></b>
+(Создать).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится свиток<b><span
+style='font-weight:bold'> Parameters</span></b> (Параметры) объекта сетки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+шаг, равный 10 линиям сетки, с помощью счетчика<b><span style='font-weight:
+bold'> Grid</span></b> (Размер сетки) раздела<b><span style='font-weight:bold'>
+Spasing</span></b> (Интервал).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Этот шаг целесообразно установить равным шагу исходной
+координатной сетки для согласования масштабов моделей.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+цвет, который будет иметь сетка после активизации, с помощью переключателя<b><span
+style='font-weight:bold'> Active Color</span></b> (Активный цвет).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Для определенности
+выберите<b><span style='font-weight:bold'> Home Color</span></b> (Цвет исходной
+сетки). Линии объекта сетки будут иметь то же цвет, что и у исходной сетки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+разделе<b><span style='font-weight:bold'> Display</span></b> (Показать)
+установите переключатель в положение<b><span style='font-weight:bold'> ZX Plane</span></b>
+(Плоскость ZX).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>После построения
+объект-сетка появится в плоскости<b><span style='font-weight:bold'> ZX.</span></b></span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Постройте
+объект-сетку в окне<b><span style='font-weight:bold'> Perspective</span></b>
+(Перспектива). Для этого щелкните LM в окне проекции, перетащите курсор по
+диагонали и щелкните на точке, где будет располагаться противоположный угол
+сетки.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>При построении следите за
+размером сетки в счетчиках<b><span style='font-weight:bold'> Length</span></b>
+(Длина), <b><span style='font-weight:bold'>Width</span></b> (Ширина) раздела<b><span
+style='font-weight:bold'> Gride Size</span></b> (Размер сетки).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Поверните
+сетку на угол 45° и переместите на середину окна.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Объект-сетка готов. Осталось ее активизировать для
+того, чтобы создаваемые объекты размещались на поверхности построенной сетки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>8.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+активизации сетки выберите в меню<b><span style='font-weight:bold'> Views</span></b>
+(Виды) команду<b><span style='font-weight:bold'> Grids </span></b>(Координатные
+сетки), а затем команду<b><span style='font-weight:bold'> Activate Grid Object</span></b>
+(Активизировать объект-сетку).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Активизированная сетка показана на рис. 3.6. Осталось
+воспользоваться построенной сеткой и создать на ней объект.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter3.files/image022.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.6.</span></font></b>
+  Активизированный объект-сетка</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter3.files/image024.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.7.</span></font></b>
+  Использование сетки для ориентации объекта</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>9.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Накоманднойпанели<b><span lang=EN-US style='
+font-weight:bold'> Create</span></b><span lang=EN-US> (</span>Создать<span lang=EN-US>) </span>нажмитекнопку<b><span lang=EN-US
+style='font-weight:bold'> Geometry </span></b><span
+lang=EN-US>(</span>Геометрия<span lang=EN-US>), </span>вспискевыберитевариант<b><span lang=EN-US
+style='font-weight:bold'> Standard Primitives</span></b><span
+lang=EN-US> (</span>Стандартныепримитивы<span
+lang=EN-US>), </span>нажмитекнопку<b><span lang=EN-US
+style='font-weight:bold'> Teapot</span></b><span
+lang=EN-US> (</span>Чайник<span lang=EN-US>), </span>щелкнитеуказателеммышинаобъекте<span lang=EN-US>-</span>сеткеипостройтечайник<span
+lang=EN-US>. </span>Сцена должна выглядеть
+примерно так же, как на рис. 3.7.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Теперь, где бы ни был построен объект, он будет
+ориентирован по объекту-сетке до тех пор, пока последняя активизирована.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>10.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Отключите
+активизацию обекта-сетки. Выберите в меню<b><span style='font-weight:bold'>
+Views</span></b> (Виды) команду<b><span style='font-weight:bold'> Grids</span></b>
+(Координатные сетки), а затем команду<b><span style='font-weight:bold'> Activate
+Home Grid</span></b> (Отключить объект-сетку).</p>
+
+<h3><a name="_Toc513631472"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Выравнивание обекта-сетки</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Объект-сетку можно выровнять по отношению к плоскости активного окна
+проекции.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выровняйте
+объект-сетку по окну<b><span style='font-weight:bold'> Front</span></b> (Вид
+спереди). Щелкните LM в окне и сделайте его активным.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+объект-сетку. Активизируйте ее и выберите в меню<b><span style='font-weight:
+bold'> Tools </span></b>(Сервис) команду<b><span style='font-weight:bold'>
+Align to View</span></b> (Выровнять по окну).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Объект-сетка примет вид, как указанно на рис. 3.8.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=211
+  src="./chapter3.files/image026.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.8.</span></font></b>
+  Выравнивание объекта по окну проекции</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513631473"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Выравнивание положения и ориентации по опорному объекту</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>При моделировании сцен почти всегда возникает необходимость
+выравнивания объектов, источников света, камер, ориентации одного объекта
+относительно другого. Ниже мы рассмотрим способы выравнивания, предоставляемые
+3D Studio MAX.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+знакомства с методами выравнивания вам понадобится построить несколько
+объектов. На командной панели<b><span style='font-weight:bold'> Create</span></b>
+(Создать) нажмите кнопку<b><span style='font-weight:bold'> Geometry</span></b>
+(Геометрия), в <span style='text-transform:uppercase'>списке </span>укажите
+вариант<b><span style='font-weight:bold'> Standard Primitives</span></b>
+(Стандартные примитивы) и постройте в окне<b><span style='font-weight:bold'>
+Perspective</span></b> (Перспектива) сферу, конус и цилиндр.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+сферу и щелкните LM на кнопке<b><span style='font-weight:bold'> Align</span></b>
+(Выравнивание) панели инструментов (рис. 3.9).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=31 height=189
+  src="./chapter3.files/image028.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.9.</span></font></b> Панель
+  инструментов выравнивания объектов</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+lang=EN-US style='font-size:12.0pt;'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Назначьте в качестве опорного объекта
+конус. Для чего установите на него курсор и щелкните LM. Появится окно диалога<b><span
+style='font-weight:bold'> Align Selection </span></b>(Выравнивание выделения)
+(рис. 3.10).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=357 height=351
+  src="./chapter3.files/image030.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.10.</span></font></b>
+  Диалоговое окно выравнивания объектов</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Исходное положение объектов до выравнивания показано на рис. 3.11.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=429 height=212
+  src="./chapter3.files/image032.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.11.</span></font></b>
+  Расположение объектов до выравнивания</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+разделе<b><span style='font-weight:bold'> Align Position (World)</span></b>
+(Выравнивание положения (По экрану)) укажите, по каким координатам будет
+происходить выравнивание. Отметьте поочередно каждую из координат и посмотрите
+в проекции<b><span style='font-weight:bold'> Тор </span></b>(Вид сверху), как
+происходит перемещение выравниваемого объекта.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=126 height=130
+  src="./chapter3.files/image034.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.12.</span></font></b> Пример
+  выравнивания объектов по центру</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Указание всех трех координат X, Y и Z приведет к выравниванию объектов
+по центру, как показано на рис. 3.12. Опорная точка текущего объекта (Сфера)
+совместилась с центром опорного объекта (Конус) по всем трем координатам.
+Остальные параметры выравнивания означают следующее:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font><b><span
+style='font-weight:bold'>Minimum</span></b> (Минимум) — ближайшая крайняя точка
+габаритного контейнера объекта;</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font><b><span
+style='font-weight:bold'>Maximum</span></b> (Максимум) — дальняя крайняя точка
+габаритного контейнера объекта;</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font><b><span
+style='font-weight:bold'>Pivot Point</span></b> (Опорная точка) — опорная точка
+объекта.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выровняйте
+цилиндр относительно конуса, установите переключатель <b><span
+style='font-weight:bold'>Current Object</span></b> (Текущий объект) в положение<b><span
+style='font-weight:bold'> Pivot Point</span></b> (Опорная точка) и<b><span
+style='font-weight:bold'> Target Object</span></b> (Опорный объект) в положение<b><span
+style='font-weight:bold'> Center</span></b> (Центр).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Результат
+выравнивания приведен на рис. 3.13.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=113 height=174
+  src="./chapter3.files/image036.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.13.</span></font></b>
+  Результат выравнивания цилиндра относительно конуса</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Определите
+требования по согласованию ориентации локальной системы координат сферы
+относительно конуса. Для этого отключите флажки по координатам X, Y и Z и
+отметьте флажки по координатам<b><span style='font-weight:bold'> X, Y и Z Axis</span></b>
+в разделе<b><span style='font-weight:bold'> Align Orientation (Local)</span></b>
+(Выровнять ориентацию (Локально)).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Сравните направления локальных осей двух объектов. Цилиндр стал
+ориентирован так же, как и конус. Ориентация не зависит от выравнивания по
+положению.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Раздел<b><span style='font-weight:bold'> Match Scale</span></b>
+(Согласование масштабов) позволяет согласовывать масштабы по соответствующим
+осям координат. Согласование масштабов не обязательно ведет к совпадению
+размеров выравниваемых объектов.</span></font></p>
+
+<h3><a name="_Toc513631474"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Выравнивание нормалей</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для каркасных объектов есть возможность выравнивания таким образом,
+чтобы нормаль к любой грани выравниваемого объекта совместилась с указанной
+опорной нормалью.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+окне<b><span style='font-weight:bold'> Perspective</span></b> (Перспектива)
+щелкните RM на названии окна и в появившемся меню окна проекции щелчком LM
+выберите команду <b><span style='font-weight:bold'>Wireframe</span></b>
+(Каркас).вместо закрашенных объектов в окне появятся их каркасные изображения,
+состоящие из граней.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;'>
+ <tr>
+  <td width=470 valign=top style='width:352.7pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Выделите сферу и на панели инструментов<b><span
+  style='font-weight:bold'> Align</span></b> (Выравнивание) активизируйте
+  кнопку<b><span style='font-weight:bold'> Normal Align</span></b>
+  (Выравнивание нормали).</p>
+  </td>
+  <td width=45 valign=top style='width:34.1pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=27 height=17
+  src="./chapter3.files/image038.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Укажите
+выравниваемую нормаль, наведите курсор на одну из граней сферы, и, когда курсор
+примет форму перекрестия, щелкните LM.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Нормаль грани изобразится в виде стрелки (рис. 3.14)
+синего цвета.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=429 height=212
+  src="./chapter3.files/image040.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.14.</span></font></b> Нормаль назначена для грани сферы</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+курсор на одной из граней конуса и щелкните LM.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Когда кнопка мыши будет
+отпущена, сфера переместится и повернется так, чтобы выравниваемая нормаль
+исходила из той же точки, что и опорная, но в противоположном направлении (рис.
+3.15). Одновременно с выравниванием нормали появится окно диалога<b><span
+style='font-weight:bold'> Normal Align</span></b> (Выравнивание нормали).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+перемещения сферы в локальной системе координат, задайте величины смещения по
+осям X, Y и Z группы<b><span style='font-weight:bold'> Position Offset</span></b>
+(Приращение положения) диалогового окна.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+поворота сферы вокруг направления нормали задайте величину угла поворота в
+счетчике<b><span style='font-weight:bold'> Angle</span></b> (Угол) группы<b><span
+style='font-weight:bold'> Rotation Offset</span></b> (Приращение поворота).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Пример поворота сферы вокруг нормали на 90° приведен
+на рис. 3.16.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Чтобы
+исходная и опорная нормали были направлены в одну сторону, отметьте<b><span
+style='font-weight:bold'> Flip Normal</span></b> (Перевернуть нормаль).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Если опция<b><span style='font-weight:bold'> Flip Normal</span></b>
+(Перевернуть нормаль) не отмечена, то нормали будут направлены в
+противоположные стороны. После задания требуемых параметров щелкните по кнопке<b><span
+style='font-weight:bold'> ОК.</span></b></span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:5.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=297 height=212
+  src="./chapter3.files/image042.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.15.</span></font></b>
+  Выравнивание сферы по нормали</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=297 height=212
+  src="./chapter3.files/image044.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.16.</span></font></b> Поворот сферы вокруг нормали</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>8.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Вернитесь
+к тонированному изображению. В окне<b><span style='font-weight:bold'>
+Perspective</span></b> (Перспектива) щелкните RM на названии окна и в
+появившемся меню окна проекции щелчком LM выберите команду<b><span
+style='font-weight:bold'> Smooth + Highlights</span></b> (Сглаживание + Блики).
+Для объектов, не имеющих граней, таких как вспомогательные объекты, габаритные
+контейнеры атмосферных эффектов, в качестве нормалей используются оси Z
+локальной системы координат.</p>
+
+<h3><a name="_Toc513631475"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Выравнивание источников света</span></font></b></a></h3>
+
+<p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt;font-weight:bold'>3D</span></font></b> Studio MAX
+позволяет точно разместить отражение и блики от источников света. С этой целью
+программа перемещает и поворачивает выделенные источники света или выделенный
+исходный объект так, чтобы они были ориентированы по направлению нормали в
+точке центра формируемого отражения на поверхности опорного объекта.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+lang=EN-US style='font-size:12.0pt;'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Создайте источник света в окне<b><span
+style='font-weight:bold'> Perspective</span></b> (Перспектива). Нажмите на
+командной панели<b><span style='font-weight:bold'> Create</span></b> (Создать)
+кнопку<b><span style='font-weight:bold'> Lights</span></b> (Источники света),
+далее укажите<b><span style='font-weight:bold'> Опии</span></b>
+(Всенаправленный) и щелкните мышью в окне <b><span style='font-weight:bold'>Perspective</span></b>
+(Перспектива).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=555 style='width:416.5pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=517 valign=top style='width:387.45pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font> Активизируйте кнопку<b><span style='font-weight:bold'> Place
+  Highlight</span></b> (Поместить блик) панели инструментов <b><span
+  style='font-weight:bold'>Align</span></b> (Выравнивание).</p>
+  </td>
+  <td width=39 valign=top style='width:29.05pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=32 height=37
+  src="./chapter3.files/image046.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выставьте
+курсор на сферу, щелкните<b><span style='font-weight:bold'> LM</span></b> и
+перетащите курсор до появления значка нормали (рис. 3.17).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter3.files/image048.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.17.</span></font></b>
+  Назначение опорной нормали</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Источник света переместится и будет оставаться в направлении нормали.
+При этом сохраняется исходное расстояние от источника света до объекта, на
+котором формируется блик. Результат выравнивания источника света показан на
+рис. 3.18.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:5.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter3.files/image050.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=506 valign=top style='width:379.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.18.</span></font></b>
+  Размещение блика света в направлении нормали</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513631476"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Выравнивание камеры</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Аналогично выравниванию источника света можно выровнять и камеру
+относительно определенной точки на поверхности объекта. В результате плоскость
+окна проекции камеры оказывается параллельной выбранной грани опорного объекта.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+сцене окна<b><span style='font-weight:bold'> Perspective</span></b>
+(Перспектива) установите камеру, нажав на командной панели<b><span
+style='font-weight:bold'> Create</span></b> (Создать) кнопку<b><span
+style='font-weight:bold'> Cameras</span></b> (Камеры), а далее указав<b><span
+style='font-weight:bold'> Free</span></b> (Свободная).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;'>
+ <tr>
+  <td width=480 valign=top style='width:359.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Так как камера после построения уже
+  выделена, активизируйте кнопку<b><span style='font-weight:bold'> Align Camera</span></b>
+  (Выровнять камеру) панели инструментов <b><span style='font-weight:bold'>Align</span></b>
+  (Выравнивание).</p>
+  </td>
+  <td width=33 valign=top style='width:25.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=24 height=23
+  src="./chapter3.files/image051.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Укажите
+курсором на нужную грань конуса, и, когда на изображении курсора появится
+перекрестие, щелкните<b><span style='font-weight:bold'> LM</span></b> и слегка
+перетащите курсор до появления значка нормали грани в виде синей стрелки, как
+показано на рис. 3.19.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:18.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter3.files/image053.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.19.</span></font></b>
+  Расположение нормали, задающее направление камеры</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoBodyTextIndent2 style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Если продолжать
+перетаскивать курсор, то значок нормали будет перемещаться по поверхности
+конуса. Камера также будет сдвигаться, выравниваясь по нормали.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установив
+нужное положение нормали, отпустите кнопку мыши.</p>
+
+<p class=MsoBodyTextIndent2 style='text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Камера изменила положение
+и ориентацию так, чтобы линия визирования была направлена навстречу выбранной
+нормали конуса (рис. 3.20).</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:18.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm;text-align:justify'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=305 height=212
+  src="./chapter3.files/image055.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm;text-align:justify'><b><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'>Рис.
+  3.20.</span></font></b> Камера установлена в направление нормали</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513631477"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Выравнивание локальных осей координат объекта по окну проекции</span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Рассмотрим возможность выравнивания локальных осей координат
+выделенного объекта относительно оси Z активного окна проекции.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=555 style='width:416.5pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=514 valign=top style='width:385.55pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Выделите сферу в окне<b><span
+  style='font-weight:bold'> Left</span></b> (Вид слева) и активизируйте кнопку <b><span
+  style='font-weight:bold'>Align to View</span></b> (Выравнивание по проекции)
+  панели инструментов <b><span style='font-weight:bold'>Align</span></b>
+  (Выравнивание).</p>
+  </td>
+  <td width=41 valign=top style='width:30.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=36 height=37
+  src="./chapter3.files/image057.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span lang=EN-US
+style='font-size:12.0pt;'>&nbsp;</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=354 height=212
+  src="./chapter3.files/image059.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.21.</span></font></b>
+  Изменение ориентации оси Z</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится окно диалога<b><span
+style='font-weight:bold'> Align to View</span></b> (Выравнивание по проекции),
+и одновременно сфера будет автоматически выровнена по умолчанию относительно
+оси Z (рис. 3.21).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+появившемся окне диалога выберите поочередно переключатели<b><span
+style='font-weight:bold'> Align Х</span></b> (Выровнять по X) и<b><span
+style='font-weight:bold'> Align Y</span></b> (Выровнять по Y).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Оси Х и Y сферы поочередно будут выравниваться
+относительно оси Z окна. Изменения ориентации оси Z сферы показаны на рис.
+3.22. Они будут происходить сразу же после установок в окне диалога.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Отметьте
+флажок<b><span style='font-weight:bold'> Flip</span></b> (Повернуть).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=354 height=212
+  src="./chapter3.files/image061.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=487 valign=top style='width:365.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Рис. 3.22.</span></font></b>
+  Выравнивание оси Y</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выравнивание выставленной локальной оси сферы произойдет в направлении,
+противоположном оси Z. Для фиксации новой ориентации объекта щелкните по кнопке<b><span
+style='font-weight:bold'> ОК.</span></b></span></font></p>
+
+<h2><a name="_Toc513631478"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Измерение расстояния между объектами</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для измерения расстояния между двумя точками сцены можно использовать
+вспомогательный объект типа<b><span style='font-weight:bold'> Таре</span></b>
+(Рулетка). Он применяется в качестве мерной ленты.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+свитке<b><span style='font-weight:bold'> Object Type</span></b> (Тип объекта)
+вспомогательных объектов командной панели щелкните на кнопке<b><span
+style='font-weight:bold'> Таре</span></b> (Рулетка).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+измерения расстояния между двумя точками щелкните LM в первой точке окна
+проекции и, не отпуская кнопку мыши, перетащите курсор во вторую точку.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>На экране отобразится
+отрезок прямой, соединяющий две точки, а в поле<b><span style='font-weight:
+bold'> Length</span></b> (Длина) свитка параметров появится значение его длины.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>При
+необходимости задать фиксированное значение рулетки, установите флажок<b><span
+style='font-weight:bold'> Specify Length</span></b> (Задать длину) и в поле<b><span
+style='font-weight:bold'> Length</span></b> (Длина) задайте требуемую длину.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>В случае фиксированного значения рулетки мерный
+отрезок будет иметь постоянную величину при каждом использовании рулетки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+удаления объекта-рулетки требуется удалить любой из ее концов.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>В разделе<b><span style='font-weight:bold'> World Space Angles</span></b>
+(Углы в глобальных координатах) можно определить ориентацию рулетки
+относительно осей глобальной системы координат.</span></font></p>
+
+</div>
+
+</body>
+
+</html>

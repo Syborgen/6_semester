@@ -1,0 +1,121 @@
+@startuml
+class Camera{
++  virtual QVector3D Project(QVector3D point) = 0;
++  virtual ~Camera() = default;
++  void SetCentral();
++  void SetParallels();
++  float near_{1};
++  float far_{10000};
+#  QMatrix4x4 projection_;
+#  bool is_central = true;
+}
+class GraphicsScene{
++  void PushShape(Shape* shape);
++  void EraseShape(Shape* shape);
++  void Clear();
++  const std::vector<Shape *>& Shapes() const;
+  ~GraphicsScene() override;
+- std::vector<Shape*> shapes_;
+- std::mutex m_;
+}
+class GraphicsView{
++  explicit GraphicsView();
++  GraphicsScene *Scene() const;
++  void Scene(GraphicsScene *scene);
++  void Render();
++  void SetCentral();
++  void SetParallels();
++  void SetPolygonView();
++  void SetLineView();
++  void PanoramStep(QVector3D);
++  void ClearSelected();
++  Camera* Camera() const;
++  void Camera(class Camera* camera);
++  void UnselectedAllShape();
+#  void keyPressEvent(QKeyEvent*) override;
+#  void keyReleaseEvent(QKeyEvent*) override;
+#  void mousePressEvent(QMouseEvent*) override;
+#  void resizeEvent(QResizeEvent* event) override;
+#  void timerEvent(QTimerEvent*) override;
+-  QImage image_;
+-  ZBuffer zbuffer_;
+-  class Camera* camera_;
+-  GraphicsScene* scene_;
+-  hash_table selected_shapes;
+-  std::map<int, bool> buttons_;
+-  void FreeCameraChange();
+-  SGL::ViewType view_type_;
+}
+class LookAtCamera{
++  LookAtCamera();
++  QVector3D Project() override;
++  LookAtCamera& operator=();
++  void Reset();
++  const QVector3D &Eye() const;
++  const QVector3D &Center() const;
++  const QVector3D &Up() const;
++  float Near() const;
++  float Far() const;
++  const QSize& WindowSize() const;
++  void WindowSize();
+-  QVector3D eye_;
+-  QVector3D center_;
+-  QVector3D up_;
+-  QMatrix4x4 model_view_;
+-  QSize window_size_;
+-  void CalculateMatrix();
+}
+class Painter{
++  explicit Painter();
++  void SetPixel(int x, int y, QRgb color);
++  SGL::Size ImageSize() const;
++  void DrawPoint();
++  void DrawBrush();
++  void DrawPixel();
++  std::optional<QRgb> Color() const;
++  void Color(std::optional<QRgb> color);
++  std::optional<QRgb> Brush() const;
++  void Brush(std::optional<QRgb> brash);
++  void Save();
++  void Restore();
++  void AppendTransform(QMatrix4x4 transform);
++  void DrawLine();
++  void DrawTriangle();
+-  std::optional<QRgb> color_ = std::nullopt;
+-  std::optional<QRgb> brush_ = std::nullopt;
+-  QMatrix4x4 transform_;
+-  QImage& image_;
+-  ZBuffer& zbuffer_;
+-  Camera& camera_;
+-  std::optional<QRgb> save_colors[2];
+-  QMatrix4x4 save_transform_;
+-  SGL::ViewType view_type_ = SGL::ViewType::polygon;
+}
+class ZBuffer{
++  explicit ZBuffer(QSize size);
++  void Resize(QSize size);
++  Point* operator[](int i) noexcept;
++  void Clear() noexcept;
++  ~ZBuffer();
+-  Point* storage_;
+-  QSize size_;
++  const QSize& Size() const;
+}
+
+abstract class Shape
+
+Camera <|-left- LookAtCamera
+GraphicsScene o-left- Shape
+GraphicsView o-- GraphicsScene
+GraphicsView o-left- Camera
+GraphicsView *-- ZBuffer
+GraphicsView o-- Shape
+Painter o-right- ZBuffer
+Painter o-up- Camera
+Shape -left-o ZBuffer
+
+
+
+
+
+@enduml

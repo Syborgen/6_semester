@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainForm</class>
+ <widget class="QWidget" name="mainForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>681</width>
+    <height>508</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::ClickFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>SMTP-client By Kirill Danilchuk</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background-color: rgb(36, 36, 36);
+	color: #FFF;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLineEdit" name="to_line">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>261</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sitka</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit { 
+	border: 2px solid rgb(30, 30, 30);
+	border-radius: 20px; 
+	color: #FFF; 
+    background-color: rgb(62, 62, 62); 
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+QLineEdit:hover {
+	border: 3px solid rgb(75, 75, 75);
+}
+
+QLineEdit:focus {
+	border: 3px solid rgb(102, 102, 102);
+	border-color: rgb(0, 170, 255);
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>kirill.danilghuk01@gmail.com</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="subject_line">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>261</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sitka</family>
+         <pointsize>12</pointsize>
+         <italic>false</italic>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit { 
+	border: 2px solid rgb(30, 30, 30);
+	border-radius: 20px; 
+	color: #FFF; 
+    background-color: rgb(62, 62, 62); 
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+QLineEdit:hover {
+	border: 3px solid rgb(75, 75, 75);
+}
+
+QLineEdit:focus {
+	border: 3px solid rgb(102, 102, 102);
+	border-color: rgb(0, 170, 255);
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Subject:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTextEdit" name="message_text">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>9</horstretch>
+           <verstretch>9</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>261</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Monotype Corsiva</family>
+           <pointsize>14</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTextEdit { 
+	border: 2px solid rgb(30, 30, 30);
+	border-radius: 20px; 
+	color: #FFF; 
+    background-color: rgb(62, 62, 62); 
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+QTextEdit:hover {
+	border: 3px solid rgb(75, 75, 75);
+}
+
+QTextEdit:focus {
+	border: 3px solid rgb(102, 102, 102);
+	border-color: rgb(0, 170, 255);
+}
+
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Message</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QListWidget" name="files_list">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>4</horstretch>
+             <verstretch>4</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QListWidget { 
+	border: 2px solid rgb(30, 30, 30);
+	border-radius: 20px; 
+	color: #FFF; 
+    background-color: rgb(62, 62, 62); 
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+QListWidget:hover {
+	border: 3px solid rgb(75, 75, 75);
+}
+
+QListWidgett:focus {
+	border: 3px solid rgb(102, 102, 102);
+	border-color: rgb(0, 170, 255);
+}
+
+</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="attach_button">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>4</horstretch>
+             <verstretch>4</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>211</width>
+             <height>41</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>MV Boli</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+	border: 2px solid rgb(30, 30, 30);
+	border-radius: 20px; 
+	color: #FFF; 
+    background-color: rgb(62, 62, 62); 
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+QPushButton:hover {
+	border: 3px solid rgb(75, 75, 75);
+}
+
+QPushButton:pressed {
+    background-color: rgb(121, 121, 121)
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Attach</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="clear_button">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>4</horstretch>
+             <verstretch>4</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>211</width>
+             <height>41</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>MV Boli</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton { 
+	border: 2px solid rgb(30, 30, 30);
+	border-radius: 20px; 
+	color: #FFF; 
+    background-color: rgb(62, 62, 62); 
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+QPushButton:hover {
+	border: 3px solid rgb(75, 75, 75);
+}
+
+QPushButton:pressed {
+    background-color: rgb(121, 121, 121)
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Clear</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="send_button">
+       <property name="minimumSize">
+        <size>
+         <width>211</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+	border: 2px solid rgb(30, 30, 30);
+	border-radius: 20px; 
+	color: #FFF; 
+    background-color: rgb(62, 62, 62); 
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+QPushButton:hover {
+	border: 3px solid rgb(0, 170, 0);
+    background-color: rgb(0, 255, 0)
+}
+
+QPushButton:pressed {
+    background-color: rgb(0, 170, 0);
+	border: 3px solid rgb(0, 255, 0);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Send</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="logOut_button">
+       <property name="minimumSize">
+        <size>
+         <width>211</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>MV Boli</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+	border: 2px solid rgb(30, 30, 30);
+	border-radius: 20px; 
+	color: #FFF; 
+    background-color:rgb(62, 62, 62);
+	padding-left: 20px;
+	padding-right: 20px;
+} 
+
+QPushButton:hover {
+	border: 3px solid rgb(170,0 ,0);
+    background-color: rgb(255, 0, 0);
+}
+
+QPushButton:pressed {
+	border: 3px solid rgb(255,0 ,0);
+    background-color: rgb(170, 0, 0);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Log out</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

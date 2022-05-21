@@ -1,0 +1,918 @@
+<html>
+
+<head>
+<meta name=Generator content="HTML-фильтр Microsoft Office версии 2.1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Originator content="Microsoft Word 9">
+<title>Лофтинговое моделирование каркасных объектов</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+h5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:72.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:84.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:96.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	text-align:right;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.FR1, li.FR1, div.FR1
+	{
+	margin-top:0cm;
+	margin-right:130.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:20.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR2, li.FR2, div.FR2
+	{
+	margin-top:20.0pt;
+	margin-right:170.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR3, li.FR3, div.FR3
+	{
+	margin-top:7.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Arial;}
+p.a, li.a, div.a
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:14.2pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.a0, li.a0, div.a0
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=silver lang=RU link=blue vlink=purple style='
+text-justify-trim:punctuation' background="fon.jpg">
+<div class=Section1>
+
+<p class=FR2 style='margin:0cm;margin-bottom:.0001pt'><b><font size=5
+face=Arial><span style='font-size:18.0pt;'>Лофтинговое
+моделирование каркасных объектов</span></font></b></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font color=blue><a href="#_Toc513988704">Лофтинг-моделирование рамы</a></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513988705">Настройка параметров поверхности</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513988706">Настройка параметров пути</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513988707">Первая вершина сечения</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513988708">Настройка параметров сетчатой оболочки</a></span></font></u></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><i><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt;font-style:italic'>Метод лофтинга</span></font></i>
+предназначен для преобразования сплайновых кривых в каркасные трехмерные
+объекты. Если рассечь трехмерный объект плоскостью, то контуром этого сечения
+будет кривая, т. е. набор вершин, соединенных отрезками линий. Примем
+сплайновую кривую за основу и соединим отрезками прямых вершины нескольких
+сплайнов. Получим набор граней, образующих каркас некоторого трехмерного тела,
+поперечными сечениями которого являются сплайновые кривые. Теперь, если сечения
+в виде сплайнов разместим вдоль некоторой кривой ортогонально к ней, то
+полностью определим форму создаваемого трехмерного объекта в пространстве.
+Таким образом, для создания каркасного трехмерного объекта методом лофтинга
+потребуется, как минимум, одна <i><span style='font-style:italic'>форма-сечение</span></i>
+и одна <i><span style='font-style:italic'>форма-путь, </span></i>вдоль которой
+это сечение будет расставляться. Используя множество различных форм-сечений,
+методом лофтинга можно построить трехмерный объект практически любой сложности.
+Рассмотрим этот метод на примере.</p>
+
+<h2><a name="_Toc513988704"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Лофтинг-моделирование рамы</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для нашего примера потребуется две сплайновые формы, такие как
+представлены на рис. 8.1. Перейдем к их созданию.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Сделайте активным окно проекции<b><span
+style='font-weight:bold'>  Тор</span></b> (Вид сверху).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=536 style='width:402.3pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=499 valign=top style='width:373.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Создайте форму-путь в виде правильного
+  шестиугольника. Для этого нажмите на командной панели<b><span
+  style='font-weight:bold'>  Create</span></b> (Создать) кнопку <b><span
+  style='font-weight:bold'> Shapes</span></b> (Формы), в списке выберите вариант<b><span
+  style='font-weight:bold'>  Splines</span></b> (Сплайны) и нажмите кнопку<b><span
+  style='font-weight:bold'>  Ngon</span></b> (Многоугольник).</p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=20 height=19
+  src="./chapter8.files/image001.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Задайте число сторон в счетчике<b><span
+style='font-weight:bold'>  Sides</span></b> (Стороны) и постройте шестиугольник.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>На командной панели<b><span
+style='font-weight:bold'>  Create</span></b> (Создать) при нажатой кнопке<b><span
+style='font-weight:bold'>  Shapes</span></b> (Формы) и выбранном в списке
+варианте<b><span style='font-weight:bold'>  Splines</span></b> (Сплайны) нажмите
+кнопку <b><span style='font-weight:bold'> Line</span></b> (Линия) и постройте
+форму сечения.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image003.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.1.</span></font></b>
+  Заготовка для лофтинг-модели</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>5.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Нажав кнопку<b><span style='font-weight:
+bold'>  Geomety</span></b> (Геометрия) на командной панели<b><span
+style='font-weight:bold'>  Create</span></b> (Создать), щелкните по кнопке мыши<b><span
+style='font-weight:bold'>  Loft Object</span></b> (Объект по сечению).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В свитке<b><span
+style='font-weight:bold'>  Object Type</span></b> (Тип объекта) расположена
+кнопка<b><span style='font-weight:bold'>  Loft</span></b> (Создать по сечению).
+Чтобы кнопка была доступна, должна быть выделена одна из форм.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>6.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Выделите форму-путь и щелкните LM на
+кнопке<b><span style='font-weight:bold'>  Loft</span></b> (Создать по сечению).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Открылся доступ к свиткам<b><span
+style='font-weight:bold'>  Creation Method</span></b> (Метод создания).<b><span
+style='font-weight:bold'>  Surface Parameters</span></b> (Параметры
+поверхности),<b><span style='font-weight:bold'>  Path Parameters</span></b>
+(Параметры пути) и<b><span style='font-weight:bold'>  Skin Parameters</span></b>
+(Параметры оболочки).</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>7.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Из двух появившихся в свитке<b><span
+style='font-weight:bold'>  Creation Method</span></b> (Метод создания) кнопок <b><span
+style='font-weight:bold'> Get Path</span></b> (Выбрать путь) и<b><span
+style='font-weight:bold'>  Get Shape</span></b> (Выбрать форму) щелкните LM на
+кнопке<b><span style='font-weight:bold'>  Get Shape</span></b> (Выбрать форму).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Если кнопка<b><span
+style='font-weight:bold'>  Get Shape</span></b> (Выбрать форму) не активна, то
+это означает, что выбранная форма не может использоваться как путь, а только
+как сечение. Форма-путь может быть забракована программой, если она состоит
+более, чем из одного сплайна или NURBS-кривой.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>8.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Переведите курсор на сечение и, когда
+курсор примет специальный вид, щелкните LM.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>В окнах, где установлен режим тонирования, появится объект, созданный
+методом лофтинга (рис 8.2).</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>В примерном построении модели назначался сперва путь, а потом
+выбиралось сечение. При такой последовательности сечение прикреплялось к пути,
+ориентируясь ортогонально ему. Если выбрать сначала сечение, а потом, после
+нажатия кнопки<b><span style='font-weight:bold'>  Get Path</span></b> (Выбрать
+путь), назначить путь, то путь будет прикреплен к сечению (рис. 8.3).</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:5.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=505 valign=top style='width:378.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image005.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=505 valign=top style='width:378.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.2.</span></font></b> Рамка, созданная методом лофтинга</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>В рассмотренном примере мы воспользовались необходимыми для лофтинга
+командами, оставляя значения параметров, в указанных выше свитках,
+установленными по умолчанию. Эти параметры можно настраивать, исходя из
+требований к моделируемой поверхности.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:5.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=505 valign=top style='width:378.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image007.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=505 valign=top style='width:378.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.3.</span></font></b> Вариант
+  прикрепления пути к сечению при лофтинге</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc513988705"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Настройка параметров поверхности</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+настройки параметров следует раскрыть свиток<b><span style='font-weight:bold'> 
+Surface Parameters </span></b>(Параметры поверхности).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+группе<b><span style='font-weight:bold'>  Smoothing</span></b> (Сглаживание)
+следует установить следующие два флажка:</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Smooth
+Length</span></b> (Сгладить вдоль) — обеспечивает сглаживание изломов граней
+поверхности вдоль линии пути;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Smooth
+Width</span></b> (Сгладить поперек) — обеспечивает сглаживание по периметру
+опорных сечений.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>При необходимости применения к объекту, созданному методом лофтинга,
+материалов на основе текстурных карт отметьте параметр<b><span
+style='font-weight:bold'>  Apply Mapping </span></b>(Применить проецирование) в
+группе<b><span style='font-weight:bold'>  Mapping</span></b> (Проецирование).
+После этого становится возможным задание параметров кратности повторения карты
+текстуры по координатам вдоль и поперек линий в счетчиках<b><span
+style='font-weight:bold'>  Length Repeat </span></b>(Кратность вдоль) и<b><span
+style='font-weight:bold'>  Width Repeat</span></b> (Кратность поперек).</span></font></p>
+
+<h2><a name="_Toc513988706"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Настройка параметров пути</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Параметры свитка<b><span style='font-weight:bold'>  Path Parameters</span></b>
+(Параметры пути) позволяют расставить несколько форм-сечений в разных точках
+пути. Это дает возможность формировать оболочку тела с переменным сечением.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Перейдите
+в окно проекции<b><span style='font-weight:bold'>  Тор</span></b> (Вид сверху) и
+отключите там заливку.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Создайте
+несколько сплайнов для форм-сечений и путь, например, как на рис. 8.4.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image009.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.4.</span></font></b>
+  Заготовки для лофтинга с двумя сечениями</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+путь и в раскрывающемся меню<b><span style='font-weight:bold'>  Geomety</span></b>
+(Геометрия) выберите <b><span style='font-weight:bold'> Loft Object</span></b>
+(Объект по сечению).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+LM на кнопке<b><span style='font-weight:bold'>  Loft</span></b> (Лофтинг).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Разверните
+свиток<b><span style='font-weight:bold'>  Path Parameters</span></b> (Параметры
+пути) и установите переключатель<b><span style='font-weight:bold'>  Distance</span></b>
+(Расстояние). В этом случае расстояние между различными сечениями будет
+определяться в единицах длины.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Если установить
+переключатель<b><span style='font-weight:bold'>  Percentage</span></b>
+(Процент), то расстояние между сечениями будет измеряться в процентах от длины
+пути.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Если же установить
+переключатель<b><span style='font-weight:bold'>  Path</span></b> <b><span
+style='font-weight:bold'> Steps</span></b> (Шаги пути), то сечения будут
+размещаться в точках, соответствующих концам линейных сегментов кривой пути.
+Общее число таких точек появится в скобках правее счетчика<b><span
+style='font-weight:bold'>  Path</span></b> (Путь).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+счетчике<b><span style='font-weight:bold'>  Path</span></b> (Путь) задайте
+положение точки на пути, в которой будет размещено первое сечение.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+на кнопке<b><span style='font-weight:bold'>  Get Shape</span></b> (Взять форму)
+и выберите первую форму-сечение.</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>В заданной точке пути появится проекция выбранного
+сечения (рис. 8.5).</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image011.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.5.</span></font></b>
+  Проекция первоначального сечения на пути</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>8.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+точку положения нового сечения, изменив значение счетчика <b><span
+style='font-weight:bold'> Path</span></b> (Путь).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Эта точка помечается на линии пути маркером в виде
+желтого крестика.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В нижней части свитка<b><span
+style='font-weight:bold'>  Path Parameters</span></b> (Параметры пути) имеются
+три кнопки. Они служат для выбора активного сечения, указываемого крестиком:</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=555 style='width:416.1pt;
+ margin-left:.4pt;border-collapse:collapse;'>
+ <tr>
+  <td width=508 valign=top style='width:380.65pt;padding:0cm 0cm 0cm 0cm'>
+  <ul style='margin-top:0cm' type=disc>
+   <li class=MsoNormal><b><font
+       size=3 face="Times New Roman"><span style='font-size:12.0pt;font-weight:
+       bold'> Pick Level</span></font></b> (Указать уровень) — позволяет сделать
+       любое сечение активным, щелкнув LM на нем;</li>
+  </ul>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=18 height=21
+  src="./chapter8.files/image012.jpg"></span></font></p>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=508 valign=top style='width:380.65pt;padding:0cm 0cm 0cm 0cm'>
+  <ul style='margin-top:0cm' type=disc>
+   <li class=MsoNormal><b><font
+       size=3 face="Times New Roman"><span style='font-size:12.0pt;font-weight:
+       bold'> Previous Shape</span></font></b> (Предыдущее сечение) — делает
+       активным предыдущее сечение;</li>
+  </ul>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=14 height=17
+  src="./chapter8.files/image013.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='margin-right:20.0pt;'><b><font size=3 face="Times New Roman"><span
+     style='font-size:12.0pt;font-weight:bold'> Next Shape</span></font></b>
+     (Следующее сечение) — делает активным следующее вдоль пути сечение.</li>
+</ul>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>9.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Лофтинг-модель
+построена. Чтобы увидеть ее, включите заливку. <img border=0 width=14 height=18
+src="./chapter8.files/image014.jpg"></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>На рис. 8.6 показан конечный результат моделирования объекта при помощи
+нескольких сечений.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Сохраните построенный объект, выбрав в меню<b><span style='font-weight:
+bold'>  File</span></b> (Файл) команду<b><span style='font-weight:bold'>  Save</span></b>
+<b><span style='font-weight:bold'> As</span></b> (Сохранить как). В следующем
+уроке он будет использован для изучения способов деформации.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:5.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=505 valign=top style='width:378.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image016.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=505 valign=top style='width:378.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.6.</span></font></b>
+  Построенная лофтинг-модель</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc513988707"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Первая вершина сечения</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Все вершины сплайнов имеют внутреннюю нумерацию. При использовании
+сплайнов в качестве сечений трехмерных объектов линии контура объекта
+формируются путем соединения вершин с одинаковыми номерами.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:5.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=505 valign=top style='width:378.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image018.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=505 valign=top style='width:378.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.7.</span></font></b>
+  Скручивание лофтинг-объекта</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Сдвинув нумерацию вершин у полигонов одинаковой геометрической формы и
+используя их в качестве сечений на разных уровнях пути, можно получить
+перекручивание конечного объекта, как на рис. 8.7. Здесь в качестве сечений
+выбраны два одинаковых многоугольника, но с измененным порядком вершин.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для изменения нумерации вершин в разделе редактирования сплайнов на
+уровне вершин <i><span style='font-style:italic'>(см. Занятие 6)</span></i>
+есть кнопка<b><span style='font-weight:bold'>  Make First</span></b> (Сделать
+первой). С ее помощью можно установить требуемую нумерацию вершин сечения,
+назначив выбранную вершину первой.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Создайте самостоятельно объект, показанный на рис. 8.8, используя прием
+&quot;скрутки&quot;.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;'>
+ <tr>
+  <td width=516 valign=top style='width:386.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image020.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=516 valign=top style='width:386.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.8.</span></font></b> Объект,
+  построенный с помощью изменения порядка нумерации вершин</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc513988708"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Настройка параметров сетчатой оболочки</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для построенного ранее объекта настройте параметры сетчатой оболочки.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Разверните свиток<b><span
+style='font-weight:bold'>  Skin Parameters</span></b> (Параметры оболочки).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Представленные там параметры управляют процессом
+построения оболочки по опорным сечениям.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>В группе<b><span style='font-weight:bold'> 
+Capping</span></b> (Накрытие) настройте следующие параметры:</p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal><b><font
+     size=3 face="Times New Roman"><span style='font-size:12.0pt;font-weight:
+     bold'> Cap Start</span></font></b> (Начальное основание) и<b><span
+     style='font-weight:bold'>  Cap End</span></b> (Конечное основание) — флажки
+     определяют, создавать ли поверхности на торцах трехмерной модели. На рис.
+     8.9 показан объект с закрытыми торцами и тот же объект с открытыми торцами;</li>
+ <li class=MsoNormal><b><font
+     size=3 face="Times New Roman"><span style='font-size:12.0pt;font-weight:
+     bold'> Morph</span></font></b> (Морфинг) — переключатель устанавливается,
+     если требуется, чтобы поверхности на торцах могли быть преобразованы
+     методом морфинга;</li>
+ <li class=MsoNormal><b><font
+     size=3 face="Times New Roman"><span style='font-size:12.0pt;font-weight:
+     bold'> Grid</span></font></b> (Сетка) — при установке переключателя
+     торцевые поверхности формируются в виде сетки с одинаковыми ячейками, что
+     дает возможность применять различные модификаторы.</li>
+</ul>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter8.files/image022.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 8.9.</span></font></b> Объект,
+  построенный с помощью изменения порядка нумерации вершин</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+группе<b><span style='font-weight:bold'>  Options</span></b> (Параметры)
+настройте параметры, определяющие степень сложности создаваемой оболочки
+объекта:</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Shape
+Steps</span></b> (Шагов формы) — счетчик управляет числом шагов (линейных
+сегментов) между соседними вершинами форм-сечений. Чем больше шагов формы, тем
+более гладкой будет оболочка объекта по периметру форм-сечений;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Path
+Steps</span></b> (Шагов пути) — счетчик управляет числом шагов (линейных
+сегментов) между вершинами линии пути. Опорное сечение помещается на конце
+каждого линейного сегмента, так что увеличение этого параметра ведет к созданию
+оболочек, более гладких вдоль линии пути;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Optimize
+shapes</span></b> (Оптимальные формы) — флажок минимизирует число шагов в
+линейных сегментах форм-сечений перед построением оболочки объекта, тем самым
+снижая ее сложность;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Adaptive
+Path Steps</span></b> (Адаптивные шаги пути) — флажок добавляет дополнительные
+шаги между вершинами пути с тем, чтобы создать наилучшую возможную оболочку
+объекта. Шаги добавляются там, где находятся контрольные точки кривой
+деформации;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Contour</span></b>
+(Контур) — флажок заставляет форму-сечение постоянно располагаться
+перпендикулярно линии пути. Если параметр не отмечен, сечение размещается вдоль
+пути параллельно своему начальному положению;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Banking</span></b>
+(Крен) — флажок заставляет форму-сечение вращаться вместе с кривой пути.
+Например, при использовании спирали в качестве пути нужно отметить параметр,
+чтобы объект сформировался должным образом. В противном случае сечение не будет
+правильно располагаться относительно пути во всех трех измерениях;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Constant
+Cross Section</span></b> (Постоянное сечение) — при установке этого флажка
+происходит увеличение размеров сечения в местах изломов линии пути, чтобы
+обеспечить постоянную толщину объекта, созданного методом лофтинга. В противном
+случае форма-сечение сохраняет свои размеры, и объект в местах изломов пути
+становится утонченным;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Linear
+Interpolation</span></b> (Линейная интерполяция) — флажок определяет, будет
+программа интерполировать оболочку трехмерного объекта в промежутках между
+сечениями по линейному закону или со сглаживанием изломов. По умолчанию
+параметр отменен, т. е. используется сглаженная интерполяция, что выражается в
+формировании более гладкого объекта. Линейная интерполяция создает оболочку, в
+которой промежутки между сечениями соединяются отрезками прямых линий. В
+результате получается ребристый объект упрощенной формы.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+при необходимости следующие параметры в группе<b><span style='font-weight:bold'> 
+Display </span></b>(Отображение):</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Skin</span></b>
+(Оболочка) — флажок обеспечивает показ оболочки объекта, сформированного
+методом лофтинга, в окнах с каркасным режимом отображения;</p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> Skin in
+Shaded</span></b> (Тонированная оболочка) — флажок обеспечивает показ оболочки
+объекта только в окнах с тонированным режимом отображения.</p>
+
+</div>
+
+</body>
+
+</html>

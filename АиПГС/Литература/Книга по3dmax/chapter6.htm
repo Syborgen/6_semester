@@ -1,0 +1,1696 @@
+<html>
+
+<head>
+<meta name=Generator content="HTML-фильтр Microsoft Office версии 2.1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Originator content="Microsoft Word 9">
+<title>Редактирование и модификация сплайнов</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+h5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:72.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:84.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:96.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:20.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.FR1, li.FR1, div.FR1
+	{
+	margin-top:0cm;
+	margin-right:170.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:20.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR2, li.FR2, div.FR2
+	{
+	margin-top:12.0pt;
+	margin-right:140.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR3, li.FR3, div.FR3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+p.FR4, li.FR4, div.FR4
+	{
+	margin-top:7.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Arial;}
+p.a, li.a, div.a
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:14.2pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.a0, li.a0, div.a0
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=silver lang=RU link=blue vlink=purple style='
+text-justify-trim:punctuation' background="fon.jpg">
+<div class=Section1>
+
+<p class=FR2 style='margin:0cm;margin-bottom:.0001pt'><a name="_Toc513982942"><b><font
+size=5 face=Arial><span style='font-size:18.0pt;'>Редактирование
+и модификация сплайнов</span></font></b></a></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font color=blue><a href="#_Toc513983282">Редактирование сплайнов на уровне форм</a></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513983283">Редактирование сплайнов на уровне вершин</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513983284">Редактирование сплайнов на уровне сегментов</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513983285">Редактирование сплайнов на уровне сплайнов</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513983286">Дополнительные модификаторы сплайнов</a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513983287">Модификатор <i><span style='font-style:italic'>Fillet/Chamfer</span></i></a></span></font></u></span></p>
+
+<p class=MsoToc3><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc513983288">Модификатор <i><span style='font-style:italic'>Trim/Extend</span></i></a></span></font></u></span></p>
+
+<p class=MsoNormal>Сплайны,
+как и любой другой тип объектов, допускают редактирование и модификацию. Их
+можно редактировать на уровне формы и на уровне ее подобъектов, таких как
+отдельные сплайны, их вершины и сегменты. Для каждого типа подобъектов имеются
+свои виды модификаторов. В режиме редактирования на уровне подобъектов могут
+быть выделены только соответствующие подобъекты сплайна. Инструменты
+преобразований тоже могут быть применены лишь к подобъектам. Средства
+редактирования и модификации сплайнов на различных уровнях позволяют создавать
+из сплайнов практически любые двумерные формы.</p>
+
+<h2><a name="_Toc513982943"></a><a name="_Toc513982995"></a><a
+name="_Toc513983282"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Редактирование сплайнов на уровне форм</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Редактирование ,сплайновой формы позволяет присоединить к ней другие
+готовые сплайны, создать отрезки линий в качестве сегментов текущего сплайна,
+изменить параметры интерполяции криволинейных сегментов, заданных при его
+создании.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Перейдем к редактированию.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=530 style='width:397.3pt;
+ margin-left:.4pt;border-collapse:collapse;'>
+ <tr>
+  <td width=451 valign=top style='width:338.45pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>На командной панели<b><span lang=EN-US style='font-weight:bold'> Create</span></b> (Создать) нажмите кнопку<b><span lang=EN-US style='font-weight:bold'> Shapes</span></b>(Формы), в
+  списке выберите значение<b><span
+  lang=EN-US style='font-weight:bold'> Splines</span></b>
+  (Сплайны), нажмите кнопку<b><span
+  lang=EN-US style='font-weight:bold'> Line</span></b>
+  (Линия) и постройте два отдельных сплайна, как показано на рис. 6.1.</p>
+  </td>
+  <td width=78 valign=top style='width:58.85pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=21 height=20
+  src="./chapter6.files/image001.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=451 valign=top style='width:338.45pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Перейдите на командную панель<b><span lang=EN-US style='font-weight:bold'> Modify</span></b> (Изменить).</p>
+  <p class=MsoToc4><font size=3 face="Times New Roman"><span lang=EN-US
+  style='font-size:12.0pt'>Если последний построенный сплайн остался
+  выделенным, то на командной панели сразу появятся свитки редактирования
+  сплайнов.</span></font></p>
+  </td>
+  <td width=78 valign=top style='width:58.85pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=29 height=26
+  src="./chapter6.files/image003.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Раскройте
+свиток<b><span lang=EN-US
+style='font-weight:bold'> Geometry</span></b>
+(Геометрия) и выберите кнопку<b><span
+lang=EN-US style='font-weight:bold'> Attach</span></b>
+(Присоединить).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Это действие позволяет присоединить к выделенной сплайновой форме
+готовый сплайн.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Переместите
+курсор в окно проекции и укажите на присоединяемый сплайн.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=213
+  src="./chapter6.files/image005.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.1.</span></font></b>
+  Редактируемые сплайны</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:11.9pt'><font size=3
+face="Times New Roman"><span lang=EN-US style='font-size:12.0pt;'>&nbsp;</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=523 style='width:392.5pt;
+ margin-left:11.9pt;border-collapse:collapse;'>
+ <tr>
+  <td width=486 valign=top style='width:364.15pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Когда курсор примет специальный вид, щелкните </span></font><span
+  lang=EN-US>LM</span>. Два сплайна будут
+  соединены в одну форму. На это указывает раздвинувшаяся рамка выбора
+  объектов. Результат присоединения показан на рис. 6.2</p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=20 height=19
+  src="./chapter6.files/image006.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span lang=EN-US
+style='font-size:12.0pt;'>&nbsp;</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=486 valign=top style='width:364.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image008.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=486 valign=top style='width:364.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.2.</span></font></b>
+  Сплайны, объединенные в одну форму</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Отметьте
+в свитке<b><span lang=EN-US
+style='font-weight:bold'> Geometry</span></b>
+(Геометрия) флажок<b><span
+lang=EN-US style='font-weight:bold'> Reorient</span></b>
+(Переориентировать).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Его установка вызовет переориентацию присоединяемого
+сплайна в соответствии с локальной системой координат редактируемого сплайна.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Создайте еще один сплайн следующим образом.</span></font></p>
+
+<p class=MsoNormal style='margin-left:20.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+свитке<b><span lang=EN-US
+style='font-weight:bold'> Geometry</span></b>
+(Геометрия) нажмите кнопку<b><span
+lang=EN-US style='font-weight:bold'> Create</span></b><b><span lang=EN-US style='
+font-weight:bold'> Line</span></b> (Создать линию).</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Это позволит создавать новые линии, которые будут
+добавляться к текущей сплайновой форме.</span></font></p>
+
+<p class=MsoNormal style='margin-left:20.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Переместите
+курсор в окно проекции на один из концов созданного сплайна и начинайте
+рисовать.</p>
+
+<p class=MsoNormal style='margin-left:20.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Если перед началом
+рисования указать курсором на один из концов текущего сплайна, то курсор примет
+вид, соответствующий режиму присоединения создаваемой линии. В этом случае
+линия будет присоединена к текущему сплайну в качестве сегмента.</span></font></p>
+
+<p class=MsoNormal style='margin-left:20.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Теперь посмотрим, как
+расширить возможности редактирования сплайнов. С этой целью используем вариант
+редактирования с помощью кнопки</span></font><b><span
+lang=EN-US style='font-weight:bold'> Edit</span></b><b><span lang=EN-US style='
+font-weight:bold'> Spline</span></b> (Редактирование сплайна).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=546 style='width:409.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=489 valign=top style='width:366.9pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:20.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span lang=EN-US style='font-size:12.0pt;'>3.<font size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Щелкните<span lang=EN-US> LM </span>накнопке<b><span lang=EN-US style='
+  font-weight:bold'>  Configure Button Sets</span></b><span lang=EN-US> (</span>Конфигурированиенаборовмодификаторов<span lang=EN-US>),
+  </span>воткрывшемсясвиткевыберетевариант <b><span lang=EN-US style='font-weight:bold'> Patch/Spline
+  Editing</span></b><span lang=EN-US> (</span>Путь<span lang=EN-US>/</span>Редактируемыйсплайн<span lang=EN-US>) </span>ивпоявившемсяменющелкнитенакнопке<b><span
+  lang=EN-US style='font-weight:bold'>  Edit Spline</span></b><span
+  lang=EN-US> (</span>Редактированиесплайна<span lang=EN-US>) (</span>рис<span lang=EN-US>. 6.3).</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.5pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=20 height=19
+  src="./chapter6.files/image006.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span lang=EN-US
+style='font-size:12.0pt;'>&nbsp;</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=168 height=145
+  src="./chapter6.files/image010.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.3.</span></font></b> Меню
+  правки стека</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:20.0pt;text-align:justify'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Список свитка</span></font><b><span lang=EN-US
+style='font-weight:bold'> Geometry</span></b>
+(Геометрия) пополнился новыми элементами.</p>
+
+<p class=MsoNormal style='margin-left:20.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Нажмите
+кнопку<b><span lang=EN-US
+style='font-weight:bold'> Attach</span></b><b><span lang=EN-US style='font-weight:bold'> Multiple</span></b>
+(Присоединить несколько), которая позволит присоединить к выделенной сплайновой
+форме несколько новых форм. После этого появится одноименное диалоговое окно
+(рис. 6.4).</p>
+
+<p class=MsoNormal style='margin-left:20.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+в списке окна имя первой созданной формы. По умолчанию ей было присвоено имя<b><span lang=EN-US style='font-weight:bold'> Line</span>01.</b> Щелкните LM на кнопке<b><span lang=EN-US style='font-weight:bold'> Attach</span></b> (Присоединить) в правом нижнем углу
+окна.</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Выделенный в списке объект будет присоединен к ранее
+указанной сплайновой форме. В списке можно выделить любое число ранее созданных
+форм. В нашем случае список состоит из одной формы.</span></font></p>
+
+<p class=MsoNormal style='margin-left:20.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Кнопки свитка</span></font><b><span lang=EN-US
+style='font-weight:bold'> Interpolation</span></b>
+(Интерполяция) управляют интерполяцией криволинейных сегментов сплайна. Ее
+параметры:<b><span lang=EN-US
+style='font-weight:bold'> Steps</span></b> (Шаги),<b><span lang=EN-US style='font-weight:bold'> Optimize</span></b>(Оптимальная)
+и<b><span lang=EN-US
+style='font-weight:bold'> Adaptive</span></b>
+(Адаптивная).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=395 height=409
+  src="./chapter6.files/image012.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.4.</span></font></b> Диалоговое
+  окно присоединения нескольких форм</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Использование настроек свитка</span></font><b><span
+lang=EN-US style='font-weight:bold'> Rendering</span></b>
+(Визуализация) позволяет сделать сплайн визуализированным объектом. Параметры
+визуализации:<b><span lang=EN-US
+style='font-weight:bold'> Renderable</span></b>(Визуализируемый),<b><span
+lang=EN-US style='font-weight:bold'> Generate</span></b><b><span lang=EN-US style='
+font-weight:bold'> Mapping</span></b><b><span
+lang=EN-US style='font-weight:bold'> Coords</span></b>
+(Проекционные координаты) и<b><span
+lang=EN-US style='font-weight:bold'> Thickness</span></b>
+(Толщина).</p>
+
+<h2><a name="_Toc513982944"></a><a name="_Toc513982996"></a><a
+name="_Toc513983283"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Редактирование сплайнов на уровне вершин</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Редактирование сплайнов на уровне вершин позволяет из простого сплайна
+создать сплайн практически любой конфигурации.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=546 style='width:409.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=499 valign=top style='width:373.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Отмените команды предыдущего
+  редактирования с помощью инструмента<b><span
+  lang=EN-US style='font-weight:bold'> Undo</span></b>
+  (Предыдущий).</p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:13.0pt;text-indent:-13.0pt'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=30 height=29
+  src="./chapter6.files/image014.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>При этом один из сплайнов
+должен остаться выделенным.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+свитке<b><span lang=EN-US
+style='font-weight:bold'> Selection</span></b> (Выбор)
+щелкните <span lang=EN-US>LM</span> на левой из
+пиктограмм, показанных на рис. 6.5.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:19.6pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=484 valign=top style='width:363.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=160 height=51
+  src="./chapter6.files/image016.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=484 valign=top style='width:363.2pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.5.</span></font></b>
+  Пиктограммы выбора подобъектов редактирования</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Вами выбран режим
+редактирования вершин. В выделенном сплайне все вершины обозначатся крестиками,
+а первая вершина — квадратиком.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+изменения типа вершины выделите одну или несколько вершин любым известным
+способом (например, прямоугольной рамкой), укажите курсором на одну из них и
+щелкните <span lang=EN-US>RM</span>.</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В нижней части
+появившегося меню</span></font><b><span
+lang=EN-US style='font-weight:bold'> Tools</span> 1</b>
+(рис. 6.6) приведен перечень четырех типов вершин. Текущий тип будет помечен
+галочкой.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=116 height=204
+  src="./chapter6.files/image018.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.6.</span></font></b> Контекстное меню преобразований</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+нужный тип вершины из предложенного списка и щелкните <span lang=EN-US>LM</span>.</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Остальные команды
+редактирования вершин будем выбирать в свитке </span></font><b><span
+lang=EN-US style='font-weight:bold'> Geometry</span></b>
+(Геометрия).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+параметр<b><span lang=EN-US
+style='font-weight:bold'> Connect</span></b>
+(Соединить), который позволяет соединять две вершины на концах разомкнутого
+сплайна отрезком прямой.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+курсор на один из концов ломаной и, нажав LM, перетащите курсор ко второму
+концу ломаной. Когда курсор примет специальный вид, отпустите кнопку.</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Пример соединения вершин
+показан на рис. 6.7.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Используем теперь кнопку</span></font><b><span lang=EN-US
+style='font-weight:bold'> Break</span></b> (Разбить).
+Она позволяет разбить любую, кроме концевых, вершину сплайна на две совпадающие,
+но не соединяющиеся вершины.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+предназначенную для разбиения вершину и щелкните LM на кнопке<b><span lang=EN-US style='font-weight:bold'> Break</span></b> (Разбить).</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Вновь добавленная в месте
+разрыва вершина становится первой и обозначается квадратиком.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>8.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Нажмите
+кнопку<b><span lang=EN-US
+style='font-weight:bold'> Refine</span></b> (Уточнить).</p>
+
+<p class=MsoNormal style='margin-left:16.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Данное действие позволяет
+вставить дополнительную вершину в произвольной точке сплайна без изменения его
+формы. Такая вершина может понадобиться, например, для разрыва в этом месте
+сплайна.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image020.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.7.</span></font></b> Пример
+  соединения двух вершин сплайна</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>9.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+курсор на линию сплайна и, когда курсор примет специальный вид, щелкните <span
+lang=EN-US>LM</span>.</p>
+
+<p class=FR4 align=left style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:24.0pt;margin-bottom:.0001pt;text-align:left'><b><font size=2
+face=Arial><span style='font-size:10.0pt;font-weight:bold'> Примечание</span></font></b></p>
+
+<p class=FR4 align=left style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:24.0pt;margin-bottom:.0001pt;text-align:left'><font size=1
+face=Arial><span style='font-size:9.0pt'>При активизированной кнопке</span></font><b><font size=1><span
+lang=EN-US style='font-size:9.0pt;font-weight:bold'> Refine</span></font></b><font
+size=1><span style='font-size:9.0pt'> (Уточнить) можно вставить неограниченное
+число уточняющих вершин.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>10.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Нажмите
+кнопку<b><span lang=EN-US
+style='font-weight:bold'> Insert</span></b> (Вставить),
+которая дает возможность вставить вершину в любой точке сплайна, сразу же
+переместить ее и продолжить добавление новых вершин и сегментов сплайна.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>11.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Установите
+курсор на линию сплайна и, когда курсор примет специальный вид, щелкните LM,
+перетащите курсор в нужное место и щелкните <b><span style='font-weight:bold'> LM</span></b>
+еще раз.</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Возможность добавлять
+вершины при выбранной команде не ограничена. Для завершения команды щелкните</span></font><b><span lang=EN-US
+style='font-weight:bold'> RM</span>.</b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>12.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Нажмите
+кнопку<b><span lang=EN-US
+style='font-weight:bold'> Weld</span></b> (Слить),
+позволяющую слить две концевые или совпадающие вершины в одну.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>13.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Подведите
+одну концевую вершину к другой с помощью инструмента <b><span lang=EN-US
+style='font-weight:bold'> Move</span></b> (Переместить)
+и, если расстояние между вершинами окажется меньше, чем указанное в счетчике<b><span lang=EN-US style='font-weight:bold'> Weld</span></b><b><span
+lang=EN-US style='font-weight:bold'> Threshold</span></b>
+(Порог слияния), то появится сообщение &quot;<span lang=EN-US>Weld</span><span lang=EN-US>Coincident</span><span lang=EN-US>endpoint</span>?&quot; (Слить совпадающие
+вершины). Щелкните на кнопке<b><span
+lang=EN-US style='font-weight:bold'> Yes</span>.</b></p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Таким способом можно
+получить замкнутую форму из любого незамкнутого сплайна. Пример слияния вершин
+показан на рис. 6.8.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=455 valign=top style='width:341.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image022.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=455 valign=top style='width:341.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.8.</span></font></b> Пример
+  слияния вершин сплайна</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>14.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Для
+удаления вершин выделите их любым из способов и нажмите кнопку<b><span lang=EN-US style='font-weight:bold'> Delete</span></b> (Удалить).</p>
+
+<p class=MsoNormal style='margin-left:16.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Данное действие не только
+удалит вершины, но и объединит сегменты, на стыке которых они располагались, в
+один сегмент. Результат удаления вершины приведен на рис. 6.9.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image024.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.9.</span></font></b> Пример
+  удаления выделенной вершины сплайна</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Рассмотрим режим, при котором можно синхронно перемещать маркеры всех
+касательных векторов вершин типа Безье.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Постройте
+сплайн-окружность, нажав в свитке<b><span
+lang=EN-US style='font-weight:bold'> Object</span></b><b><span lang=EN-US style='
+font-weight:bold'> Type</span></b> (Тип объекта) кнопку<b><span lang=EN-US style='font-weight:bold'> Circle</span></b> (Окружность). Выберите все вершины
+сплайн-формы способом прямоугольной рамки.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+курсор на одну из вершин и щелкните<b><span
+lang=EN-US style='font-weight:bold'> RM</span>.</b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+в открывшемся списке вершину Безье.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Выделенные вершины
+обозначены теперь красными крестиками, а концы касательных векторов вершин
+Безье — зелеными прямоугольниками.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+свитке<b><span lang=EN-US
+style='font-weight:bold'> Selection</span></b> (Выбор)
+отметьте флажок<b><span
+lang=EN-US style='font-weight:bold'> Lock</span></b><b><span lang=EN-US style='
+font-weight:bold'> Handles</span></b> (Блокировать маркеры) и установите
+переключатель<b><span lang=EN-US
+style='font-weight:bold'> All</span></b> (Все).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=546 style='width:409.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=499 valign=top style='width:373.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>5.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Выберите инструмент<b><span lang=EN-US style='font-weight:bold'> Move</span></b> (Переместить) и переместите любой из
+  маркеров касательного вектора.</p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=30 height=27
+  src="./chapter6.files/image026.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Перемещение любого из
+маркеров заставляет синхронно перемещаться и все остальные маркеры. На рис.
+6.10 показаны исходная сплайн-окружность и сплайн, полученный из нее путем
+синхронного перемещения вершин.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image028.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.10.</span></font></b> Пример
+  синхронного перемещения вершин сплайн-окружности</p>
+  </td>
+ </tr>
+</table>
+
+<p class=FR4 style='margin-top:0cm'><font size=1 face=Arial><span
+style='font-size:8.0pt'>&nbsp;</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+переключатель<b><span lang=EN-US
+style='font-weight:bold'> Alike</span></b> (Подобные) и
+в этом режиме переместите любой из маркеров касательного вектора.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Обратите внимание, что теперь перемещаются не все
+маркеры, а только соответствующие выбранному. То есть, если выбран входящий
+маркер, то перемещаются только входящие маркеры остальных касательных векторов.</span></font></p>
+
+<h2><a name="_Toc513982945"></a><a name="_Toc513982997"></a><a
+name="_Toc513983284"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Редактирование сплайнов на уровне сегментов</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Редактирование сплайнов на уровне сегментов позволяет разбивать сплайн
+на отдельные части, добавлять новые вершины к существующим сегментам, отделять
+сегменты, преобразуя их в самостоятельные формы и удалять сегменты.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Сбросьте
+выбор вершин, щелкнув <span lang=EN-US>LM</span>
+в любой точке экрана.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=546 style='width:409.4pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=499 valign=top style='width:373.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>В свитке<b><span lang=EN-US style='
+  font-weight:bold'> Selection</span></b> (Выбор) щелкните на кнопке с
+  пиктограммой <b><span lang=EN-US style='font-weight:
+  bold'> Segment</span></b> (Сегмент).</p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=22 height=21
+  src="./chapter6.files/image029.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=center style='margin-left:14.0pt;text-align:center'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>Вы перешли в режим
+редактирования сплайнов на уровне сегментов.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+изменения типа сегмента выделите один или несколько сегментов. Выделенные
+сегменты отличаются красным цветом.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выставьте
+курсор на любой из них и щелкните <span lang=EN-US>RM</span>.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится контекстное меню
+сегментов, показанное на рис. 6.11. В нижней части меню приведен перечень типов
+сегментов:</span></font><b><span
+lang=EN-US style='font-weight:bold'> Curve</span></b>
+(Кривая) и <b><span lang=EN-US style='font-weight:bold'> Line</span></b>
+(Линия). Текущий тип отмечен галочкой.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=453 style='width:340.1pt;
+ margin-left:26.7pt;border-collapse:collapse;'>
+ <tr>
+  <td width=453 valign=top style='width:340.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=421 height=350
+  src="./chapter6.files/image031.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=453 valign=top style='width:340.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.11.</span></font></b> Меню
+  преобразования с разделом типов сегментов</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Назначьте
+для выбранного сегмента тип<b><span
+lang=EN-US style='font-weight:bold'> Line</span></b>
+(Линия).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Нажмите
+кнопку<b><span lang=EN-US
+style='font-weight:bold'> Break</span></b> (Разбить) в
+свитке<b><span lang=EN-US
+style='font-weight:bold'> Geometry</span></b>
+(Геометрия).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Это действие позволяет разбить сплайн на два отдельных
+сплайна путем вставки вершины в указанной точке.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Наведите
+на сегмент курсор сплайна и, когда он примет специальный вид, щелкните <span
+lang=EN-US>LM</span>.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В указанной точке на
+сегменте появится прямоугольник, обозначающий начало сегмента. Сам же исходный
+сегмент будет разорван в этой точке. Чтобы убедиться в этом, достаточно
+переместить его с помощью инструмента</span></font><b><span
+lang=EN-US style='font-weight:bold'> Move</span></b>
+(Переместить).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>8.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Нажмите
+кнопку<b><span lang=EN-US
+style='font-weight:bold'> Refine</span></b> (Уточнить) в
+свитке<b><span lang=EN-US
+style='font-weight:bold'> Geometry</span></b>
+(Геометрия), которая позволяет вставить вершину в произвольной точке сплайна,
+не разбивая сплайн и не меняя его формы.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>9.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Укажите
+курсором на сегмент сплайна и, когда курсор примет вид, показанный на рис.
+6.12, щелкните LM.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Новая вершина будет отмечена крестиком.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=475 style='width:356.1pt;
+ margin-left:26.7pt;border-collapse:collapse;'>
+ <tr>
+  <td width=475 valign=top style='width:356.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image033.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=475 valign=top style='width:356.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.12.</span></font></b> Пример
+  разбиения сегмента сплайна</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>10.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Выделите
+сегмент и нажмите кнопку<b><span
+lang=EN-US style='font-weight:bold'> Detach</span></b>
+(Отделить) в свитке<b><span
+lang=EN-US style='font-weight:bold'> Geometry</span></b>
+(Геометрия).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Это позволит отделить
+сегмент сплайна, превратив его в самостоятельный объект.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Установка флажка</span></font><b><span lang=EN-US
+style='font-weight:bold'> Same</span></b><b><span
+lang=EN-US style='font-weight:bold'> Shape</span></b>
+(Та же форма) заставляет отдельный сегмент стать частью той же формы, к которой
+относится сплайн. Установленный флажок<b><span
+lang=EN-US style='font-weight:bold'> Reorient</span></b>
+(Исходная ориентация) позволяет привести ориентацию локальных осей координат
+отделяемого сегмента в соответствие с ориентацией осей координат активного окна
+проекции, а флажок<b><span
+lang=EN-US style='font-weight:bold'> Copy</span></b>
+(Копия) отделяет копию сегмента.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>11.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Если
+не отмечен параметр<b><span
+lang=EN-US style='font-weight:bold'> Same</span></b><b><span lang=EN-US style='
+font-weight:bold'> Shape</span></b> (Та, же форма), появится одноименное
+диалоговое окно. Введите имя создаваемой формы и подтвердите нажатием кнопки<b><span
+style='font-weight:bold'>  ОК.</span></b></p>
+
+<p class=MsoNormal style='margin-left:14.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Отделенный сегмент
+окрасится в другой цвет.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>12.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Выделите
+сегмент, выставьте в счетчике<b><span
+lang=EN-US style='font-weight:bold'> Divisions</span></b>
+(Деления) число разбиений и щелкните на кнопке<b><span lang=EN-US style='font-weight:bold'> Divide</span></b>
+(Разделить) в свитке<b><span
+lang=EN-US style='font-weight:bold'> Geometry</span></b>
+(Геометрия).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Это действие, позволяющее
+равномерно разбить выделенный сегмент на более мелкие сегменты за счет
+размещения равноудаленных вершин по всей длине сегмента. Число добавляемых
+сегментов задается в счетчике </span></font><b><span lang=EN-US
+style='font-weight:bold'> Divisions</span></b>
+(Деления). На рис. 6.13 показан вариант разбиения сегмента.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>13.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Кнопка<b><span lang=EN-US style='font-weight:bold'> Delete</span></b> (Удалить) позволяет удалять
+выделенный сегмент сплайна, а кнопка<b><span
+lang=EN-US style='font-weight:bold'> Insert</span></b>
+(Вставить) выполняет ту же операцию, что и аналогичная команда редактирования
+вершин.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image035.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.13.</span></font></b> Сегмент сплайна, разбитый на части</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc513982946"></a><a name="_Toc513982998"></a><a
+name="_Toc513983285"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Редактирование сплайнов на уровне сплайнов</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Данный вид редактирования позволяет объединять, замыкать, выполнять
+булевские и другие операции над сплайнами.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=536 style='width:402.3pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=499 valign=top style='width:373.95pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span lang=EN-US style='font-size:12.0pt;'>1.<font size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Выделите для редактирования один из
+  построенных сплайнов. В свитке<b><span
+  lang=EN-US style='font-weight:bold'> Selection</span></b>
+  (Выбор) щелкните на кнопке с пиктограммой <b><span lang=EN-US
+  style='font-weight:bold'> Spline</span></b> (Сплайн).</p>
+  </td>
+  <td width=38 valign=top style='width:1.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=22 height=21
+  src="./chapter6.files/image036.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Выделенный сплайн приобретет красный цвет в окнах
+проекций.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Если
+выбранный вами сплайн не замкнут, то замкните его, нажав кнопку <b><span
+lang=EN-US style='font-weight:bold'> Close</span></b>
+(Замкнуть) в свитке<b><span
+lang=EN-US style='font-weight:bold'> Geometry</span></b>
+(Геометрия).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Начальная и конечная точки вашего сплайна соединятся
+отрезком прямой. На рис. 6.14 показано замыкание ранее созданного сплайна.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=305 height=212
+  src="./chapter6.files/image038.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.14.</span></font></b> Пример
+  замыкания сплайна</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Нажмите
+кнопку<b><span lang=EN-US
+style='font-weight:bold'> Outline</span></b> (Контур).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Выполненное действие позволяет построить контур любой
+ширины выделенного сплайна. Он представляет собой замкнутый сплайн. Пример
+построения контура приведен на рис. 6.15.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image040.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=477 valign=top style='width:358.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.15.</span></font></b> Пример
+  создания контура сплайна</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Укажите
+курсором на редактируемый сплайн. Когда курсор примет специальный вид, щелкните
+<span lang=EN-US>LM</span> и перетащите курсор
+на требуемое расстояние, создавая контур.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Второй способ построения контура состоит в том, чтобы выделить исходный
+сплайн, задать расстояние между ним и линией контура в счетчике</span></font><b><span lang=EN-US
+style='font-weight:bold'> Outline</span></b><b><span lang=EN-US style='
+font-weight:bold'> Width</span></b> (Ширина контура) и щелкнуть на кнопке<b><span lang=EN-US style='font-weight:bold'> Outline</span></b> (Контур). Если флажок<b><span lang=EN-US style='font-weight:bold'> Center</span></b> (От центра) не отмечен, то исходный
+сплайн остается на месте, а контур обводки создается от него на расстоянии,
+заданном в счетчике. Если отметить флажок<b><span
+lang=EN-US style='font-weight:bold'> Center</span></b>
+(От центра), то исходный сплайн и линия контура смещаются в противоположных
+направлениях на половину величины, указанной в счетчике.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Рассмотрим варианты выполнения булевской операции над сплайнами. Здесь
+понадобятся оба построенных сплайна. И они должны быть составными частями одной
+двумерной формы <i><span style='font-style:italic'>(см. разд.
+&quot;Редактирование сплайнов на уровне форм&quot;</span></i> ранее в этом
+занятии).</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Переместите один из сплайнов с помощью
+инструмента<b><span lang=EN-US
+style='font-weight:bold'> Move</span></b>(Переместить)
+до пересечения с другим, как на рис. 6.16, и оставьте его выделенным (красного
+цвета).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Объедините оба сплайна, щелкнув LM на
+кнопке<b><span lang=EN-US
+style='font-weight:bold'> Attach</span></b>
+(Присоединить) в свитке<b><span
+lang=EN-US style='font-weight:bold'> Geometry</span></b>
+(Геометрия), и далее щелкните на присоединяемом сплайне.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image042.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.16.</span></font></b>
+  Сплайны, подготовленные для Объединения</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните <span lang=EN-US>LM</span> последовательно на кнопках<b><span lang=EN-US style='font-weight:bold'> Union</span></b> (Объединение) и <b><span lang=EN-US
+style='font-weight:bold'> Boolean</span></b>
+(Булевские). Наведите на второй сплайн курсор и, когда он примет специальный
+вид, щелкните LM.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Пример объединения двух
+сплайнов показан на рис. 6.17. Две оставшиеся логические операции:</span></font><b><span lang=EN-US
+style='font-weight:bold'> Intersection</span></b>
+(Пересечение) и<b><span
+lang=EN-US style='font-weight:bold'> Subtraction</span></b>
+(Исключение) выполните самостоятельно.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image044.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.17.</span></font></b> Результат булевского объединения двух сплайнов</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Для работы с командой<b><span lang=EN-US style='font-weight:bold'> Mirror</span></b> (Отразить) назначьте один из
+вариантов зеркального отражения и щелкните на кнопке<b><span lang=EN-US style='
+font-weight:bold'> Mirror</span></b> (Отразить). Выделенный сплайн зеркально
+отразится в соответствии с пиктограммой на кнопке группы вариантов. Флажок<b><span lang=EN-US style='font-weight:bold'> Copy</span></b> (Копия) позволяет создать зеркальную
+копию выделенного сплайна.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Нажатие кнопки</span></font><b><span lang=EN-US
+style='font-weight:bold'> Reverse</span></b> (Обратить)
+ведет к обращению порядка следования вершин выделенного сплайна. </p>
+
+<h2><a name="_Toc513982947"></a><a name="_Toc513982999"></a><a
+name="_Toc513983286"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Дополнительные модификаторы сплайнов</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>В дополнение к стандартным способам редактирования предлагаются специальные
+модификаторы сплайнов. Рассмотрим работу двух модификаторов:</span></font></p>
+
+<p class=MsoNormal><b><font size=3 face="Times New Roman"><span lang=EN-US
+style='font-size:12.0pt;font-weight:bold'> Fillet</span>/</font></b><b><span
+lang=EN-US style='font-weight:bold'> Chamfer</span></b>
+(Закругление/Срез) и<b><span
+lang=EN-US style='font-weight:bold'> Trim</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Extend</span></b>
+(Подрезание/Наращивание).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>В свитке</span></font><b><span
+lang=EN-US style='font-weight:bold'> Modifiers</span></b>
+(Модификаторы) командной панели<b><span
+lang=EN-US style='font-weight:bold'> Modify</span></b>
+(Изменить) может размещаться до 32 кнопок модификаторов. Добавим в свиток
+модификаторов требуемые модификаторы.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=530 style='width:397.3pt;
+ margin-left:.4pt;border-collapse:collapse;'>
+ <tr>
+  <td width=482 valign=top style='width:361.3pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>В свитке <b><span style='font-weight:
+  bold'> Modifiers</span></b> (Модификаторы) щелкните на кнопке <b><span
+  style='font-weight:bold'> Configure Modifiers Sets</span></b>
+  (Конфигурирование наборов модификаторов).</p>
+  </td>
+  <td width=48 valign=top style='width:36.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=20 height=19
+  src="./chapter6.files/image006.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится диалоговое окно</span></font><b><span lang=EN-US
+style='font-weight:bold'> Configure</span></b><b><span lang=EN-US style='
+font-weight:bold'> Modifiers</span></b><span
+lang=EN-US>Sets</span> (Конфигурирование наборов
+модификаторов).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+появившемся окне диалога увеличьте значение в счетчике<b><span lang=EN-US style='font-weight:bold'> Total</span></b><b><span
+lang=EN-US style='font-weight:bold'> Buttons</span></b>(Всего кнопок) до требуемой величины, но не превышающей
+32.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Ниже появится запрошенное
+число новых кнопок без надписей</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+в списке<b><span lang=EN-US
+style='font-weight:bold'> Modifiers</span></b>
+(Модификаторы) имя нужного модификатора и перетащите его на новую кнопку.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Наименование модификатора появится на выбранной
+кнопке.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Закончив
+настройку состава кнопок в окне диалога, щелкните на кнопке<b><span
+style='font-weight:bold'>  ОК.</span></b></p>
+
+<h3><a name="_Toc513983287"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Модификатор <i><span style='font-style:italic'>Fillet/Chamfer</span></i></span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Постройте
+сплайн в виде стандартного многоугольника для редактирования его с помощью
+модификатора<b><span lang=EN-US
+style='font-weight:bold'> Fillet</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Chamfer</span></b>
+(Закругление/Срез) и оставьте его выделенным.</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Необходимым условием
+использования данного модификатора является наличие у сплайна вершин типа</span></font><b><span lang=EN-US
+style='font-weight:bold'> Corner</span></b> (С изломом)
+или<b><span lang=EN-US
+style='font-weight:bold'> Bezier</span></b><b><span lang=EN-US style='font-weight:bold'> Corner</span></b>(Безье с изломом). Применительно к вершинам типа<b><span lang=EN-US style='font-weight:bold'> Smooth</span></b> (Сглаженная) и<b><span lang=EN-US style='font-weight:bold'> Bczie</span></b> (Безье) данный модификатор работать не
+будет.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+строку модификатора<b><span
+lang=EN-US style='font-weight:bold'> Fillet</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Chamfer</span></b>
+(Закругление/Срез) в окне диалога<b><span
+lang=EN-US style='font-weight:bold'> Modifiers</span></b>
+(Модификаторы). Щелкните на кнопке<b><span style='font-weight:bold'>  ОК.</span></b></p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>На командной панели</span></font><b><span lang=EN-US
+style='font-weight:bold'> Modify</span></b> (Изменить)
+установится режим правки вершин и появится свиток<b><span lang=EN-US style='
+font-weight:bold'> Edit</span></b><b><span lang=EN-US
+style='font-weight:bold'> Vertex</span></b> (Правка
+вершин).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+любую вершину многоугольника и задайте радиус закругления в счетчике<b><span lang=EN-US style='font-weight:bold'> Radius</span></b> (Радиус). Щелкните <span lang=EN-US>LM</span> на кнопке<b><span lang=EN-US style='
+font-weight:bold'> Apply</span></b> (Применить).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+среза угла установите в счетчике группы<b><span
+lang=EN-US style='font-weight:bold'> Chamfer</span></b>
+(Срез) расстояние новых вершин от срезаемой вершины сплайна и щелкните <span
+lang=EN-US>LM</span> на кнопке <b><span
+lang=EN-US style='font-weight:bold'> Apply</span></b>
+(Применить).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Модифицированный с помощью команды</span></font><b><span
+lang=EN-US style='font-weight:bold'> Fillet</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Chamfer</span></b>
+(Закругление/Срез) многоугольник и показан на рис. 6.18.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter6.files/image046.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=476 valign=top style='width:357.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.18.</span></font></b> Пример
+  использования модификаторов закругления и среза</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc513983288"><b><font
+size=4 face=Arial><span style='font-size:14.0pt'>Модификатор <i><span style='font-style:italic'>Trim/Extend</span></i></span></font></b></a></h3>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Модификатор</span></font><b><span
+lang=EN-US style='font-weight:bold'> Trim</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Extend</span></b>
+(Подрезание/Наращивание) применяется к формам, состоящим, по крайней мере, из
+двух пересекающихся сплайнов. Первый — подрезает сегмент сплайна до точки
+пересечения его с другим сплайном, а второй — дотягивает сегмент первого
+сплайна до пересечения со вторым.</p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Постройте
+два пересекающихся сплайна, выделите всю форму и нажмите кнопку<b><span lang=EN-US style='font-weight:bold'> Trim</span>/</b><b><span lang=EN-US style='font-weight:bold'> Extend</span></b> (Подрезание/Наращивание) в свитке<b><span lang=EN-US style='font-weight:bold'> Modifiers</span></b> (Модификаторы).</p>
+
+<p class=MsoNormal style='margin-left:19.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В нижней части командной
+панели</span></font><b><span
+lang=EN-US style='font-weight:bold'> Modify</span></b>
+(Изменить) появится свиток <b><span lang=EN-US style='
+font-weight:bold'> Trim</span>/</b><b><span lang=EN-US style='font-weight:bold'> Extend</span></b> (Подрезание/Наращивание).</p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+переключатель в группе<b><span
+lang=EN-US style='font-weight:bold'> Operation</span></b>
+(Операция) в положение <b><span lang=EN-US style='
+font-weight:bold'> Trim</span></b><b><span lang=EN-US
+style='font-weight:bold'> Only</span></b> (Только
+подрезание).</p>
+
+<p class=MsoNormal style='margin-left:19.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Установка флажка</span></font><b><span lang=EN-US
+style='font-weight:bold'> Infinite</span></b><b><span lang=EN-US style='
+font-weight:bold'> Boundaries</span></b> (Неограниченная протяженность)
+позволяет при расчете точек пересечения рассматривать открытые сплайны как
+имеющие неограниченную протяженность. Это, например, позволяет подрезать линию,
+пересекающуюся с воображаемым продолжением другой линии.</p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+переключатель группы<b><span
+lang=EN-US style='font-weight:bold'> Intersection</span></b><b><span lang=EN-US style='
+font-weight:bold'> Projection</span></b> (Проекция пересечения) в положение<b><span lang=EN-US style='font-weight:bold'> View</span></b> (Проекция).</p>
+
+<p class=MsoNormal style='margin-left:19.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>При установке
+переключателя в положение</span></font><b><span
+lang=EN-US style='font-weight:bold'> View</span></b>
+(Проекция) или<b><span
+lang=EN-US style='font-weight:bold'> Construction</span></b><b><span lang=EN-US style='
+font-weight:bold'> Plane</span></b> (Конструкционная плоскость) ищется
+пересечение проекций линий соответственно с плоскостью активного окна или с
+текущей конструкционной плоскостью. При установке переключателя в положение<b><span lang=EN-US style='font-weight:bold'> Non</span> (3D)</b> (Без проекции (3D)) ищется истинное
+пересечение линий в трехмерном пространстве, а не пересечение проекций линий.</p>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+подрезания сегментов нажмите кнопку<b><span
+lang=EN-US style='font-weight:bold'> Pick</span></b><b><span lang=EN-US style='
+font-weight:bold'> Locations</span></b> (Укажите места), затем укажите на
+сегмент сплайна, который требуется подрезать. Когда курсор примет вид,
+соответствующий режиму подрезания, щелкните <span lang=EN-US>LM</span>.</p>
+
+<p class=MsoNormal style='margin-left:19.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Формы до модификации и
+после выполнения действия</span></font><b><span
+lang=EN-US style='font-weight:bold'> Trim</span></b>
+(Подрезание) показаны на рис. 6.19.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:26.7pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=214
+  src="./chapter6.files/image048.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=479 valign=top style='width:359.1pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.19.</span></font></b> Пример
+  использования модификатора подрезания</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:19.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+наращивания сплайна установите переключатель в группе<b><span lang=EN-US style='
+font-weight:bold'> Operation</span></b>(Операция) в
+положение<b><span lang=EN-US
+style='font-weight:bold'> Extend</span></b><b><span lang=EN-US style='font-weight:bold'> Only</span></b>
+(Только наращивание) и нажмите кнопку<b><span
+lang=EN-US style='font-weight:bold'> Pick</span></b><b><span lang=EN-US style='
+font-weight:bold'> Locations</span></b> (Укажите места), затем щелкните на
+сегментах разомкнутого сплайна, который следует дотянуть.</p>
+
+<p class=MsoNormal style='margin-left:19.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>На рис. 6.20 представлены
+сплайны до и после выполнения операции наращивания.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Самостоятельно постройте заготовку для корпуса скрипки, как на рис.
+2.21.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>При построении используйте сплайн-эллипс, две сплайн-окружности и
+модификатор</span></font><b><span
+lang=EN-US style='font-weight:bold'> Trim</span></b>
+(Подрезание).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span lang=EN-US
+style='font-size:12.0pt;'>&nbsp;</span></font></p>
+
+</div>
+
+<font size=3 face="Times New Roman"><span style='font-size:12.0pt;font-family:
+"Times New Roman";'><br clear=all
+style='page-break-before:always;'>
+</span></font>
+
+<div class=Section2>
+
+<table border=0 cellspacing=0 cellpadding=0 width=491 style='width:13.0cm;
+ margin-left:5.4pt;border-collapse:collapse;'>
+ <tr>
+  <td width=491 valign=top style='width:13.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=214
+  src="./chapter6.files/image050.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=491 valign=top style='width:13.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.20.</span></font></b> Пример
+  выполнения операции наращивания</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=491 valign=top style='width:13.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=214
+  src="./chapter6.files/image052.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=491 valign=top style='width:13.0cm;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 6.21.</span></font></b> Пример
+  конструирования объекта с использованием стандартных сплайнов и модификатора
+  подрезания</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>&nbsp;</span></font></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,987 @@
+<html>
+
+<head>
+<meta name=Generator content="HTML-фильтр Microsoft Office версии 2.1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Originator content="Microsoft Word 9">
+<title>Объемная деформация объектов</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:72.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:84.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:96.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.FR1, li.FR1, div.FR1
+	{
+	margin-top:0cm;
+	margin-right:90.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:20.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR2, li.FR2, div.FR2
+	{
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR3, li.FR3, div.FR3
+	{
+	margin-top:9.0pt;
+	margin-right:80.0pt;
+	margin-bottom:0cm;
+	margin-left:86.0pt;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Arial;}
+p.a, li.a, div.a
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.a0, li.a0, div.a0
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=silver lang=RU link=blue vlink=purple style='
+text-justify-trim:punctuation' background="fon.jpg">
+<div class=Section1>
+
+<p class=FR2 style='margin-top:0cm'><b><font size=5 face=Arial><span
+style='font-size:18.0pt;'>Объемная деформация объектов</span></font></b></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font color=blue><a href="#_Toc514125381">Контейнерная деформация</a></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514125382">Волнообразные деформации</a></span></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514125383">Деформация смещения</a></span></font></u></span></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514125384">Деформация взрыва</a></span></font></u></span></p>
+
+<p class=MsoNormal><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Объемная деформация объектов создается на основе построения
+дополнительной деформирующей геометрии, которая как бы оказывает на объект
+силовое воздействие. Объекты, к которым применяются объемные деформации, должны
+иметь достаточно много граней для качественного произведения эффекта
+воздействия. Объекты деформирующей геометрии представлены пятью типами:</span></font><b><span lang=EN-US
+style='font-weight:bold'> Forces</span></b> (Силовые
+воздействия),<b><span lang=EN-US
+style='font-weight:bold'> Deflectors</span></b>
+(Отражатели), <b><span lang=EN-US style='font-weight:
+bold'> Geometric</span>/</b><b><span lang=EN-US style='
+font-weight:bold'> Defonnable</span></b> (Деформирующая геометрия),<b><span lang=EN-US style='font-weight:bold'> Particles</span> &amp; </b><b><span lang=EN-US
+style='font-weight:bold'> Dinamics</span></b> (Частицы и
+динамика) и<b><span lang=EN-US
+style='font-weight:bold'> Modifier</span>-</b><b><span
+lang=EN-US style='font-weight:bold'> Based</span></b>
+(На базе модификаторов). Здесь мы рассмотрим деформацию типа<b><span lang=EN-US style='font-weight:bold'> Geometric</span>/</b><b><span lang=EN-US
+style='font-weight:bold'> Defonnable</span></b>
+(Деформирующая геометрия), а остальные типы деформации — в занятиях,
+посвященных анимации.</p>
+
+<h2><a name="_Toc514125381"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Контейнерная деформация</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Деформирующая геометрия здесь представляется в виде прямоугольной или
+цилиндрической пространственной решетки с управляющими узлами.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=520 style='width:390.3pt;
+ margin-left:.4pt;border-collapse:collapse;'>
+ <tr>
+  <td width=491 valign=top style='width:13.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Создайте сферу как объект деформации</p>
+  </td>
+  <td width=29 valign=top style='width:21.75pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoToc1>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=491 valign=top style='width:13.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Щелкните <span lang=EN-US>LM</span> на кнопке<b><span lang=EN-US style='
+  font-weight:bold'> Space</span></b><b><span
+  lang=EN-US style='font-weight:bold'> Warps</span></b>
+  (Объемные деформации) командной панели. Выберите в раскрывающемся списке
+  вариант <b><span lang=EN-US style='font-weight:bold'> Geometric</span>/</b><b><span
+  lang=EN-US style='font-weight:bold'> Defonnable</span></b>
+  (Деформирующая геометрия), а в свитке<b><span
+  lang=EN-US style='font-weight:bold'> Object</span></b><b><span lang=EN-US style='
+  font-weight:bold'> Type</span></b> (Тип объекта) нажмите кнопку<b><span lang=EN-US style='font-weight:bold'> FFD</span> (</b><b><span lang=EN-US style='font-weight:bold'> Box</span>)</b> (FFD-контейнер (прямоугольный)).</p>
+  </td>
+  <td width=29 valign=top style='width:21.75pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=20 height=19
+  src="./chapter11.files/image001.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=491 valign=top style='width:13.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Щелкните LM в окне проекции и,
+  протягивая курсор, постройте прямоугольный контейнер в виде параллелепипеда.</p>
+  <p class=MsoNormal style='margin-left:17.85pt'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>Контейнер может
+  охватывать деформируемый объект, как показано на рис. 11.1, или находиться
+  рядом с ним.</span></font></p>
+  </td>
+  <td width=29 valign=top style='width:21.75pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=491 valign=top style='width:13.0cm;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font
+  size=3 face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+  face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></font></span></font>Свяжите сферу с параллелепипедом, для
+  чего нажмите кнопку<b><span
+  lang=EN-US style='font-weight:bold'> Bind</span></b><b><span lang=EN-US style='
+  font-weight:bold'> to</span></b><b><span lang=EN-US
+  style='font-weight:bold'> Space</span></b><b><span lang=EN-US style='
+  font-weight:bold'> Warp</span></b> (Связать с воздействием) на панели инструментов,
+  щелкните LM на сфере и перетащите курсор на контейнер. Отпустите кнопку, как
+  только курсор примет вид значка, изображенного на кнопке инструмента.</p>
+  <p class=MsoNormal style='margin-left:17.85pt'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'>Теперь оба объекта
+  связаны. С одним источником объемной деформации можно связать множество объектов
+  деформации</span></font></p>
+  </td>
+  <td width=29 valign=top style='width:21.75pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=28 height=27
+  src="./chapter11.files/image003.jpg"></span></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:14.0pt;text-indent:-13.0pt'><font size=3
+face="Times New Roman"><span lang=EN-US style='font-size:12.0pt;'>&nbsp;</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:14.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image005.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 11.1</span></font></b>.
+  Контейнер объемной деформации вокруг деформируемого объекта</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>5.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Настройте параметры контейнера объемной
+деформации, перейдя на панель<b><span
+lang=EN-US style='font-weight:bold'> Modify</span></b>
+(Изменить):</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-indent:-18.0pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Set</span></b><b><span
+lang=EN-US style='font-weight:bold'> Number</span></b><b><span lang=EN-US style='
+font-weight:bold'> of</span></b><b><span lang=EN-US
+style='font-weight:bold'> Points</span></b> (Задание
+числа точек) — устанавливает количество управляющих точек по трем измерениям
+контейнера;</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-indent:-18.0pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Lattice</span></b> (Решетка) — устанавливает либо
+отображение решетки деформации, либо только управляющих точек;</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-indent:-18.0pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Source</span></b><b><span
+lang=EN-US style='font-weight:bold'> Volume</span></b>
+(Исходный контейнер) — если установлен, то отображается исходный вид
+недеформированного контейнера;</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-indent:-18.0pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Only</span></b><b><span
+lang=EN-US style='font-weight:bold'> In</span></b><b><span lang=EN-US style='
+font-weight:bold'> Volume</span></b> (Только в контейнере) — перемещение
+управляющих точек будет влиять только на вершины объекта, лежащие внутри
+контейнера деформации;</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-indent:-18.0pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> All</span></b><b><span
+lang=EN-US style='font-weight:bold'> Vertices</span></b>
+(Все вершины) — перемещение управляющих точек будет влиять на все вершины
+объекта, лежащие как внутри контейнера, так и вне его. При этом в счетчике<b><span lang=EN-US style='font-weight:bold'> Falloff</span></b> (Спад) задается расстояние (в долях
+размера контейнера), за пределами которого влияние деформирующего фактора
+спадает до нуля;</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-indent:-18.0pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Tension</span>/</b><b><span lang=EN-US
+style='font-weight:bold'> Continuity</span></b>
+(Натяжение/Непрерывность) — параметры, влияющие на форму сплайнов,
+аппроксимирующих деформируемую поверхность объекта. Изменяя эти параметры,
+лучше всего подбирать оптимальные значения, наблюдая деформацию объекта;</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-indent:-18.0pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> All</span></b><b><span
+lang=EN-US style='font-weight:bold'> X</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Y</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Z</span></b> (Все
+по <span lang=EN-US>X</span>/<span lang=EN-US>Y</span>/<span lang=EN-US>Z</span>) — при выборе управляющей точки выделятся и все остальные, расположенные
+с ней в одном ряду по соответствующей координате.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>6.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>После настройки параметров щелкните <span
+lang=EN-US>LM</span> в списке<b><span lang=EN-US style='font-weight:bold'> Modify</span></b><b><span
+lang=EN-US style='font-weight:bold'> Stack</span></b>
+(Стек модификаторов) на названии модификатора.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>7.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Начните редактирование сферы, перемещая с
+помощью мыши вершины контейнера.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>На рис. 11.2 показан результат редактирования, полученный перемещением
+нескольких управляющих вершин. Способ создания объемной деформации с помощью
+цилиндрического контейнера<b><span style='font-weight:bold'>  (</span></b></span></font><b><span
+lang=EN-US style='font-weight:bold'> FFD</span> (Су1)</b>
+аналогичен способу, приведенному выше для прямоугольного контейнера.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image007.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 11.2.</span></font></b>
+  Результат деформации сферы при деформации решетки</p>
+  </td>
+ </tr>
+</table>
+
+<p class=FR3 style='margin:0cm;margin-bottom:.0001pt'><font size=1 face=Arial><span
+style='font-size:8.0pt'>&nbsp;</span></font></p>
+
+<h2><a name="_Toc514125382"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Волнообразные деформации</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>К волнообразным относятся деформирующие геометрии типа</span></font><b><span lang=EN-US
+style='font-weight:bold'> Wave</span></b> (Волна) и<b><span lang=EN-US style='font-weight:bold'> Ripple</span></b> (Рябь). Они используются для создания
+волнообразного эффекта на поверхности деформируемого объекта. Пример
+воздействия деформации типа<b><span
+lang=EN-US style='font-weight:bold'> Wave</span></b>
+(Волна) приведен на рис. 11.3, а деформации типа<b><span lang=EN-US style='
+font-weight:bold'> Ripple</span></b> (Рябь) — на рис. 11.4.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+свитке типов объектов объемной деформации нажмите кнопку<b><span lang=EN-US style='font-weight:bold'> Ripple</span></b>(Рябь).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+<span lang=EN-US>LM</span> в окне проекции и
+создайте подобно цилиндру деформирующую геометрию<b><span lang=EN-US style='
+font-weight:bold'> Ripple</span></b> (Рябь).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Перейдите
+на командную панель<b><span
+lang=EN-US style='font-weight:bold'> Modify</span></b>
+(Изменить) и настройте параметры:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Amplitude</span> 1</b> (Амплитуда 1) — амплитуда
+синусоидальной волны, ориентированной в направлении оси <span lang=EN-US>Y</span> локальной системы координат источника
+деформации типа<b><span
+lang=EN-US style='font-weight:bold'> Wave</span></b>
+(Волна), и оси Х локальной системы координат источника деформации типа<b><span lang=EN-US style='font-weight:bold'> Ripple</span></b> (Рябь);</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Amplitude</span></b> 2 (Амплитуда 2) — амплитуда
+параболической волны, ориентированной в направлении оси Х локальной системы
+координат источника информации типа<b><span
+lang=EN-US style='font-weight:bold'> Wave</span></b>
+(Волна), и синусоидальной волны, ориентированной в направлении оси <span
+lang=EN-US>Y</span> локальной системы координат
+источника деформации типа<b><span
+lang=EN-US style='font-weight:bold'> Ripple</span></b>
+(Рябь);</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:36.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=405 valign=top style='width:303.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image009.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=405 valign=top style='width:303.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 11.3.</span></font></b> Пример
+  использования деформатора типа<b><span
+  lang=EN-US style='font-weight:bold'> Wave</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=405 valign=top style='width:303.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image011.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=405 valign=top style='width:303.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 11.4.</span></font></b> Пример
+  использования деформатора типа<b><span
+  lang=EN-US style='font-weight:bold'> Ripple</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Wave</span></b><b><span
+lang=EN-US style='font-weight:bold'> Length</span></b>(Длина волны) — пространственный период обеих волн, т. е.
+расстояние между их гребнями;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Phase</span></b> (Фаза) — сдвиг гребня волны в
+направлении, перпендикулярном гребням. Чем меньше фаза, тем меньше радиус
+первого кольца ряби;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Decay</span></b> (Затухание)— ограничение области
+распространения эффекта волновой деформации за счет уменьшения амплитуды волны
+по мере удаления от источника. Отрицательное затухание создает волны с
+нарастающей амплитудой;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Circles</span></b> (Круги) — число кругов в значке
+ряби;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Segments</span></b> (Сегменты) — число сегментов в
+значке волны в направлении оси Y системы координат и в значке ряби — по
+периметру окружности;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Divisions</span></b> (Сечения) — параметр, определяющий
+число сегментов (кругов), приходящихся на один период волны. Влияет на размер
+значка волновой деформации, но не сказывается на ее действии на объект.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Создайте
+объект деформации в виде параллелепипеда и свяжите источник деформации с
+объектом (кнопка<b><span
+lang=EN-US style='font-weight:bold'> Bind</span></b><b><span lang=EN-US style='
+font-weight:bold'> to</span></b><b><span lang=EN-US
+style='font-weight:bold'> Space</span></b><b><span
+lang=EN-US style='font-weight:bold'> Warp</span></b>
+(Связать с воздействием)) на панели инструментов.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Настройте
+параметр<b><span lang=EN-US
+style='font-weight:bold'> Flexibility</span></b>
+(Гибкость) на командной панели<b><span
+lang=EN-US style='font-weight:bold'> Modify</span></b>(Изменить).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Этот параметр определяет чувствительность объекта к воздействию
+деформации.</span></font></p>
+
+<h2><a name="_Toc514125383"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Деформация смещения</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Источник деформации смещения оказывает прямое силовое воздействие на
+объект, вызывая изменение его формы. В одном случае происходит прямая
+деформация с учетом величины параметра силы. В другом случае степень деформации
+определяется цветом растровой маски: черные области маски не деформируются, а
+светлые заставляют поверхность вспучиваться пропорционально цветовой
+интенсивности.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>В свитке типов объектов<b><span lang=EN-US style='font-weight:bold'> Object</span></b><b><span
+lang=EN-US style='font-weight:bold'> Type</span></b>
+(Тип объекта) нажмите кнопку <b><span lang=EN-US style='
+font-weight:bold'> Displace</span></b> (Смещение).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните <span lang=EN-US>LM</span> в окне проекции и перетащите курсор,
+растягивая по диагонали значок источника деформации, имеющий вид
+прямоугольника.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Постройте объект деформации в виде сферы,
+задайте ей количество сегментов не менее 56 и расположите его в направлении
+действия силы (рис. 11.5).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Эффект силового
+воздействия будет значительнее при большом количестве сегментов.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Свяжите источник деформации с объектом.
+На рис. 11.6 показан эффект силового воздействия на сферу.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Перейдите
+на панель<b><span lang=EN-US
+style='font-weight:bold'> Modify</span></b> (Изменить) и
+настройте параметры:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Strength</span></b> (Сила) — влияет на величину
+смещения объекта, если не задана растровая карта смещения;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.0pt;'><font size=3 face=Symbol><span
+style='font-size:12.0pt;font-family:Symbol'>·<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Decay</span></b> (Затухание) — позволяет ввести в
+действие смещения затухание по мере удаления от центра воздействия.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Теперь настроим
+деформацию смещения по растровой маске. В группе </span></font><b><span
+lang=EN-US style='font-weight:bold'> Image</span></b>
+(Маска) выберите материал на основе карты текстур для использования в качестве
+маски смещения.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:36.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image013.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 11.5.</span></font></b>
+  Положение сферы перед воздействием деформации типа<b><span lang=EN-US style='
+  font-weight:bold'> Displace</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image015.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 11.6.</span></font></b>
+  Силовое воздействие на сферу деформации<b><span
+  lang=EN-US style='font-weight:bold'> Displace</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните <span lang=EN-US>LM</span> на кнопке<b><span
+lang=EN-US style='font-weight:
+bold'> None</span></b> (Отсутствует),
+относящейся к разделу <b><span lang=EN-US style='font-weight:bold'> Bitmap</span></b> (Растровая карта).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+появившемся окне диалога<b><span
+lang=EN-US style='font-weight:bold'> Select</span></b><b><span lang=EN-US style='
+font-weight:bold'> Displacement</span></b><b><span
+lang=EN-US style='font-weight:bold'> Image</span></b>
+(Выбор карты смещения) укажите файл растрового изображения и щелкните на кнопке<b><span lang=EN-US style='font-weight:bold'> Open</span></b> (Открыть).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Имя файла отобразится на кнопке.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>8.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+<span lang=EN-US>LM</span> на кнопке<b><span lang=EN-US style='font-weight:bold'> None</span></b> (Отсутствует), относящейся к разделу<b><span lang=EN-US style='font-weight:bold'> Map</span></b>(Карта текстур),
+и в появившемся окне<b><span
+lang=EN-US style='font-weight:bold'> Material</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Map</span></b><b><span lang=EN-US style='
+font-weight:bold'> Browser</span></b> (Просмотр материалов и карт текстур)
+выберите текстуру. Имя карты отобразится на кнопке.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Для удаления карты
+текстуры щелкните на кнопке</span></font><b><span
+lang=EN-US style='font-weight:bold'> Remove</span></b><b><span lang=EN-US style='
+font-weight:bold'> Map</span></b>(Удалить карту).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>9.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+значение счетчика<b><span
+lang=EN-US style='font-weight:bold'> Blur</span></b>
+(Размытие), который позволяет определить степень размытия изображения карты.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>10.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>Задайте
+сферическую систему координат в группе<b><span
+lang=EN-US style='font-weight:bold'> Map</span></b>
+(Проекция), установив переключатель в положение<b><span lang=EN-US style='
+font-weight:bold'> Spherical</span></b> (Сферические).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Пример использования растровой маски для смещения в сферических
+координатах приведен на рис. 11.7.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image017.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 11.7.</span></font></b>
+  Деформация смещения по растровой маске</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc514125384"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Деформация взрыва</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Источник объемной деформации типа</span></font><b><span
+lang=EN-US style='font-weight:bold'> Bomb</span></b>
+(Бомба) разбрасывает деформируемый объект на отдельные составляющие, имитируя
+взрыв бомбы.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Создайте деформируемый объект в виде
+сферы.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Позаботьтесь, чтобы сфера
+имела достаточное число сегментов.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Нажмите кнопку<b><span lang=EN-US style='
+font-weight:bold'> Bomb</span></b> (Бомба) в свитке<b><span lang=EN-US style='
+font-weight:bold'> Object</span></b><b><span
+lang=EN-US style='font-weight:bold'> Type</span></b>
+(Тип объекта) при нажатой кнопке<b><span
+lang=EN-US style='font-weight:bold'> Space</span></b><b><span lang=EN-US style='
+font-weight:bold'> Warps</span></b> (Объемная деформация) на командной панели<b><span lang=EN-US style='font-weight:bold'> Create</span></b> (Создать).</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:20.0pt;margin-bottom:
+4.0pt;margin-left:17.85pt;text-indent:-17.85pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+<span lang=EN-US>LM</span> в окне проекции, где
+должна располагаться бомба. Значок деформации имеет вид пирамиды (рис. 11.8).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-right:20.0pt'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image019.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-right:20.0pt'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'> Рис.
+  11.8.</span></font></b> Сфера, подготовленная к взрыву</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-align:justify;text-indent:
+-17.85pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Свяжите сферу с источником деформации и
+перейдите на командную панель<b><span
+lang=EN-US style='font-weight:bold'> Modify</span></b>
+(Изменить) для настройки параметров бомбы (рис. 11.9):</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Strength</span></b> (Мощность) — чем больше значение
+параметра, тем дальше разлетаются осколки;</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Spin</span></b> (Вращение) — скорость вращения осколков
+в оборотах в секунду;</p>
+
+<p class=MsoNormal style='margin-left:35.85pt;text-align:justify;text-indent:
+-18.0pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Falloff</span></b> (Спад) — расстояние от бомбы, на
+которое распространяется ее действие.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:36.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=413 valign=top style='width:309.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=155 height=311
+  src="./chapter11.files/image021.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=413 valign=top style='width:309.6pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'> Рис.
+  11.9.</span></font></b> Параметры деформации взрыва</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>5.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Задайте в группе<b><span lang=EN-US style='font-weight:bold'> Fragment</span></b><b><span
+lang=EN-US style='font-weight:bold'> Size</span></b>
+(Размер фрагментов) пределы числа граней, приходящихся на каждый из фрагментов,
+на которые распадается взрываемый объект, используя счетчики<b><span lang=EN-US style='font-weight:bold'> Min</span></b> (Минимум) и<b><span style='font-weight:
+bold'>  Мах</span></b> (Максимум).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>6.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Настройте параметры взрыва в группе<b><span lang=EN-US style='font-weight:bold'> General</span></b> (Общие параметры):</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Gravity</span></b> (Гравитация) — задает влияние силы
+тяжести на осколки объекта;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Chaos</span></b> (Хаос) —задает степень случайности
+параметров взрыва;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.15pt;'><font
+size=3 face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font
+size=1 face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Detonation</span></b> (Детонация) — определяет номер
+кадра, в котором произойдет взрыв;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Seed</span></b> (Номер выборки) — определяет число,
+задающее работу генератора случайных чисел.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>7.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Чтобы увидеть результат взрыва,
+переместите ползунок таймера анимации. На рис. 11.10 показан результат взрыва
+сферы.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=306 height=212
+  src="./chapter11.files/image023.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 11.10.</span></font></b>
+  Взорванная сфера</p>
+  </td>
+ </tr>
+</table>
+
+<p class=FR3 style='margin:0cm;margin-bottom:.0001pt'><font size=1 face=Arial><span
+style='font-size:8.0pt'>&nbsp;</span></font></p>
+
+</div>
+
+</body>
+
+</html>

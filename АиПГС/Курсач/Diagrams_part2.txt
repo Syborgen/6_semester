@@ -1,0 +1,143 @@
+@startuml
+
+abstract class Shape{
++  explicit Shape()
++  void AppendModify(QMatrix4x4 modify_matrix) noexcept;
++  void Rotate(float a, QVector4D v);
++  void Rotate(float a, QVector4D v, QVector3D pos);
++  void Move(QVector4D);
++  void Scale(float a, float b, float c);
++  void MoveBasePoint(QVector4D v);
++  virtual QVector3D Center() const = 0;
++  void Draw(Painter& painter);
++  virtual std::vector<Triangle> Triangulate() = 0;
++  virtual ~Shape() = default;
++  const QVector3D& BasePoint() const;
++  void BasePoint(const QVector3D& base_point);
++  const std::optional<QRgb>& Color() const;
++  void Color(const std::optional<QRgb> &color);
++  const std::optional<QRgb>& Brush() const;
++  void Brush(const std::optional<QRgb>& brush);
++  const QVector4D& I() const;
++   const QVector4D& J() const;
++  const QVector4D& K() const;
++  Shape* BaseParent() noexcept;
++   const QMatrix4x4& ModifyMatrix() const;
++  void ModifyMatrix(const QMatrix4x4& modify_matrix);
++   virtual QJsonObject ToJson() const;
++  virtual void FromJson(const QJsonObject& json);
++  virtual QString type();
+#  std::optional<QRgb> color_{};
+#  std::optional<QRgb> brush_{};
+#  QMatrix4x4 modify_matrix_;
+#  QVector3D base_point_;
+#  Shape* parent_ = nullptr;
+#  virtual void DrawShape(Painter& painter) = 0;
+}
+class Box{
++  Box();
+-  float length_{};
+-  float width_{};
+-  float height_{};
+}
+class Ellipse{
++  Ellipse();
+-  float a_near_;
+-  float b_near_;
+-  float a_far_;
+-  float b_far_;
+}
+class Ellipsoid{
++  Ellipsoid();
++  const std::vector<Triangle>& MyTriangulate();
+-  float a_;
+-  float b_;
+-  float c_;
+-  float a_old_;
+-  float b_old_;
+-  float c_old_;
+-  float part_;
+-  std::vector<Triangle> triangles_;
+}
+class Frustum{
++  Frustum();
+-  float a_far_bottom_;
+-  float a_near_bottom_;
+-  float b_far_bottom_;
+-  float b_near_bottom_;
+-  float a_far_top_;
+-  float a_near_top_;
+-  float b_far_top_;
+-  float b_near_top_;
+-  float height_;
+}
+class Line{
++  explicit Line();
++  explicit Line();
++  const QVector3D &Begin() const;
++  void Begin(const QVector3D &begin);
++  const QVector3D &AnEnd() const;
++  void AnEnd(const QVector3D &an_end);
+-  QVector3D begin_;
+-  QVector3D end_;
+}
+class Pyramid{
++  Pyramid();
+-  float bottom_length_;
+-  float bottom_width_;
+-  float height_;
+-  float top_length_;
+-  float top_width_;
+-  float bottom_near_length_;
+-  float bottom_near_width_;
+-  float top_near_length_;
+-  float top_near_width_;
+}
+class Quadrangle{
++  explicit Quadrangle();
+-  QVector3D vertexes_[4];
+}
+class Triangle{
++  explicit Triangle();
++  explicit Triangle();
++  const std::array<QVector3D, 3>& Points() const;
+-  std::array<QVector3D, 3> points_;
+}
+class Switch{
++    Switch();
+-    int width_;
+-    int height_;
+}
+
+class Drill{
++    Drill();
+-    float battery_width_;
+-    float battery_length_;
+-    float battery_height_;
+-    int switch_count_;
+-    float handle_width_;
+-    float handle_length_;
+-    float handle_height_;
+-    float trigger_length_;
+-    float trigger_height_;
+-    float workpart_length_;
+-    float workpart_radius_;
+-    float sphere_radius_;
+-    float workpart2_length_;
+-    float workpart2_radius_;
+-    float drill_length_;
+-    float drill_radius_;
+}
+
+Ellipsoid *-left- Triangle
+Shape <|-down- Box
+Shape <|-up- Ellipse
+Shape <|-- Ellipsoid
+Shape <|-up- Frustum
+Shape <|-up- Switch
+Shape <|- Drill
+Shape <|-up- Line
+Shape <|-left- Pyramid
+Shape <|-up- Quadrangle
+Shape <|- Triangle
+@enduml

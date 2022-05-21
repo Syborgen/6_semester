@@ -1,0 +1,63 @@
+
+
+create table if not exists districts  (
+id serial primary key,
+district varchar(30)
+);
+
+create table if not exists statuses  (
+id serial primary key,
+status varchar(30)
+);
+
+create table if not exists product_types (
+id serial primary key,
+product_type varchar(30)
+);
+
+create table if not exists customers (
+id serial primary key,
+first_name varchar(30),
+second_name varchar(30),
+third_name varchar(30),
+id_district integer references districts(id),
+id_status integer references statuses(id),
+work varchar(60),
+birthday date,
+phone char(10)
+);
+
+create table if not exists workers (
+id serial primary key,
+login varchar(30)
+);
+
+create table if not exists shops (
+id serial primary key,
+id_worker integer references workers(id)
+);
+
+create table if not exists products (
+id serial primary key,
+quittance integer,
+id_product_type integer references product_types(id),
+product_name varchar(30),
+reception date,
+count integer,
+remaining integer,
+price integer,
+id_customer integer references customers(id),
+id_shop integer references shops(id),
+id_woker integer references workers(id)
+);
+
+create table if not exists realization (
+id serial primary key,
+ticket integer,
+id_product integer references products(id),
+realization_date date,
+realization_count integer,
+id_worker integer references workers(id)
+
+)
+

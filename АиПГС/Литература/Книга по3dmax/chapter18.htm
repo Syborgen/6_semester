@@ -1,0 +1,1102 @@
+<html>
+
+<head>
+<meta name=Generator content="HTML-фильтр Microsoft Office версии 2.1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Originator content="Microsoft Word 9">
+<title>Моделирование динамики с помощью систем частиц</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:24.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:72.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:84.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:96.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:17.85pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.FR1, li.FR1, div.FR1
+	{
+	margin-top:0cm;
+	margin-right:100.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-autospace:none;
+	font-size:20.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR2, li.FR2, div.FR2
+	{
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR3, li.FR3, div.FR3
+	{
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Arial;}
+p.a, li.a, div.a
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.a0, li.a0, div.a0
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=silver lang=RU link=blue vlink=purple style='
+text-justify-trim:punctuation' background="fon.jpg">
+<div class=Section1>
+
+<p class=FR2 style='margin-top:0cm'><b><font size=5 face=Arial><span
+style='font-size:18.0pt;'>Моделирование динамики с
+помощью систем частиц</span></font></b></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font color=blue><a href="#_Toc514249669">Создание систем частиц</a></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514249670">Настройка параметров частиц</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514249671">Генерация частиц</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514249672">Тип частиц</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514249673">Вращение частиц</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514249674">Наследование движения объекта</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514249675">Пузырьковый тип движения</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514249676">Дробление частиц</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+class=MsoHyperlink><u><font size=3 color=blue face="Times New Roman"><span
+style='font-size:12.0pt'><a href="#_Toc514249677">Сохранение заготовок и их загрузка</a></span></font></u></span></p>
+
+<p class=MsoToc2><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Под системой частиц понимается совокупность управляемых с помощью
+параметров малоразмерных объектов. Они способны принимать форму различных
+объектов и позволяют моделировать снег, дождь, стаю птиц, фейерверк и т. д. В
+зависимости от вида источника программой генерируются различные типы систем
+частиц. Остается выбрать, какой из предлагаемых типов более всего подходит для
+моделирования конкретного эффекта.</span></font></p>
+
+<h2><a name="_Toc514249669"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Создание систем частиц</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните <span lang=EN-US>LM</span> на кнопке<b><span lang=EN-US style='
+font-weight:bold'> Geometry</span></b> (Геометрия) командной панели<b><span lang=EN-US style='font-weight:bold'> Create</span></b>(Создать) и в
+раскрывающемся списке разновидностей объектов выберите<b><span lang=EN-US style='font-weight:bold'> Particle</span></b><b><span
+lang=EN-US style='font-weight:bold'> Systems</span></b>
+(Системы частиц).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В свитке</span></font><b><span lang=EN-US
+style='font-weight:bold'> Object</span></b><b><span lang=EN-US style='font-weight:bold'> Type</span></b>
+(Типы объектов) появятся шесть кнопок с названиями типов систем частиц:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Spray</span></b> (Брызги) — эффект водяных брызг,
+дождя;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Show</span></b> (Снег) — эффект падающего снега;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Super</span></b><b><span
+lang=EN-US style='font-weight:bold'> Spray</span></b>
+(Супербрызги) — тип частиц для создания более сложных эффектов. Частицам можно
+придавать форму различных объектов;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Blizzard</span></b> (Метель) — усовершенствованная
+версия частиц типа снег;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> PCloud</span></b> (Облако частиц) — облако частиц.
+Частицам можно придавать форму различных объектов;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span style='font-weight:bold'> РАггау</span></b>
+(Массив частиц) — произвольное множество частиц, пригодных для моделирования
+различных эффектов. Частицам можно придавать форму различных объектов.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Перечисленные источники
+систем частиц показаны на рис. 18.1.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Нажмите кнопку<b><span lang=EN-US style='
+font-weight:bold'> Super</span></b><b><span lang=EN-US
+style='font-weight:bold'> Spray</span></b>
+(Супербрызги), щелкните LM в окне проекции и, перетаскивая курсор, создайте
+источник частиц.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Источник частиц представляет собой объект, не
+подлежащий визуализации и служащий для определения местоположения и ориентации
+частиц.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Передвиньте ползунок анимации.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=512 valign=top style='width:383.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=306 height=212
+  src="./chapter18.files/image002.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=512 valign=top style='width:383.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 18.1.</span></font></b>
+  Источники систем частиц типа<b><span
+  lang=EN-US style='font-weight:bold'> Blizzard</span></b>
+  (<span lang=EN-US>a</span>), <b><span
+  lang=EN-US style='font-weight:bold'> Super</span></b><b><span lang=EN-US style='
+  font-weight:bold'> Spray</span></b> (б),<b><span
+  lang=EN-US style='font-weight:bold'> Parray</span></b>
+  (в),<b><span lang=EN-US
+  style='font-weight:bold'> Pcloud</span></b> (<span
+  lang=EN-US>a</span>)</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>При передвижении ползунка анимации частицы начинают
+перемещаться. Момент перемещения показан на рис. 18.2. Для получения требуемого
+эффекта следует настроить параметры частиц.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=512 valign=top style='width:383.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter18.files/image004.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=512 valign=top style='width:383.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 18.2.</span></font></b>
+  Генерация частиц источником<b><span
+  lang=EN-US style='font-weight:bold'> Super</span></b><b><span lang=EN-US style='
+  font-weight:bold'> Spray</span></b></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc514249670"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Настройка параметров частиц</span></font></b></a></h2>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Раскройте
+свиток<b><span lang=EN-US
+style='font-weight:bold'> Basic</span></b><b><span
+lang=EN-US style='font-weight:bold'> Parameters</span></b>
+(Базовые параметры).</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Параметры этого свитка позволяют задать геометрию
+пучка частиц в целом, размеры значка источника и геометрический вид частицы.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Укажите
+значения счетчиков в группе<b><span
+lang=EN-US style='font-weight:bold'> Particle</span></b><b><span lang=EN-US style='
+font-weight:bold'> Formation</span></b> (Формирование частиц):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Off</span></b><b><span
+lang=EN-US style='font-weight:bold'> Axis</span></b>
+(Отклонение от оси),<b><span
+lang=EN-US style='font-weight:bold'> Spread</span></b>
+(Расстояние) — угол отклонения пучка частиц от оси <span lang=EN-US>Z</span> источника и ширина пучка в этой
+плоскости;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Off</span></b><b><span
+lang=EN-US style='font-weight:bold'> Plane</span></b>
+(Отклонение от плоскости),<b><span
+lang=EN-US style='font-weight:bold'> Spread</span></b>
+(Расстояние) — угол поворота пучка частиц в плоскости <span lang=EN-US>XY</span> источника и ширина пучка в
+направлении отклонения.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+группе<b><span lang=EN-US
+style='font-weight:bold'> Display</span></b><b><span lang=EN-US style='
+font-weight:bold'> Icon</span></b> (Отображение значка) задайте значения в
+счетчике <b><span lang=EN-US style='font-weight:bold'> Icon</span></b><b><span lang=EN-US style='
+font-weight:bold'> Size</span></b> (Размеры значка) и отметьте флажок<b><span lang=EN-US style='font-weight:bold'> Emitter</span></b><b><span
+lang=EN-US style='font-weight:bold'> Hidden</span></b>
+(Скрытый значок).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>При установленном флажке</span></font><b><span lang=EN-US
+style='font-weight:bold'> Emitter</span></b><b><span lang=EN-US style='
+font-weight:bold'> Hidden</span></b> (Скрытый значок) источник становится
+невидимым в проекциях окон.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+геометрический вид частицы в группе<b><span
+lang=EN-US style='font-weight:bold'> Viewport</span></b><b><span lang=EN-US style='
+font-weight:bold'> Display</span></b> (Вид), отметив одно из положений:<b><span lang=EN-US style='font-weight:bold'> Dots</span></b> (Точки),<b><span lang=EN-US style='
+font-weight:bold'> Tics</span></b> (Штрихи),<b><span
+lang=EN-US style='font-weight:bold'> Mesh</span></b>
+(Сетка) или<b><span style='font-weight:bold'>  ВВох</span></b> (Габаритный
+контейнер). Счетчик<b><span
+lang=EN-US style='font-weight:bold'> Percentage</span></b><b><span lang=EN-US style='
+font-weight:bold'> of</span></b><b><span lang=EN-US
+style='font-weight:bold'> Particles</span></b>(Процент частиц) позволяет задать долю общего числа частиц,
+которая будет отображаться в окнах проекции в ходе работы.</p>
+
+<h2><a name="_Toc514249671"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Генерация частиц</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Раскройте
+свиток<b><span lang=EN-US
+style='font-weight:bold'> Particle</span></b><b><span lang=EN-US style='
+font-weight:bold'> Generation</span></b> (Генерация частиц).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Параметры этого свитка
+позволяют задать количество, время существования, период роста и спада частиц и
+т. д.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+среднюю начальную скорость частиц в момент испускания в счетчике<b><span lang=EN-US style='font-weight:bold'> Speed</span></b> (Скорость) и предел ее вариаций в
+счетчике<b><span lang=EN-US
+style='font-weight:bold'> Variation</span></b>
+(Вариации).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+продолжительность существования частиц в группе параметров <b><span lang=EN-US
+style='font-weight:bold'> Particle</span></b><b><span lang=EN-US style='
+font-weight:bold'> Timing</span></b> (Время жизни частиц):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Emit</span></b><b><span
+lang=EN-US style='font-weight:bold'> Start</span></b>
+(Начальная генерация),<b><span
+lang=EN-US style='font-weight:bold'> Emit</span></b><b><span lang=EN-US style='
+font-weight:bold'> Stop</span></b> (Конец генерации) — но-' мера кадров, в
+которых начинается и заканчивается испускание частиц;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Display</span></b><b><span
+lang=EN-US style='font-weight:bold'> Until</span></b>
+(Отображать до) — время (номер кадра) исчезновения всех частиц независимо от их
+параметров;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Life</span></b> (Время жизни) и<b><span lang=EN-US style='font-weight:bold'> Variation</span></b> (Вариации) — среднее время жизни
+частицы с момента ее испускания и число кадров, на которое время жизни частицы
+может отличаться от среднего.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Задайте
+размеры частиц в группе параметров<b><span
+lang=EN-US style='font-weight:bold'> Particle</span></b><b><span lang=EN-US style='
+font-weight:bold'> Size</span></b> (Размеры частиц):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Size</span></b> (Размер) и<b><span lang=EN-US style='
+font-weight:bold'> Variation</span></b> (Вариации) — средний размер всех частиц
+и процент возможных отклонений размеров каждой частицы от среднего;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Grow</span></b><b><span
+lang=EN-US style='font-weight:bold'> For</span></b>
+(Период роста) — число кадров, за которое частица вырастает от 10 до 100%
+окончательного размера;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Fade</span></b><b><span
+lang=EN-US style='font-weight:bold'> For</span></b>
+(Период спада) — число кадров, за которое частица уменьшается от полного
+размера до 10% этого размера перед полным исчезновением.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+группе<b><span lang=EN-US
+style='font-weight:bold'> Uniqueness</span></b>
+(Уникальность) укажите в счетчике <span lang=EN-US>Seed</span> (Номер выборки) число, которое служит для запуска генератора
+случайных чисел, используемых при расчете вариаций параметров частиц.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Чтобы сгенерировать такое
+число случайным образом, щелкните </span></font><span lang=EN-US>LM</span> .на кнопке <span lang=EN-US>New</span> (Новый).</p>
+
+<h2><a name="_Toc514249672"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Тип частиц</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Раскройте
+свиток<b><span lang=EN-US
+style='font-weight:bold'> Particle</span></b><b><span lang=EN-US style='
+font-weight:bold'> Type</span></b> (Тип частиц)-</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Параметры этого свитка позволяют задать тип частиц и
+настроить их для выбранного типа.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Можно
+назначить один из трех типов частиц с помощью переключателя <b><span
+lang=EN-US style='font-weight:bold'> Particles</span></b><b><span lang=EN-US style='
+font-weight:bold'> Types</span></b> (Тип частиц). Выберите<b><span lang=EN-US style='font-weight:bold'> Standard</span></b><b><span
+lang=EN-US style='font-weight:bold'> Particles</span></b>
+(Стандартные частицы).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Параметр</span></font><b><span lang=EN-US
+style='font-weight:bold'> Standard</span></b><b><span lang=EN-US style='
+font-weight:bold'> Particles</span></b> (Стандартные частицы) позволяет указать
+форму стандартных частиц.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+форму стандартных частиц, установив переключатель в группе <b><span lang=EN-US
+style='font-weight:bold'> Standard</span></b><b><span lang=EN-US style='
+font-weight:bold'> Particles</span></b> (Стандартные частицы) в одно из
+положений:<b><span lang=EN-US
+style='font-weight:bold'> Triangle</span></b>(Треугольник),<b><span
+lang=EN-US style='font-weight:bold'> Cub</span></b>
+(Куб),<b><span lang=EN-US
+style='font-weight:bold'> Facing</span></b> (Лицом к
+зрителю),<b><span lang=EN-US
+style='font-weight:bold'> Sphere</span></b> (Сфера), <b><span
+lang=EN-US style='font-weight:bold'> Tetra</span></b>
+(Тетраэдр),<b><span lang=EN-US
+style='font-weight:bold'> SixPoint</span></b>
+(Шестиконечная звезда),<b><span
+lang=EN-US style='font-weight:bold'> Constant</span></b>
+(Постоянного размера) и<b><span
+lang=EN-US style='font-weight:bold'> Special</span></b>
+(Специального размера). Визуализированная система стандартных частиц в виде
+сферы показана на рис. 18.3. Создайте сцену с любой из указанных форм.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Теперь
+выберите<b><span lang=EN-US
+style='font-weight:bold'> MetaParticles</span></b> (Метачастицы)
+в свитке<b><span lang=EN-US
+style='font-weight:bold'> Particles</span></b><b><span lang=EN-US style='
+font-weight:bold'> Types</span></b>(Тип частиц).
+Создайте сцену с помощью этого типа частиц.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Указанием этого типа
+каждая частица при визуализации заменяется мета-сферой (</span></font><span
+lang=EN-US>metaball</span>) с имитацией
+поверхностного натяжения, позволяющего частицам сливаться друг с другом подобно
+реальным водяным каплям.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>5.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Настройте
+параметры метачастиц в группе<b><span
+lang=EN-US style='font-weight:bold'> MetaParticle</span></b><b><span lang=EN-US style='
+font-weight:bold'> Parameters</span></b>(Параметры
+метачастиц):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Tention</span></b> (Натяжение),<b><span lang=EN-US style='font-weight:bold'> Variation</span></b> (Вариации) — степень стремления
+частиц к слиянию с другими частицами и процент случайного отклонения этого
+параметра от среднего значения для каждой частицы;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Evaluation</span></b><b><span
+lang=EN-US style='font-weight:bold'> Coarseness</span></b>
+(Загрубление расчетов) — задает степень упрощения расчетов поведения метачастиц
+на этапах визуализации (счетчик <span lang=EN-US>Render</span>).
+Установка флажка<b><span
+lang=EN-US style='font-weight:bold'> Automatic</span></b><b><span lang=EN-US style='
+font-weight:bold'> Coarseness</span></b> (Автозагрубле-ние) обеспечивает
+автоматический выбор степени упрощения расчетов.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Визуализированная система метачастиц показана на рис.
+18.4. Параметры ее настройки представлены на рис. 18.5.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=492 valign=top style='width:368.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=287 height=555
+  src="./chapter18.files/image006.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'> Рис.
+  18.3.</span></font></b> Визуализированная система частиц в виде сферы</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=294 height=378
+  src="./chapter18.files/image008.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><b><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt;font-weight:bold'> Рис.
+  18.4.</span></font></b> Система метачастиц</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'><font size=3
+  face="Times New Roman"><span style='font-size:12.0pt'><img border=0 width=161 height=177
+  src="./chapter18.files/image010.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=492 valign=top style='width:368.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 18.5.</span></font></b>
+  Параметры системы метачастиц</p>
+  <p class=MsoBodyTextIndent2 style='margin-left:0cm'>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>6.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выберите
+последний в списке тип частиц:<b><span
+lang=EN-US style='font-weight:bold'> Instanced</span></b><b><span lang=EN-US style='
+font-weight:bold'> Geometry</span></b> (Образцы моделей). Этот тип частиц
+позволяет моделировать, например, падение листьев, полет стаи птиц и т. д.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Здесь каждая частица в системе
+заменяется образцом выделенной геометрической модели.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>7.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Вспомните
+<i><span style='font-style:italic'>занятие</span></i> 5 и в качестве образца
+создайте с помощью сплайна лист. Попробуйте смоделировать листопад.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>8.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Настройте
+параметры образца частиц в группе<b><span
+lang=EN-US style='font-weight:bold'> Instancing</span></b><b><span lang=EN-US style='
+font-weight:bold'> Parameters</span></b>(Параметры
+образцов):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Pick</span></b><b><span
+lang=EN-US style='font-weight:bold'> Object</span></b>
+(Указать образец) — после щелчка <span lang=EN-US>LM</span> на этой кнопке следует выделить объект-образец частицы;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Use</span></b><b><span
+lang=EN-US style='font-weight:bold'> Subtree</span></b><b><span lang=EN-US style='
+font-weight:bold'> Also</span></b> (Использовать поддерево) — флажок
+обеспечивает выделение вместе с объектом-образцом всех его потомков;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Animation</span></b><b><span
+lang=EN-US style='font-weight:bold'> Offset</span></b><b><span lang=EN-US style='
+font-weight:bold'> Keying</span></b> (Сдвиги ключей анимации) — при
+использовании объекта с анимацией данный набор переключателей позволяет задать,
+будет ли анимация всех частиц происходить синхронно (<span lang=EN-US>None</span>), начинаться с той фазы, которая
+совпала с моментом рождения первой частицы<b><span style='font-weight:bold'>  (</span></b><b><span
+lang=EN-US style='font-weight:bold'> Birth</span>),</b>
+или иметь случайный сдвиг по времени от этой фазы <b><span style='font-weight:
+bold'> (</span></b><b><span lang=EN-US style='
+font-weight:bold'> Random</span>).</b></p>
+
+<h2><a name="_Toc514249673"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Вращение частиц</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Раскройте свиток<b><span lang=EN-US style='font-weight:bold'> Rotation</span></b><b><span
+lang=EN-US style='font-weight:bold'> and</span></b><b><span lang=EN-US style='
+font-weight:bold'> Collision</span></b> (Вращение и столкновение).</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Параметры этого свитка позволяют определить скорость и
+направление вращения частиц.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Задайте скорость вращения частиц в группе
+параметров<b><span lang=EN-US
+style='font-weight:bold'> Spin</span></b><b><span
+lang=EN-US style='font-weight:bold'> Speed</span></b><b><span lang=EN-US style='
+font-weight:bold'> Controls</span></b> (Управление скоростью вращения):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Spin</span></b><b><span
+lang=EN-US style='font-weight:bold'> Time</span></b>
+(Период вращения).<b><span
+lang=EN-US style='font-weight:bold'> Variation</span></b>
+(Вариации) — счетчики определяют средний период вращения частицы (в кадрах) и
+процент случайного отклонения периода вращения каждой частицы от среднего
+значения;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Phase</span></b> (Фаза),<b><span lang=EN-US style='
+font-weight:bold'> Variation</span></b> (Вариации) — счетчики задают начальный
+угол поворота частицы в градусах и процент случайного отклонения фазы вращения
+каждой частицы от среднего значения.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Задайте ориентацию осей, вокруг которых
+будут вращаться частицы, в группе параметров<b><span
+lang=EN-US style='font-weight:bold'> Spin</span></b><b><span lang=EN-US style='
+font-weight:bold'> Axis</span></b><b><span lang=EN-US
+style='font-weight:bold'> Controls</span></b>
+(Управление осями вращения):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Random</span></b> (Случайное) — переключатель случайной
+ориентации осей вращения отдельных частиц;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Direction</span></b><b><span
+lang=EN-US style='font-weight:bold'> of</span></b><b><span lang=EN-US style='
+font-weight:bold'> Travel</span>/</b><b><span lang=EN-US style='font-weight:bold'> Mblnr</span></b> (В направлении движения/Размытие) —
+вращение вокруг вектора движения каждой частицы. Счетчик<b><span lang=EN-US style='font-weight:bold'> Stretch</span></b> (Растяжение) задает степень
+размывания изображений частиц за счет их движения. На рис. 18.7 показан пример
+движения частиц с размытием;</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:18.15pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=512 valign=top style='width:383.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=298 height=378
+  src="./chapter18.files/image012.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=512 valign=top style='width:383.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 18.7.</span></font></b>
+  Система частиц с заданным параметром размытия</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> User</span></b><b><span
+lang=EN-US style='font-weight:bold'> Defined</span></b>
+(Заданное пользователем) — переключатель позволяет задать ориентацию осей
+вращения в счетчиках<b><span style='font-weight:bold'>  Х </span></b><b><span
+lang=EN-US style='font-weight:bold'> Axis</span></b>
+(Ось X),<b><span lang=EN-US
+style='font-weight:bold'> Y</span></b><b><span
+lang=EN-US style='font-weight:bold'> Axis</span></b>(Ось <span lang=EN-US>Y</span>),<b><span lang=EN-US style='font-weight:bold'> Z</span></b><b><span
+lang=EN-US style='font-weight:bold'> Axis</span></b>
+(Ось <span lang=EN-US>Z</span>) и отклонения от
+средней ориентации для каждой отдельной частицы в счетчике<b><span lang=EN-US style='font-weight:bold'> Variation</span></b> (Вариации).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для созданной системы частиц визуализируйте<b><span style='font-weight:
+bold'>  (</span></b></span></font><b><span lang=EN-US style='font-weight:bold'> Render</span>)</b> сцену и проследите, как влияют на
+динамику частиц параметры этого свитка.</p>
+
+<h2><a name="_Toc514249674"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Наследование движения объекта</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Разверните
+свиток<b><span lang=EN-US
+style='font-weight:bold'> Object</span></b><b><span lang=EN-US style='font-weight:bold'> Motion</span></b><b><span lang=EN-US style='
+font-weight:bold'> Inheritance</span></b> (Наследование движения объекта).</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Представленные в нем параметры позволяют задать
+степень влияния движения источника частиц на движение самих частиц.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+счетчике<b><span lang=EN-US
+style='font-weight:bold'> Influence</span></b> (Влияние)
+задайте долю частиц, наследующих движение источника.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Укажите
+значение счетчиков<b><span
+lang=EN-US style='font-weight:bold'> Multiplier</span></b>
+(Усилитель) и<b><span lang=EN-US
+style='font-weight:bold'> Variation</span></b>
+(Вариации).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Первый параметр позволяет модифицировать степень влияния в сторону
+увеличения или уменьшения, а второй определяет степень отклонения величины,
+указанной в счетчике</span></font><b><span
+lang=EN-US style='font-weight:bold'> Multiplier</span></b>
+(Усилитель), от среднего значения для каждой из частиц.</p>
+
+<h2><a name="_Toc514249675"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Пузырьковый тип движения</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Разверните свиток<b><span lang=EN-US style='font-weight:bold'> Bubble</span></b><b><span
+lang=EN-US style='font-weight:bold'> Motion</span></b>
+(Пузырьковый тип движения).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Его параметры позволяют придать движению частиц
+некоторую периодическую неустойчивость, напоминающую движение пузырьков воздуха
+под водой.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Задайте параметры периода колебаний
+частиц в счетчиках<b><span
+lang=EN-US style='font-weight:bold'> Amplitude</span></b>
+(Амплитуда),<b><span lang=EN-US
+style='font-weight:bold'> Period</span></b> (Период),<b><span lang=EN-US style='font-weight:bold'> Phase</span></b> (Фаза) и случайные вариации
+соответствующих параметров для каждой из частиц в счетчиках<b><span lang=EN-US style='font-weight:bold'> Variation</span></b> (Вариации).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Установленное по умолчанию очень большое значение
+периода колебаний означает фактическое отсутствие пузырькового эффекта.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Создайте новый источник частиц типа<b><span lang=EN-US style='font-weight:bold'> Super</span></b><b><span
+lang=EN-US style='font-weight:bold'> Spray</span></b>
+(Супербрызги). Назначьте в качестве образца модели сферу и, выбирая различные
+параметры, проследите их влияние на эффект пузырькового движения.</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>На рис. 18.8 показан эффект пузырькового движения.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=298 height=378
+  src="./chapter18.files/image014.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 18.8.</span></font></b> Пример
+  пузырькового эффекта</p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc514249676"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Дробление частиц</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Разверните свиток<b><span lang=EN-US style='font-weight:bold'> Particle</span></b><b><span
+lang=EN-US style='font-weight:bold'> Spawn</span></b>
+(Дробление частиц).</p>
+
+<p class=MsoBodyTextIndent2><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Параметры этого свитка отвечают за поведение частиц в
+момент истечения срока жизни и при столкновении с отражателем.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Задайте тип эффекта дробления с помощью
+одного из переключателей в группе<b><span
+lang=EN-US style='font-weight:bold'> Particle</span></b><b><span lang=EN-US style='
+font-weight:bold'> Spawning</span></b><b><span
+lang=EN-US style='font-weight:bold'> Effects</span></b>
+(Эффект дробления частиц):</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> None</span></b> (Отсутствует) — нет дробления. В момент
+столкновения с преградой частица или отскакивает, или прилипает, в зависимости
+от параметров отражателя, а при &quot;умирании&quot; — исчезает;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Die</span></b><b><span
+lang=EN-US style='font-weight:bold'> After</span></b><b><span lang=EN-US style='
+font-weight:bold'> Collision</span></b> (Исчезновение после столкновения) —
+частицы при столкновении с преградой исчезают;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Spawn</span></b><b><span
+lang=EN-US style='font-weight:bold'> on</span></b><b><span lang=EN-US style='
+font-weight:bold'> Collision</span></b> (Дробление при столкновении) — частицы
+при столкновении с преградой дробятся;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Spawn</span></b><b><span
+lang=EN-US style='font-weight:bold'> on</span></b><b><span lang=EN-US style='
+font-weight:bold'> Death</span></b> (Дробление в конце жизни) — частицы
+распадаются на осколки в конце срока жизни;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Spawn</span></b><b><span
+lang=EN-US style='font-weight:bold'> Trails</span></b>
+(Шлейфы осколков) — частицы дробятся на осколки в каждом кадре своего срока
+жизни. Базовое направление движения осколков противоположно направлению
+движения частиц.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Задайте число осколков при любом типе
+эффекта в счетчике<b><span
+lang=EN-US style='font-weight:bold'> Spawns</span></b>
+(Осколков), а долю распадающихся частиц — в счетчике<b><span lang=EN-US style='
+font-weight:bold'> Affects</span></b> (Влияние).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Счетчик</span></font><b><span lang=EN-US
+style='font-weight:bold'> Multiplier</span></b>
+(Умножитель) позволяет изменять число осколков, а параметр<b><span lang=EN-US style='font-weight:bold'> Variation</span></b> (Вариации) определяет степень
+отклонения величины, указанной в счетчике<b><span
+lang=EN-US style='font-weight:bold'> Multiplier</span></b>
+(Умножитель), от среднего значения для каждой из частиц.</p>
+
+<h2><a name="_Toc514249677"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Сохранение заготовок и их загрузка</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Команды свитка</span></font><b><span
+lang=EN-US style='font-weight:bold'> Load</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Save</span></b><b><span lang=EN-US style='
+font-weight:bold'> Presets</span></b> (Загрузить/сохранить заготовки) позволяют
+сохранять наборы сформированных параметров и использовать их в других сценах.
+Для этого используются кнопки<b><span
+lang=EN-US style='font-weight:bold'> Save</span></b>
+(Сохранить) и<b><span lang=EN-US
+style='font-weight:bold'> Load</span></b>(Загрузить).
+Имена сохраненных заготовок добавляются в список<b><span lang=EN-US style='
+font-weight:bold'> Saved</span></b><b><span lang=EN-US
+style='font-weight:bold'> Presets</span></b>
+(Сохраненные заготовки). Для удаления набора из списка служит кнопка<b><span lang=EN-US style='font-weight:bold'> Delete</span></b> (Удалить).</p>
+
+</div>
+
+</body>
+
+</html>

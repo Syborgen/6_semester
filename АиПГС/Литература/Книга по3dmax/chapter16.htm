@@ -1,0 +1,1246 @@
+<html>
+
+<head>
+<meta name=Generator content="HTML-фильтр Microsoft Office версии 2.1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Originator content="Microsoft Word 9">
+<title>Имитация внешней среды</title>
+<style>
+<!--
+ 
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h3
+	{
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:24.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:72.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:84.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:96.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:14.2pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:2.0pt;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:19.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:4.0pt;
+	margin-left:17.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.FR1, li.FR1, div.FR1
+	{
+	margin-top:0cm;
+	margin-right:130.0pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:20.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR2, li.FR2, div.FR2
+	{
+	margin-top:14.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.FR3, li.FR3, div.FR3
+	{
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Arial;}
+p.a, li.a, div.a
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:17.85pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.a0, li.a0, div.a0
+	{
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body bgcolor=silver lang=RU link=blue vlink=purple style='
+text-justify-trim:punctuation' background="fon.jpg">
+<div class=Section1>
+
+<p class=FR2><b><font size=5 face=Arial><span style='font-size:18.0pt;'>Имитация внешней среды</span></font></b></p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><u><font color=blue><a href="#_Toc514245988">Настройка цвета фона</a></font></u></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><u><font size=3 color=blue
+face="Times New Roman"><span style='font-size:12.0pt'><a href="#_Toc514245989">Подбор текстуры в качестве фона сцены</a></span></font></u></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><u><font size=3 color=blue
+face="Times New Roman"><span style='font-size:12.0pt'><a href="#_Toc514245990">Общая освещенность сцены</a></span></font></u></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><u><font size=3 color=blue
+face="Times New Roman"><span style='font-size:12.0pt'><a href="#_Toc514245991">Выбор эффектов атмосферных явлений</a></span></font></u></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><u><font size=3 color=blue
+face="Times New Roman"><span style='font-size:12.0pt'><a href="#_Toc514245992">Габаритные контейнеры для атмосферных
+эффектов</a></span></font></u></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><u><font size=3 color=blue
+face="Times New Roman"><span style='font-size:12.0pt'><a href="#_Toc514245993">Эффект горения</a></span></font></u></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><u><font size=3 color=blue
+face="Times New Roman"><span style='font-size:12.0pt'><a href="#_Toc514245994">Объемное освещение</a></span></font></u></span></p>
+
+<p class=MsoToc1>&nbsp;</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>В этом занятии мы рассмотрим возможности создания фона сцены,
+имитирующего реальную внешнюю среду: пейзаж, архитектурный ландшафт. Ее можно
+приправить свойственными природе явлениями, такими как дымка, туман. Имитация
+природных эффектов дает реальное ощущение пространства и правдоподобия сцены.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выберите в меню</span></font><b><span
+lang=EN-US style='font-weight:bold'> Rendering</span></b>
+(Визуализация) команду<b><span
+lang=EN-US style='font-weight:bold'> Environment</span></b>
+(Окружение). Появится диалоговое окно<b><span
+lang=EN-US style='font-weight:bold'> Environment</span></b>
+(Окружение), которое содержит два свитка:<b><span
+lang=EN-US style='font-weight:bold'> Common</span></b><b><span lang=EN-US style='
+font-weight:bold'> Parameters</span></b> (Общие параметры) с группами<b><span lang=EN-US style='font-weight:bold'> Background</span> (Фон) и </b><b><span lang=EN-US
+style='font-weight:bold'> Global</span></b><b><span lang=EN-US style='font-weight:bold'> Lighting</span></b>
+(Общая освещенность), и<b><span
+lang=EN-US style='font-weight:bold'> Atmosphere</span></b>
+(Атмосфера).</p>
+
+<h2><a name="_Toc514245988"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Настройка цвета фона</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для настройки цвета фона выполните следующие шаги:</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Щелкните
+<span lang=EN-US>LM</span> в области<b><span lang=EN-US style='font-weight:bold'> Color</span></b> (Цвет) группы<b><span lang=EN-US style='font-weight:bold'> Background</span></b> (Фон).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>В
+появившемся окне<b><span
+lang=EN-US style='font-weight:bold'> Color</span></b><b><span lang=EN-US style='
+font-weight:bold'> Selector</span>: </b><b><span lang=EN-US style='font-weight:bold'> Background</span></b><b><span
+lang=EN-US style='font-weight:bold'> Color</span></b>
+(Выбор цвета: Фон) задайте цвет фона.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выполните
+визуализацию сцены.</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Фон сцены будет окрашен в
+выбранный цвет.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>4.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Вернитесь
+в группу<b><span lang=EN-US
+style='font-weight:bold'> Background</span></b> (Фон) и
+отметьте флажок<b><span
+lang=EN-US style='font-weight:bold'> Use</span></b><b><span lang=EN-US style='
+font-weight:bold'> Map</span></b> (Использовать карту текстур).</p>
+
+<h2><a name="_Toc514245989"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Подбор текстуры в качестве фона сцены</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Применение карт текстур позволяет создать практически любой фон сцены.
+Для имитации фона сцены можно использовать такие карты текстур, как </span></font><b><span
+lang=EN-US style='font-weight:bold'> Bitmap</span></b>
+(Растровая карта),<b><span
+lang=EN-US style='font-weight:bold'> Gradient</span></b>
+(Градиентная),<b><span
+lang=EN-US style='font-weight:bold'> Mask</span></b>
+(Маска) и т. п.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Выбор типа карты текстур и ее применение можно провести двумя
+способами. Первый способ предполагает использование редактора материалов.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Раскройте окно редактора материалов и
+щелкните LM на кнопке<b><span
+lang=EN-US style='font-weight:bold'> Get</span></b><b><span lang=EN-US style='
+font-weight:bold'> Material</span></b> (Получить материал).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>В появившемся окне диалога<b><span lang=EN-US style='font-weight:bold'> Material</span>/</b><b><span lang=EN-US
+style='font-weight:bold'> Map</span></b><b><span
+lang=EN-US style='font-weight:bold'> Browser</span></b>
+(Просмотр материалов и карт текстур) щелкните два раза <span lang=EN-US>LM</span> на наименовании нужного типа карты
+текстуры.</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В результате карта
+текстуры будет загружена в ячейку образца.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Настройте характеристики выбранной
+текстуры.</p>
+
+<p class=MsoBodyTextIndent3><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>Настройка параметров карт текстуры внешней среды
+производится так же, как и любые другие типы карт.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Перетащите текстуру из ячейки образца в
+диалоговое окно<b><span
+lang=EN-US style='font-weight:bold'> Environment</span></b>(Окружение) и положите поверх кнопки<b><span lang=EN-US style='font-weight:bold'> Environment</span></b><b><span
+lang=EN-US style='font-weight:bold'> Map</span></b>
+(Карта текстуры фона).</p>
+
+<p class=MsoNormal style='margin-left:17.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Как только кнопка мыши
+будет отпущена, появится диалоговое окно </span></font><b><span lang=EN-US
+style='font-weight:bold'> Instance</span> (</b><b><span
+lang=EN-US style='font-weight:bold'> Copy</span>) </b><b><span
+lang=EN-US style='font-weight:bold'> Map</span></b>
+(Создать образец (копию) карты).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>5.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Установите переключатель<b><span lang=EN-US style='font-weight:bold'> Method</span></b> (Метод) в положение <span lang=EN-US>Instance</span> (Образец) и щелкните на кнопке<b><span
+style='font-weight:bold'>  ОК.</span></b></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Второй способ начинается с окна диалога</span></font><b><span lang=EN-US style='font-weight:bold'> Environment</span></b> (Окружение).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните LM на кнопке<b><span lang=EN-US style='font-weight:bold'> Environment</span></b><b><span
+lang=EN-US style='font-weight:bold'> Map</span></b>
+(Карта текстуры фона) в группе<b><span
+lang=EN-US style='font-weight:bold'> Background</span></b>
+(Фон).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится диалоговое окно</span></font><b><span lang=EN-US
+style='font-weight:bold'> Material</span>/</b><b><span
+lang=EN-US style='font-weight:bold'> Map</span></b><b><span lang=EN-US style='
+font-weight:bold'> Browser</span></b> (Просмотр материалов и карт текстур).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните дважды LM на наименовании
+нужного типа карты.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Наименование типа карты
+появится на кнопке</span></font><b><span
+lang=EN-US style='font-weight:bold'> Environment</span></b><b><span lang=EN-US style='
+font-weight:bold'> Map</span></b> (Карта текстуры фона).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Для настройки текстурной
+карты или для выбора файла растрового изображения при использовании карты типа</span></font><b><span lang=EN-US
+style='font-weight:bold'> Bitmap</span></b> (Растровая
+карта) загрузите выбранную карту в одну из ячеек образцов окна редактора
+материалов.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>С этой целью снова щелкните на кнопке<b><span lang=EN-US style='font-weight:bold'> Environment</span></b><b><span
+lang=EN-US style='font-weight:bold'> Map</span></b>
+(Карта текстуры фона) с надписью, указывающей на тип выбранной текстуры, и
+перетащите курсор в свободную ячейку образца редактора материалов.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Как только кнопка мыши
+будет отпущена, появится диалоговое окно </span></font><b><span lang=EN-US
+style='font-weight:bold'> Instance</span> (</b><b><span
+lang=EN-US style='font-weight:bold'> Copy</span>) </b><b><span
+lang=EN-US style='font-weight:bold'> Map</span></b>
+(Создать образец (копию) карты), в которой следует установить переключатель<b><span lang=EN-US style='font-weight:bold'> Method</span></b> (Метод) в положение<b><span lang=EN-US style='font-weight:bold'> Instance</span></b> (Образец).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Для проецирования текстур
+на фон сцены необходимо установить переключатель варианта использования
+проекционных координат, расположенный в верхней части свитка</span></font><b><span lang=EN-US
+style='font-weight:bold'> Coordinates</span></b>
+(Координаты) редактора материалов, в положение<b><span lang=EN-US style='font-weight:bold'> Environ</span></b>
+(Фоновые) и выбрать один из четырех типов фоновых проекционных координат в
+раскрывшемся списке<b><span
+lang=EN-US style='font-weight:bold'> Mapping</span></b>
+(Проекция):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Spherical</span></b> (Сферические) — обеспечивает
+нанесение карты растровой текстуры фона на внутреннюю поверхность воображаемой
+сферы бесконечно большого радиуса;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Cylindrical</span></b> (Цилиндрические) — обеспечивает
+проецирование карты текстуры фона на внутреннюю поверхность охватывающего сцену
+воображаемого цилиндра бесконечно больших размеров;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Shrink</span></b><b><span
+lang=EN-US style='font-weight:bold'> Wrap</span></b>
+(Обтягивающая) — обеспечивает проецирование карты текстуры фона на внутреннюю
+поверхность воображаемой сферы бесконечно большого радиуса. При этом в отличие
+от сферического проецирования все четыре угла текстуры карты стягиваются к
+одному из полюсов сферы;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Screen</span></b> (Экранная) — позволяет использовать
+текстуру в качестве обычного плоского фона, привязанного к окну проекции. При
+переключении окна на другую проекцию сцены фон в окне не меняется. Данная
+система координат удобна только для визуализации неподвижных кадров. Пример
+использования растровой текстуры в качестве фона в экранной системе координат
+приведен на рис. 16.1.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 width=498 style='width:373.65pt;
+ margin-left:36.0pt;border-collapse:collapse;'>
+ <tr>
+  <td width=498 valign=top style='width:373.65pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=326 height=328
+  src="./chapter16.files/image002.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=498 valign=top style='width:373.65pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 16.1.</span></font></b>
+  Растровая текстура фона В экранной системе координат</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:36.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>После того как тип
+системы проекционных координат выбран, установка текстуры фона закончена.
+Созданный фон станет использоваться при визуализации до тех пор, пока не будет
+сброшен флажок</span></font><b><span
+lang=EN-US style='font-weight:bold'> Use</span></b><b><span lang=EN-US style='
+font-weight:bold'> Map</span></b> (Использовать карту текстур) в группе<b><span lang=EN-US style='font-weight:bold'> Background</span></b> (Фон) диалогового окна <b><span
+lang=EN-US style='font-weight:bold'> Environment</span></b>
+(Окружение).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Чтобы растровая текстура, выбранная в
+качестве фона сцены, была видна в окнах проекции, выберите в меню<b><span lang=EN-US style='font-weight:bold'> Views</span></b> (Проекции) команду<b><span lang=EN-US style='font-weight:bold'> Viewport</span></b><b><span
+lang=EN-US style='font-weight:bold'> Background</span></b>
+(Фон окна проекции) и установите флажок<b><span
+lang=EN-US style='font-weight:bold'> Use</span></b><b><span lang=EN-US style='
+font-weight:bold'> Environment</span></b><b><span
+lang=EN-US style='font-weight:bold'> Background</span></b>
+(Использовать фон внешней среды) в группе<b><span
+lang=EN-US style='font-weight:bold'> Background</span></b><b><span lang=EN-US style='
+font-weight:bold'> Source</span></b> (Источник фона) диалогового окна<b><span lang=EN-US style='font-weight:bold'> Viewport</span></b><b><span
+lang=EN-US style='font-weight:bold'> Background</span></b>
+(Фон окна проекции).</p>
+
+<h2><a name="_Toc514245990"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Общая освещенность сцены</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Группа</span></font><b><span
+lang=EN-US style='font-weight:bold'> Global</span></b><b><span lang=EN-US style='
+font-weight:bold'> Lighting</span></b> (Общая освещенность) диалогового окна<b><span lang=EN-US style='font-weight:bold'> Environment</span></b></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>(Окружение) содержит элементы управления освещенностью.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните <span lang=EN-US>LM</span> в области<b><span lang=EN-US style='
+font-weight:bold'> Ambient</span></b> (Подсветка), чтобы вызвать диалоговое окно<b><span lang=EN-US style='font-weight:bold'> Color</span></b><b><span
+lang=EN-US style='font-weight:bold'> Selector</span>: </b><b><span
+lang=EN-US style='font-weight:bold'> Ambient</span></b><b><span lang=EN-US style='
+font-weight:bold'> Light</span></b> (Выбор цвета: Подсветка), и настройте цвет и
+интенсивность подсветки.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните LM в области<b><span lang=EN-US style='font-weight:bold'> Tint</span></b> (Оттенок), чтобы вызвать диалоговое
+окно <b><span lang=EN-US style='font-weight:bold'> Color</span></b><b><span lang=EN-US style='
+font-weight:bold'> Selector</span>: </b><b><span lang=EN-US style='font-weight:bold'> Global</span></b><b><span
+lang=EN-US style='font-weight:bold'> Tint</span></b>
+(Выбор цвета: Оттенок) и настройте цвет и интенсивность оттенка.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Цвет оттенка подкрашивает
+все огни сцены, за исключением подсветки. Этот параметр допускает анимацию. По
+умолчанию цвет</span></font><b><span
+lang=EN-US style='font-weight:bold'> Tint</span></b>
+(Оттенок) — белый.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Установите
+значение счетчика<b><span
+lang=EN-US style='font-weight:bold'> Level</span></b>
+(Уровень).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Этот параметр действует
+как усилитель по отношению ко всем источникам света, кроме подсветки. Значение
+1 в счетчике сохраняет нормальные уровни всех огней. Более высокие — усиливают
+освещение.</span></font></p>
+
+<h2><a name="_Toc514245991"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Выбор эффектов атмосферных явлений</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Параметры свитка</span></font><b><span
+lang=EN-US style='font-weight:bold'> Atmosphere</span></b>
+(Атмосфера) диалогового окна<b><span
+lang=EN-US style='font-weight:bold'> Environment</span></b></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>(Окружение) позволяют выбирать типы атмосферных явлений и управлять их
+визуализацией.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Для
+выбора атмосферных явлений щелкните LM на кнопке<b><span lang=EN-US style='
+font-weight:bold'> Add</span></b> (Добавит) свитка<b><span lang=EN-US style='
+font-weight:bold'> Atmosphere</span></b> (Атмосфера) окна диалога<b><span lang=EN-US style='font-weight:bold'> Environment</span></b> (Окружение).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится диалоговое окно</span></font><b><span lang=EN-US
+style='font-weight:bold'> Add</span></b><b><span
+lang=EN-US style='font-weight:bold'> Atmospheric</span></b><b><span lang=EN-US style='
+font-weight:bold'> Effects</span></b> (Добавление атмосферного эффекта), в
+котором перечислены все типы атмосферных явлений, реализуемые пакетом.
+Стандартные модули позволяют имитировать четыре типа атмосферных явлений:
+горение<b><span style='font-weight:bold'>  (</span></b><b><span lang=EN-US
+style='font-weight:bold'> Fire</span></b><b><span
+lang=EN-US style='font-weight:bold'> Effect</span>),</b>
+однородный туман или дымку (<span lang=EN-US>Fog</span>),
+объемный туман<b><span style='font-weight:bold'>  (</span></b><b><span
+lang=EN-US style='font-weight:bold'> Volume</span></b><b><span lang=EN-US style='
+font-weight:bold'> Fog</span>)</b> и объемное освещение<b><span
+style='font-weight:bold'>  (</span></b><b><span lang=EN-US style='font-weight:bold'> Volume</span></b><b><span
+lang=EN-US style='font-weight:bold'> Light</span>).</b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Выделите
+строку атмосферного явления нужного типа и щелкните LM на кнопке<b><span
+style='font-weight:bold'>  ОК.</span></b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Наименование выбранного
+эффекта добавится в список</span></font><b><span
+lang=EN-US style='font-weight:bold'> Effects</span></b>
+(Эффекты) свитка<b><span
+lang=EN-US style='font-weight:bold'> Atmosphere</span></b>
+(Атмосфера), а в нижней части окна диалога <b><span lang=EN-US
+style='font-weight:bold'> Environment</span></b> (Окружение)
+появится свиток параметров эффекта.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Аналогичным
+способом добавьте в список эффектов другие типы атмосферных явлений.</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Все включенные в список эффекты будут добавлены на этапе визуализации
+сцены в порядке очередности, сверху вниз по списку.</span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для управления составом атмосферных явлений в свитке</span></font><b><span lang=EN-US
+style='font-weight:bold'> Atmosphere</span></b>
+(Атмосфера) представлены следующие элементы управления:</p>
+
+<p class=MsoNormal style='margin-left:18.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Delete</span></b> (Удалить) — кнопка удаляет выделенные
+атмосферные эффекты из списка;</p>
+
+<p class=MsoNormal style='margin-left:18.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Active</span></b> (Активен) — флажок позволяет включать
+и выключать действие каждого отдельного эффекта списка. Исключенный эффект не
+будет визуализироваться;</p>
+
+<p class=MsoNormal style='margin-left:18.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Move</span></b><b><span
+lang=EN-US style='font-weight:bold'> Up</span></b>
+(Переместить вверх) и<b><span
+lang=EN-US style='font-weight:bold'> Move</span></b><b><span lang=EN-US style='
+font-weight:bold'> Down</span></b> (Переместить вниз) — кнопки перемещают строку
+выделенного эффекта вверх или вниз по списку, изменяя порядок визуализации
+эффектов;</p>
+
+<p class=MsoNormal style='margin-left:18.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Merge</span></b> (Присоединить) — кнопка дает
+возможность присоединить к текущей сцене атмосферные эффекты из других сцен,
+вызывая диалоговое окно<b><span
+lang=EN-US style='font-weight:bold'> Merge</span></b><b><span lang=EN-US style='
+font-weight:bold'> Atmospheric</span></b><b><span
+lang=EN-US style='font-weight:bold'> Effects</span></b>
+(Присоединение атмосферных эффектов);</p>
+
+<p class=MsoNormal style='margin-left:18.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Name</span></b> (Имя) — текстовое поле, позволяющее
+переименовывать любой эффект в списке.</p>
+
+<p class=MsoNormal style='margin-left:18.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Для наблюдения атмосферного эффекта
+любого типа сцена должна визуализироваться в окне проекций<b><span lang=EN-US style='font-weight:bold'> Perspective</span></b> (Перспектива) или<b><span lang=EN-US style='font-weight:bold'> Camera</span></b> (Камера).</p>
+
+<h2><a name="_Toc514245992"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Габаритные контейнеры для атмосферных эффектов</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для некоторых типов атмосферных эффектов, таких как туман, горение,
+требуется задать границы пространства, в которых этот эффект проявляется. В
+этом случае используется специальный габаритный контейнер. Он представляет
+собой вспомогательный объект сцены, не участвующий в визуализации.</span></font></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>1.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>На
+командной панели<b><span
+lang=EN-US style='font-weight:bold'> Create</span></b>
+(Создать) щелкните <span lang=EN-US>LM</span>
+на кнопке<b><span lang=EN-US
+style='font-weight:bold'> Helpers</span></b>(Вспомогательные объекты) и выберите в списке
+разновидностей объектов вариант<b><span
+lang=EN-US style='font-weight:bold'> Atmospheric</span></b><b><span lang=EN-US style='
+font-weight:bold'> Apparatus</span></b> (Атмосферная оснастка).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Набор элементов
+управления свитка</span></font><b><span
+lang=EN-US style='font-weight:bold'> Object</span></b><b><span lang=EN-US style='
+font-weight:bold'> Type</span></b> (Тип объекта) состоит из трех кнопок типов
+габаритных контейнеров: в виде параллелепипеда <b><span style='font-weight:
+bold'> (</span></b><b><span lang=EN-US style='
+font-weight:bold'> BoxGizmo</span>),</b> цилиндра<b><span style='font-weight:
+bold'>  (</span></b><b><span lang=EN-US style='
+font-weight:bold'> CylGizmo</span>)</b> и сферы<b><span style='font-weight:bold'> 
+(</span></b><b><span lang=EN-US style='font-weight:
+bold'> SphereGizmo</span>)</b> (рис. 16.2).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>2.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Создайте
+габаритный контейнер любого из приведенных типов. Они формируются так же, как
+аналогичные фигуры из раздела геометрии.</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Свитки параметров всех
+трех типов контейнеров содержат счетчики задания их геометрических размеров,
+как и аналогичные примитивы из раздела геометрия, а так же два дополнительных
+параметра:</span></font></p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Seed</span></b> (Номер выборки) — счетчик задает номер
+случайной выборки параметров объемного тумана или горения. Разным номерам
+выборок соответствуют различные на вид проявления атмосферных эффектов;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> New</span></b><b><span
+lang=EN-US style='font-weight:bold'> Seed</span></b>
+(Новая выборка) — кнопка генерирует случайное значение параметра<b><span lang=EN-US style='font-weight:bold'> Seed</span></b> (Номер выборки).</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:36.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=512 valign=top style='width:383.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=306 height=212
+  src="./chapter16.files/image004.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=512 valign=top style='width:383.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 16.2.</span></font></b> Типы габаритных контейнеров</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt;'><font size=3 face="Times New Roman"><span
+style='font-size:12.0pt'>3.<font size=1 face="Times New Roman"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></span></font>Создав
+габаритный контейнер, примените к нему при необходимости требуемые
+преобразования (перемещение, поворот и т. д.).</p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Осуществляя
+преобразование неравномерного масштабирования для контейнера, можно сжать или
+растянуть область проявления атмосферного эффекта.</span></font></p>
+
+<h2><a name="_Toc514245993"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Эффект горения</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Для создания эффекта горения можно применить габаритный контейнер
+атмосферного эффекта.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Создайте габаритный контейнер формы,
+показанной на рис. 16.3.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Вызовите диалоговое окно<b><span lang=EN-US style='font-weight:bold'> Environment</span></b> (Окружение), щелкните <span
+lang=EN-US>LM</span> на кнопке<b><span lang=EN-US style='font-weight:bold'> Add</span></b> (Добавить) свитка<b><span lang=EN-US style='font-weight:bold'> Atmosphere</span></b> (Атмосфера) и выберите строку <b><span
+lang=EN-US style='font-weight:bold'> Fire</span></b><b><span lang=EN-US style='
+font-weight:bold'> Effect</span></b> (Горение) в окне диалога<b><span lang=EN-US style='font-weight:bold'> Add</span></b><b><span
+lang=EN-US style='font-weight:bold'> Atmospheric</span></b><b><span lang=EN-US style='
+font-weight:bold'> Effect</span></b> (Добавление атмосферного эффекта).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В нижней части
+диалогового окна диалог</span></font><b><span
+lang=EN-US style='font-weight:bold'> Environment</span></b>
+(Окружение) появятся параметры настройки эффекта горения.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните LM на кнопке<b><span lang=EN-US style='font-weight:bold'> Pick</span></b><b><span
+lang=EN-US style='font-weight:bold'> Gizmo</span></b>
+(Указать контейнер).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>После этого включается
+режим выбора габаритного контейнера.</span></font></p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Щелкните LM на построенном габаритном
+контейнере.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Один и тот же атмосферный
+эффект может быть применен к различным габаритным контейнерам. Кроме того,
+одному и тому же габаритному контейнеру могут быть назначены различные типы
+атмосферных эффектов.</span></font></p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=306 height=212
+  src="./chapter16.files/image006.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 16.3.</span></font></b>
+  Габаритный контейнер для эффекта горения</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>5.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Чтобы указать несколько габаритных
+контейнеров, следует щелкнуть <span lang=EN-US>LM</span>
+на кнопке<b><span lang=EN-US
+style='font-weight:bold'> Pick</span></b><b><span
+lang=EN-US style='font-weight:bold'> Gizmo</span></b>
+(Указать контейнер), а затем нажать клавишу &lt;Н&gt;.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Появится диалоговое окно</span></font><b><span lang=EN-US
+style='font-weight:bold'> Pick</span></b><b><span
+lang=EN-US style='font-weight:bold'> Object</span></b>
+(Выделение объекта) (рис. 16.4), с помощью которого можно выбрать любое
+количество созданных габаритных контейнеров.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'><img border=0 width=395 height=409
+  src="./chapter16.files/image008.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=514 valign=top style='width:385.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 16.4.</span></font></b>
+  Диалоговое окно для выделения группы объектов</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>6.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Настройте цвета компонентов пламени в
+группе<b><span lang=EN-US
+style='font-weight:bold'> Colors</span></b> (Цвета):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Inner</span></b><b><span
+lang=EN-US style='font-weight:bold'> Color</span></b>
+(Внутренний цвет) — образец цвета внутренней части пламени;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Outer</span></b><b><span
+lang=EN-US style='font-weight:bold'> Color</span></b>
+(Наружный цвет) — образец цвета наружной части пламени;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Smoke</span></b><b><span
+lang=EN-US style='font-weight:bold'> Color</span></b>
+(Цвет дыма) — образец цвета дыма при имитации вспышки взрыва.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>7.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Установите переключатель<b><span lang=EN-US style='font-weight:bold'> Flame</span></b><b><span
+lang=EN-US style='font-weight:bold'> Type</span></b>
+(Тип пламени) в разделе<b><span
+lang=EN-US style='font-weight:bold'> Shape</span></b>(Форма) в одно из двух положений:</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Tendril</span></b> (Язык) — генерирует языки пламени,
+заостренные на концах;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> FireBall</span></b> (Огненный шар) — моделирует
+округлые области огня.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>8.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Настройте параметры типа пламени в группе<b><span lang=EN-US style='font-weight:bold'> Shape</span></b> (Фигура):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Stretch</span></b> (Растяжение) — счетчик задает длину
+отдельных языков пламени;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Regularity</span></b> (Регулярность) — счетчик
+определяет, в какой степени область горения будет заполнять габаритный
+контейнер. Уменьшение величины параметра заставляет пламя отодвигаться от краев
+контейнера.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>9.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Настройте характеристики пламени в группе<b><span lang=EN-US style='font-weight:bold'> Characteristics</span></b> (Характеристики):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Flame</span></b><b><span
+lang=EN-US style='font-weight:bold'> Size</span></b>
+(Размер пламени) — счетчик задает размер отдельных вихрей пламени в пределах
+габаритного контейнера. Этот параметр не влияет на общий размер области
+эффекта, определяемый габаритами контейнера;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Flame</span></b><b><span
+lang=EN-US style='font-weight:bold'> Detail</span></b>
+(Детализация пламени) — счетчик определяет крутизну перепадов между участками
+различного цвета в пределах области горения;</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:55.05pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=438 valign=top style='width:328.75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=197 height=256
+  src="./chapter16.files/image010.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=438 valign=top style='width:328.75pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 16.5.</span></font></b>
+  Имитация эффекта горения</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Density</span></b> (Плотность) — счетчик задает степень
+непрозрачности и общую яркость пламени;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Samples</span></b> (Частота выборки) — счетчик задает
+частоту дискрета области горения. Большие значения частоты выборки обеспечивают
+более высокую точность эффекта горения, но ведут к увеличению времени
+визуализации.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>10.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp; </span></font></span></font>При
+анимации горения следует выставить ненулевые значения счетчиков<b><span lang=EN-US style='font-weight:bold'> Drift</span></b> (Дрейф) и<b><span lang=EN-US style='
+font-weight:bold'> Phase</span></b> (Фаза).</p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Пример эффекта горения приведен на рис. 16.5.</span></font></p>
+
+<h2><a name="_Toc514245994"><b><font
+size=5 face=Arial><span style='font-size:16.0pt'>Объемное освещение</span></font></b></a></h2>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Имитация объемного освещения создается при прохождении света через
+атмосферу тумана. Пример объемного освещения показан на рис. 16.6. Для создания
+эффекта объемного освещения построим объект, расставим источники света и
+зададим режим объемного освещения в свитке</span></font><b><span
+lang=EN-US style='font-weight:bold'> Atmosphere</span></b>(Атмосфера).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>1.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Создайте несколько текстовых символов,
+нажав на командной панели <b><span lang=EN-US style='
+font-weight:bold'> Create</span></b> (Создать) кнопку<b><span lang=EN-US style='
+font-weight:bold'> Shapes</span></b> (Форма), выбрав в списке вариант<b><span lang=EN-US style='font-weight:bold'> Splines</span></b>(Сплайны) и
+нажав кнопку<b><span lang=EN-US
+style='font-weight:bold'> Text</span></b> (Текст).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>2.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Созданные символы сделайте объемными,
+воспользовавшись методом лофтинга.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=361 height=316
+  src="./chapter16.files/image012.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=513 valign=top style='width:384.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 16.6.</span></font></b> Пример
+  объемного освещения</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>3.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>С помощью булевской операции вычитания
+сделайте вырез на плоскости прямоугольника по контурам букв, как показано на
+рис. 16.7.</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:17.85pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=516 valign=top style='width:386.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=306 height=212
+  src="./chapter16.files/image014.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=516 valign=top style='width:386.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 16.7.</span></font></b> Заготовка для моделирования объемного
+  освещения</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>4.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Создайте источник направленного света и
+задайте параметры<b><span
+lang=EN-US style='font-weight:bold'> Cast</span></b><b><span lang=EN-US style='
+font-weight:bold'> Shadows</span></b>(Отбрасывать тень)
+и<b><span lang=EN-US
+style='font-weight:bold'> Shadow</span></b><b><span lang=EN-US style='font-weight:bold'> Maps</span></b>
+(Применять параметры тени).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>5.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Вызовите окно<b><span lang=EN-US style='
+font-weight:bold'> Environment</span></b> (Окружение), разверните свиток<b><span lang=EN-US style='font-weight:bold'> Atmosphere</span></b>(Атмосфера),
+щелкните <span lang=EN-US>LM</span> на кнопке<b><span lang=EN-US style='font-weight:bold'> Add</span></b> (Добавить) и выберите строку <b><span
+lang=EN-US style='font-weight:bold'> Volume</span></b><b><span lang=EN-US style='
+font-weight:bold'> Light</span></b> (Объемное освещение) в диалоговом окне<b><span lang=EN-US style='font-weight:bold'> Add</span></b><b><span
+lang=EN-US style='font-weight:bold'> Atmospheric</span></b><b><span lang=EN-US style='
+font-weight:bold'> Effect</span></b> (Добавление атмосферного эффекта).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>В нижней части
+диалогового окна</span></font><b><span
+lang=EN-US style='font-weight:bold'> Environment</span></b>
+(Окружение) появится свиток<b><span
+lang=EN-US style='font-weight:bold'> Volume</span></b><b><span lang=EN-US style='
+font-weight:bold'> Light</span></b><b><span lang=EN-US
+style='font-weight:bold'> Parameters</span></b>
+(Параметры объемного освещения), подобный представленному на рис. 16.8.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>6.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Для добавления эффекта объемного
+освещения, в разделе<b><span
+lang=EN-US style='font-weight:bold'> Lights</span></b>
+(Источники света) свитка щелкните LM на кнопке<b><span lang=EN-US style='font-weight:bold'> Pick</span></b><b><span lang=EN-US style='
+font-weight:bold'> Light</span></b> (Указать источник) и выделите источник
+света.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Выбранные источники света
+будут занесены в раскрывающийся список справа от кнопки</span></font><b><span lang=EN-US
+style='font-weight:bold'> Pick</span></b><b><span
+lang=EN-US style='font-weight:bold'> Light</span></b>
+(Указать источник).</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Один и тот же эффект
+объемного освещения можно применить к нескольким источникам света. Чтобы
+указать несколько источников света, щелкните на кнопке</span></font><b><span lang=EN-US
+style='font-weight:bold'> Pick</span></b><b><span
+lang=EN-US style='font-weight:bold'> Light</span></b>
+(Указать источник), а затем нажмите клавишу &lt;Н&gt;. Появится диалоговое окно<b><span lang=EN-US style='font-weight:bold'> Pick</span></b><b><span
+lang=EN-US style='font-weight:bold'> Object</span></b>
+(Выделение объекта), с помощью которого можно выбрать несколько источников
+света.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Чтобы удалить источник
+света из списка, выделите его и щелкните на кнопке</span></font><b><span lang=EN-US style='font-weight:bold'> Remove</span></b><b><span
+lang=EN-US style='font-weight:bold'> Light</span></b>
+(Удалить источник). Источник света останется в сцене, но не будет при
+визуализации демонстрировать эффект объемного освещения.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>7.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>Задайте цвет и плотность имитации тумана,
+а также максимальную и минимальную яркость света и уровень качества фильтра
+полутонов объемного освещения с помощью следующих параметров группы<b><span lang=EN-US style='font-weight:bold'> Volume</span></b>(Объем):</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Fog</span></b><b><span
+lang=EN-US style='font-weight:bold'> Color</span></b>
+(Цвет тумана) — образец цвета тумана выбирается после щелчка <span lang=EN-US>LM</span> на цветовой области в диалоговом окне<b><span lang=EN-US style='font-weight:bold'> Color</span></b><b><span
+lang=EN-US style='font-weight:bold'> Selector</span>: </b><b><span
+lang=EN-US style='font-weight:bold'> Fog</span></b><b><span lang=EN-US style='
+font-weight:bold'> Color</span></b> (Выбор цвета: Туман);</p>
+
+<table border=0 cellspacing=0 cellpadding=0 style='margin-left:36.0pt;
+ border-collapse:collapse;'>
+ <tr>
+  <td width=493 valign=top style='width:369.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoToc1><font size=3 face="Times New Roman"><span style='font-size:
+  12.0pt'><img border=0 width=356 height=572
+  src="./chapter16.files/image016.jpg"></span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=493 valign=top style='width:369.8pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'> Рис. 16.8.</span></font></b> Свиток
+  параметров объемного освещения</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Attenuation</span></b><b><span
+lang=EN-US style='font-weight:bold'> Color</span></b>
+(Цвет затухания) — образец цвета, который будет приобретать туман по мере
+затухания света;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Exponential</span></b> (Экспоненциально) — если флажок
+установлен, плотность тумана экспоненциально увеличивается по мере удаления от
+источника света. При сброшенном флажке плотность возрастает по линейному
+закону. Если в сцене использованы прозрачные объекты, то установка флажка
+улучшает результат их визуализации;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Density</span></b> (Плотность) — счетчик задает
+плотность тумана, которая указывается в процентах от той, при которой туман
+становится полностью непрозрачным;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Max</span></b><b><span
+lang=EN-US style='font-weight:bold'> Light</span></b> %
+(Максимальная яркость) — чем дальше туман от источника света, тем он плотнее и
+тем ярче выглядит в луче объемного света. Этот счетчик позволяет ограничить
+яркость тумана, чтобы он не возрастал бесконечно по мере удаления от источника
+света. По умолчанию принимается величина 90%;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Min</span></b><b><span
+lang=EN-US style='font-weight:bold'> Light</span></b> %
+(Минимальная яркость) — установкой ненулевой величины этого счетчика можно
+обеспечить светимость тумана за пределами конуса луча света;</p>
+
+<p class=MsoNormal style='margin-left:54.15pt;text-indent:-18.15pt;'><font size=3
+face=Symbol><span style='font-size:12.0pt;font-family:Symbol'>·<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font><b><span lang=EN-US style='font-weight:bold'> Filter</span></b><b><span
+lang=EN-US style='font-weight:bold'> Shadows</span></b>
+(Качество фильтров полутонов) — набор переключателей, позволяющий улучшить
+качество визуализации объемных пучков света. Для окончательной визуализации
+сцены следует выбрать фильтр <b><span lang=EN-US style='
+font-weight:bold'> High</span></b> (Высокое). Это позволит обеспечить плавные
+перепады тонов объемного света.</p>
+
+<p class=MsoNormal style='margin-left:17.85pt;text-indent:-17.85pt;'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>8.<font size=1
+face="Times New Roman"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></font>В разделе<b><span lang=EN-US style='
+font-weight:bold'> Attenuation</span></b> (Затухание) задайте характеристики
+затухания световых лучей, определяющие, насколько далеко от источника света
+простирается действие световых пучков.</p>
+
+</div>
+
+</body>
+
+</html>

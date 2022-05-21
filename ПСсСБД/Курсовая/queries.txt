@@ -1,0 +1,541 @@
+-- Симметричное внутреннее соединение с условием (два по внешнему ключу, два по дате)
+
+-- 1.1 Вывод продуктов определенного типа (По внешнему ключу)
+create or replace function query_1_1(product_t varchar)
+    returns table
+            (
+                id                   integer,
+                product_name         varchar,
+                recerption           date,
+                remaining            integer,
+                price                integer,
+                customer_firs_name   varchar,
+                customer_second_name varchar,
+                shop                 varchar,
+                product_type         varchar
+            )
+as
+$$
+begin
+    return query select products.id,
+                        products.product_name,
+                        products.reception,
+                        products.remaining,
+                        products.price,
+                        c.first_name,
+                        c.second_name,
+                        s.name,
+                        pt.product_type
+                 from products
+                          inner join customers c on products.id_customer = c.id
+                          inner join product_types pt on products.id_product_type = pt.id
+                          inner join shops s on products.id_shop = s.id
+                 where id_product_type =
+                       (select product_types.id from product_types where product_types.product_type = product_t);
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+select *
+from query_1_1('посуда');
+
+-- 1.2 Вывод клиентов живущих в определенном районе (По внешнему ключу)
+create or replace function query_1_2(district_name varchar)
+    returns table
+            (
+                id          integer,
+                first_name  varchar,
+                second_name varchar,
+                district    varchar,
+                work        varchar,
+                birthday    date,
+                phone       char(10)
+            )
+as
+$$
+begin
+    return query select customers.id,
+                        customers.first_name,
+                        customers.second_name,
+                        d.district,
+                        customers.work,
+                        customers.birthday,
+                        customers.phone
+                 from customers
+                          inner join districts d on customers.id_district = d.id
+                 where id_district = (select districts.id from districts where districts.district = district_name);
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+drop function query_1_2(varchar);
+
+select *
+from query_1_2('Киевский');
+
+-- 1.3 Пользователи, которые родились позже указанной даты (По дате)
+create or replace function query_1_3(birth date)
+    returns table
+            (
+                id          integer,
+                first_name  varchar,
+                second_name varchar,
+                district    varchar,
+                work        varchar,
+                birthday    date,
+                phone       char(10)
+            )
+as
+$$
+begin
+    return query select customers.id,
+                        customers.first_name,
+                        customers.second_name,
+                        d.district,
+                        customers.work,
+                        customers.birthday,
+                        customers.phone
+                 from customers
+                          inner join districts d on customers.id_district = d.id
+                 where customers.birthday > birth;
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+drop function query_1_3(birth date);
+-- 1.3
+select *
+from query_1_3('01-01-1990');
+
+-- 1.4 Продукты, которые были приняты после указанной даты (По дате)
+create or replace function query_1_4(reception_date date)
+    returns table
+            (
+                id                   integer,
+                product_name         varchar,
+                recerption           date,
+                remaining            integer,
+                price                integer,
+                customer_firs_name   varchar,
+                customer_second_name varchar,
+                shop                 varchar,
+                product_type         varchar
+            )
+as
+$$
+begin
+    return query select products.id,
+                        products.product_name,
+                        products.reception,
+                        products.remaining,
+                        products.price,
+                        c.first_name,
+                        c.second_name,
+                        s.name,
+                        pt.product_type
+                 from products
+                          inner join customers c on products.id_customer = c.id
+                          inner join product_types pt on products.id_product_type = pt.id
+                          inner join shops s on products.id_shop = s.id
+                 where reception > reception_date;
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+
+select *
+from query_1_4('01-01-2000');
+
+-- 2 Симметричное внутреннее соединение без условия (три запроса)
+
+-- 2.1 Информация о клиентах и состояниях сданных ими товаров
+create or replace view query_2_1 as
+select customers.first_name || ' ' || customers.second_name as customer_name,
+       customers.work,
+       p.quittance,
+       p.remaining,
+       s.name
+from customers
+         inner join products p on customers.id = p.id_customer
+         inner join shops s on p.id_shop = s.id
+order by customer_name;
+
+select *
+from query_2_1;
+
+drop view query_2_1;
+
+-- 2.2 Информация о продуктах и их реализации
+create or replace view query_2_2 as
+select products.quittance,
+       products.product_name,
+       products.reception,
+       r.realization_count,
+       r.realization_date,
+       s.name as "shop"
+from products
+         inner join realization r on products.id = r.id_product
+         inner join shops s on products.id_shop = s.id
+order by s.name, products.reception, r.realization_date, r.realization_count;
+
+select *
+from query_2_2;
+
+drop view query_2_2;
+
+
+-- 2.3 Информация о раелизации товарас указанием магазина
+create or replace view query_2_3 as
+select realization.ticket, realization.realization_date, realization.realization_count, w.login, s.name
+from realization
+         inner join products p on realization.id_product = p.id
+         inner join shops s on p.id_shop = s.id
+         inner join workers w on p.id_woker = w.id
+order by s.name, realization.realization_date, w.login;
+
+select *
+from query_2_3;
+
+-- 3 Левое внешнее соединение
+
+-- 3.1 Все продукты и их реализация
+create or replace view query_3_1 as
+select products.quittance, products.count, products.remaining, r.ticket
+from products
+         left join realization r on products.id = r.id_product
+order by quittance;
+
+select *
+from query_3_1;
+
+drop view query_3_1;
+
+-- 4 Правое внешнее соединение
+
+-- 4.1 Реализация продукта с указанием работника
+create or replace view query_4_1 as
+select r.ticket, r.realization_date, r.realization_count, workers.login
+from workers
+         right join realization r on workers.id = r.id_worker;
+
+select *
+from query_4_1;
+
+-- 5 Запрос на запросе по принципу левого соединения
+
+-- 5.1 Реализация и работник который принял
+create or replace view query_5_1 as
+select products.quittance,
+       products.product_name,
+       products.reception,
+       (select login from workers where workers.id = products.id_woker)
+from products;
+
+select *
+from query_5_1;
+
+-- 6 Итоговый запрос без условия
+
+-- 6.1 Проданные товары с магазином
+create or replace view query_6_1 as
+select sold_products.quittance, sold_products.count, sold_products.reception, s.name
+from (select * from products where remaining = 0) as sold_products
+         inner join shops s on sold_products.id_shop = s.id
+order by s.name, sold_products.reception;
+
+select *
+from query_6_1;
+
+drop view query_6_1;
+
+-- 7 Итоговый запрос без условия с итоговыми данными выда: "всего", "в том числе"
+
+-- 7.1 Количество товаров и проданных товаров
+create or replace view query_7_1 as
+select count(*), (select count(*) as sold from products where remaining = 0)
+from products;
+
+select *
+from query_7_1;
+
+-- 8 Итоговые запросы с условием на данные (по значению, по маске, с имспользованием индекса,
+-- без использования индекса)
+
+-- 8.1 Продукты, которых на складе больше указанного
+drop function query_8_1(remaining_count integer);
+create or replace function query_8_1(remaining_count integer)
+    returns table
+            (
+                product_name  varchar,
+                quittance     integer,
+                remaining     integer,
+                tickets_count integer,
+                reception     date,
+                shop          varchar
+
+            )
+as
+$$
+begin
+    return query select t1.product_name, t1.quittance, t1.remaining, t1.tikets_count, t1.reception, t1.shop
+                 from (select p.product_name,
+                              p.quittance,
+                              p.remaining,
+                              count(r.ticket):: integer as tikets_count,
+                              p.reception,
+                              s.name                    as shop
+                       from realization r
+                                inner join products p on r.id_product = p.id
+                                inner join shops s on p.id_shop = s.id
+                       where p.remaining > remaining_count
+                       group by r.id_product, p.product_name, p.quittance, p.remaining, p.reception, s.name
+                      ) as t1;
+
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+select *
+from query_8_1(5);
+
+--8.2 Поиск клиента по части номера общее количество его товаров
+drop function query_8_2(part_of_phone varchar(10));
+create or replace function query_8_2(part_of_phone varchar(10))
+    returns table
+            (
+                first_name    varchar,
+                second_name   varchar,
+                phone         char(10),
+                product_count integer
+            )
+as
+$$
+begin
+    return query select t1.first_name, t1.second_name, t1.phone, t1.count
+                 from (select c.first_name, c.second_name, c.phone, count(p.quittance) :: integer as count
+                       from customers c
+                                inner join products p on c.id = p.id_customer
+                       where c.phone similar to '%' || part_of_phone || '%'
+                       group by c.phone, c.second_name, c.first_name
+                       order by count desc) as t1;
+
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+select *
+from query_8_2('033');
+
+-- 8.3 Количество чеков выписанных, на этот товар
+drop index realization_ticket_index;
+create index realization_ticket_index
+    on realization (id_product);
+
+drop function query_8_3(product_id integer);
+
+create or replace function query_8_3(product_id integer)
+    returns table
+            (
+                product_name       varchar,
+                quittance          integer,
+                shop               varchar,
+                realizations_count integer
+            )
+as
+$$
+begin
+    return query select t1.product_name, t1.quittance, t1.shop, t1.realizations_count
+                 from (select p.product_name,
+                              p.quittance,
+                              s.name                              as shop,
+                              count(r.realization_count)::integer as realizations_count
+                       from realization r
+                                right join products p on r.id_product = p.id
+                                inner join shops s on p.id_shop = s.id
+                       where r.id_product = product_id
+                       group by p.id, s.name, p.quittance) as t1;
+end;
+$$
+    language plpgsql SECURITY DEFINER;
+
+select *
+from query_8_3(1231);
+
+-- 8.4 Количество работников магазина
+drop function query_8_4(shop_id integer);
+create or replace function query_8_4(shop_id integer)
+    returns table
+            (
+                shop  varchar,
+                login integer
+            )
+as
+$$
+begin
+    return query select t1.name, count(t1.login) :: integer
+                 from (select s.name, w.login
+                       from shops s
+                                right join workers w on s.id = w.id_shop
+                       where s.id = shop_id) as t1
+                 group by t1.name;
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+
+select * from shops;
+select *
+from query_8_4(1);
+
+-- 9 Итоговый запрос с условием на группы
+
+-- 9.1 Продукты, продажи которых больше указанного
+create or replace function query_9_1(min_sold_count integer)
+    returns table
+            (
+                product_name varchar,
+                shop         varchar,
+                sold_count   integer
+            )
+as
+$$
+begin
+    return query select t1.product_name, t1.shop, t1.sold
+                 from (select p.product_name, s.name as shop, sum(r.realization_count)::integer as sold
+                       from realization r
+                                inner join products p on r.id_product = p.id
+                                inner join shops s on p.id_shop = s.id
+                       group by p.id, p.product_name, shop
+                       having sum(r.realization_count) > min_sold_count
+                       order by shop, sold) as t1;
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+select *
+from query_9_1(3);
+
+-- 10 Итоговый запрос с условием на данные и на группы
+
+-- 10.1 Пользователи с указанным социальным статусом и количеством сданных товаров больше указанного
+create or replace function query_10_1(status1 varchar, prod_count integer)
+    returns table
+            (
+                customer       varchar,
+                shop           varchar,
+                status         varchar,
+                products_count integer
+            )
+as
+$$
+begin
+    return query select t1.customer, t1.shop, t1.status, t1.products_count
+                 from (select (c.first_name || ' ' || c.second_name) :: varchar as customer,
+                              s.name                                            as shop,
+                              s2.status,
+                              count(p.quittance)::integer                       as products_count
+                       from products p
+                                inner join customers c on p.id_customer = c.id
+                                inner join shops s on p.id_shop = s.id
+                                inner join statuses s2 on c.id_status = s2.id
+                       where s2.status = status1
+                       group by p.id_customer, customer, shop, s2.status
+                       having count(p.quittance) > prod_count
+                       order by count(p.quittance) desc) as t1;
+end;
+$$ language plpgsql SECURITY DEFINER;
+
+select *
+from query_10_1('предприниматель', 1);
+
+-- 11 Запрос на запросе по принципу итогового запроса
+
+-- 11.1 Средняя стоимость всех товаров магазина
+drop view query_11_1;
+create or replace view query_11_1 as
+select (select avg(price) from products where id_shop = s.id)::integer as average_price, s.name as shop
+from shops s
+order by average_price desc;
+
+
+select *
+from query_11_1;
+
+-- 12 Запрос с использованием объединения
+
+-- 12.1 Продукты которые еще не покупали и продукты, которые полностью выкуплены
+create or replace view query_12_1 as
+select *
+from products
+where count = remaining
+union all
+select *
+from products
+where remaining = 0
+order by remaining desc;
+
+select *
+from query_12_1;
+
+-- 13 Запросы с подзапросами (с использованием in, not in, case, операциями над итоговыми данными)
+
+-- 13.1 Информация о пользователях, товары которых еще есть в наличии
+create or replace view query_13_1 as
+select first_name, second_name, phone
+from customers
+where id in (select id_customer from products where remaining > 0);
+
+select *
+from query_13_1;
+
+-- 13.2 Информация о пользователях, товаров которых уже нет в наличии
+drop view query_13_2;
+create or replace view query_13_2 as
+select first_name, second_name, phone
+from customers
+where id not in (select id_customer from products where remaining > 0);
+
+select *
+from query_13_2;
+
+-- 13.3 Популярность продукта у покупателей
+drop view query_13_3;
+create or replace view query_13_3 as
+select quittance,
+       product_name,
+       price,
+       remaining,
+       count,
+       case
+           when (remaining::float / count * 100)::integer = 100
+               then 'Не покупается (' || (remaining::float / count * 100)::integer || '%)'
+           when (remaining::float / count * 100)::integer between 80 and 99 then
+                   'Очень плохо покупается (' || (remaining::float / count * 100)::integer || '%)'
+           when (remaining::float / count * 100)::integer between 60 and 80
+               then 'Плохо покупается (' || (remaining::float / count * 100)::integer || '%)'
+           when (remaining::float / count * 100)::integer between 40 and 60
+               then 'Покупается (' || (remaining::float / count * 100)::integer || '%)'
+           when (remaining::float / count * 100)::integer between 20 and 40
+               then 'Хорошо покупается (' || (remaining::float / count * 100)::integer || '%)'
+           when (remaining::float / count * 100)::integer between 1 and 20 then
+                   'Очень хорошо покупается (' || (remaining::float / count * 100)::integer || '%)'
+           when (remaining::float / count * 100)::integer = 0
+               then 'Раскупили (' || (remaining::float / count * 100)::integer || '%)'
+           else (remaining::float / count * 100)::integer || ' error' end as state
+from products
+order by (remaining::float / count * 100)::integer, count desc;
+
+select *
+from query_13_3;
+-- 13.4 Продукты со стоимостью больше средней
+drop view query_13_4;
+create or replace view query_13_4 as
+select quittance, product_name, price, s.name as shop
+from products
+         inner join shops s on products.id_shop = s.id
+where price > (select avg(price) from products)
+order by shop, price;
+
+select *
+from query_13_4;
+
+
+--Views
+
+
+
+select * from customers_view where id = 792
+
+
